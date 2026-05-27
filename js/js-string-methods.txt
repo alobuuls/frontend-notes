@@ -1,0 +1,90 @@
+//📘 STRING METHODS (MÉTODOS DE STRINGS)
+
+    🧠 Son funciones para trabajar con texto:
+    buscar, reemplazar, cortar, convertir, etc.
+
+    let texto = "  Hola Mundo JavaScript  ";
+    --------------------------------
+
+    📗 charAt(index)  →  string
+    🧠 Devuelve el carácter en esa posición.
+
+    🧪 texto.charAt(2);
+    // "o"
+    --------------------------------
+
+    📗 replace('a', 'b')  →  string
+    🧠 Reemplaza la PRIMER coincidencia.
+
+    📗 replaceAll('a', 'b')  →  string
+    🧠 Reemplaza TODAS las coincidencias.
+
+    🧪 texto.replace("Mundo", "JS");
+    // "  Hola JS JavaScript  "
+    --------------------------------
+
+    📗 includes('texto')  →  boolean
+    🧠 Devuelve true si el texto existe.
+
+    🧪 texto.includes("Hola");
+    // true
+    --------------------------------
+
+    📗 indexOf('texto')  →  number
+    🧠 Devuelve la posición.
+    Si no existe → -1
+
+    🧪 texto.indexOf("Mundo");
+    // 7
+    --------------------------------
+
+    📗 slice(inicio, fin)  →  string
+    🧠 Corta una parte del texto.
+
+    🧪 texto.slice(2, 6);
+    // "Hola"
+    --------------------------------
+
+    📗 split('separador')  →  []
+    🧠 Convierte el string en array.
+
+    🧪 texto.trim().split(" ");
+    // ["Hola", "Mundo", "JavaScript"]
+    --------------------------------
+
+    📗 toUpperCase() / toLowerCase()
+    🧠 Convierte a mayúsculas / minúsculas.
+
+    🧪 texto.toUpperCase();
+    // "  HOLA MUNDO JAVASCRIPT  "
+    --------------------------------
+
+    📗 trim()
+    🧠 Elimina espacios al inicio y al final.
+
+    🧪 texto.trim();
+    // "Hola Mundo JavaScript"
+    --------------------------------
+
+    📗 startsWith('x') / endsWith('x')
+    🧠 Verifica cómo empieza o termina el texto.
+
+    🧪 texto.trim().startsWith("Hola");
+    // true
+    --------------------------------
+
+    📗 repeat(n)
+    🧠 Repite el texto n veces.
+
+    🧪 "Hi ".repeat(3);
+    // "Hi Hi Hi "
+
+    --------------------------------
+    📗 concat('otro')
+    🧠 Une strings.
+
+    🧪 "Hola".concat(" Mundo");
+    // "Hola Mundo"
+
+
+

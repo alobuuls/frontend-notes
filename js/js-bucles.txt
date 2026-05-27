@@ -1,0 +1,104 @@
+// 📘 WHILE
+
+    🧠 while es un ciclo que repite un bloque de código
+    MIENTRAS una condición sea true.
+
+    📘 ESTRUCTURA
+      💡 Ejemplo
+        let contador = 1;
+
+        while (contador <= 5) {
+          console.log(contador);
+          contador++;
+        }
+
+    🧠 Cómo funciona paso a paso
+    1. Se evalúa la condición
+    2. Si es true → se ejecuta el código
+    3. Se actualiza la variable
+    4. Vuelve a evaluar la condición
+
+
+    📘 CUÁNDO SE USA
+    🧠 Se usa cuando NO sabes cuántas veces se repetirá el ciclo,
+    pero sí sabes cuándo debe detenerse.
+
+    📘 BUCLE INFINITO (ERROR COMÚN)
+    🧠 Ocurre cuando la condición nunca cambia a false.
+      💡 Ejemplo incorrecto
+        let x = 1;
+
+        while (x <= 5) {
+          console.log(x);
+        }
+
+    ⚠️ x nunca cambia → el ciclo no termina
+
+    📘 EJEMPLO CON FALSY
+    🧠 while se detiene cuando la condición es falsy.
+      💡 Ejemplo
+        let valor = 3;
+
+        while (valor) {
+          console.log(valor);
+          valor--;
+        }
+
+// 📘 FOR //
+
+    🧠 for es un ciclo que repite un bloque de código
+    cuando SABES cuántas veces debe ejecutarse.
+
+    📘 ESTRUCTURA
+      💡 Ejemplo
+        for (let i = 1; i <= 5; i++) {
+          console.log(i);
+        }
+
+    🧠 Partes del for
+    1. let i = 1      → inicio del contador
+    2. i <= 5         → condición
+    3. i++            → incremento
+
+
+    📘 CÓMO FUNCIONA
+    🧠 El ciclo sigue este orden:
+    1. Se ejecuta el inicio (una sola vez)
+    2. Se evalúa la condición
+    3. Si es true → se ejecuta el código
+    4. Se ejecuta el incremento
+    5. Vuelve a evaluar la condición
+
+
+    📘 FOR CON ARRAYS
+    🧠 Se usa mucho para recorrer listas.
+      💡 Ejemplo
+          let frutas = ["manzana", "pera", "uva"];
+
+          for (let i = 0; i < frutas.length; i++) {
+            console.log(frutas[i]);
+          }
+
+    📘 PARA CONTAR (COUNT)
+    🧠 Se usa mucho para contar los elementos de un array.
+        💡 Ejemplo
+        let fruits = ['apple', 'banana', 'cherry', 'date'];
+
+        // Access the length property directly
+        let count = fruits.length;
+
+        console.log(count);
+        // Output: 4
+
+
+    📘 ERRORES COMUNES
+    🧠 Errores típicos al usar for:
+    - olvidar el incremento
+    - condición mal escrita
+    - usar mal el índice
+
+    📘 CUÁNDO USAR FOR
+    🧠 Úsalo cuando:
+    - conoces el número de repeticiones
+    - recorres arrays
+    - trabajas con contadores

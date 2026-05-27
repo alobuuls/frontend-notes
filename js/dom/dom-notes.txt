@@ -1,0 +1,307 @@
+// 📘 DOM (DOCUMENT OBJECT MODEL) //
+    🧠 El DOM es la forma en que JavaScript puede ver,
+    acceder y modificar una página HTML.
+
+    👉 El navegador convierte el HTML en un objeto que JavaScript entiende.
+
+    📘 QUÉ ES EL DOM
+    🧠 DOM significa Document Object Model.
+    Es una representación del HTML en forma de objetos.
+
+    👉 Gracias al DOM, JavaScript puede:
+    - leer elementos HTML
+    - cambiar texto
+    - cambiar estilos
+    - escuchar eventos (clicks, teclas)
+
+
+    📘 CÓMO FUNCIONA EL DOM
+    🧠 El navegador hace esto:
+    1. Lee el HTML
+    2. Lo convierte en un árbol de nodos
+    3. JavaScript interactúa con ese árbol
+
+    📘 EJEMPLO MENTAL
+    🧠 Imagina el HTML como un árbol:
+
+    html
+    └─ body
+        └─ h1
+        └─ p
+        └─ button
+
+    👉 JavaScript puede acceder a cada rama.
+
+    📘 ACCEDER AL DOM
+    🧠 Se usa el objeto document.
+
+    💡 Ejemplo
+    document.title;      // título de la página
+    document.body;       // cuerpo del HTML
+
+    📘 SELECCIONAR ELEMENTOS
+    🧠 Para trabajar con un elemento, primero hay que seleccionarlo.
+      💡 Ejemplo
+          const titulo = document.querySelector("h1");
+
+
+    📘 MODIFICAR ELEMENTOS
+    🧠 Una vez seleccionado, se puede cambiar su contenido.
+
+      💡 Ejemplo
+        const titulo = document.querySelector("h1");
+        titulo.textContent = "Hola DOM";
+
+    📘 EJEMPLO COMPLETO Y SIMPLE
+    🧠 HTML
+    <h1>Hola</h1>
+    🧠 JavaScript
+    const titulo = document.querySelector("h1");
+    titulo.textContent = "Hola desde JavaScript";
+
+    📘 IDEA CLAVE PARA EMPEZAR
+    🧠 El DOM conecta JavaScript con el HTML.
+    Sin DOM, JavaScript no podría cambiar la página.
+
+
+//📘 REGLA DE ORO DEL DOM 🧠
+
+  👉 Si ves “Element” en el nombre → ignora nodos de texto
+  👉 Si NO dice “Element” → incluye TODO (texto, comentarios, etc.)
+
+
+//📘 EVENTS (EVENTOS DEL DOM)
+
+  🧠 Los eventos son acciones que ocurren en la página:
+  clics, teclas, movimiento del mouse, envío de formularios, etc.
+
+  📗 DOMContentLoaded
+  🧠 Se ejecuta cuando el HTML ya fue cargado y parseado.
+  👉 Ideal para empezar a usar el DOM sin errores.
+
+  --------------------------------
+
+  📗 Eventos del mouse
+  mousedown   → cuando presionas el botón del mouse  
+  mouseup     → cuando sueltas el botón del mouse  
+  mousemove   → cuando mueves el mouse  
+  mouseenter  → cuando el mouse entra al elemento  
+  mouseleave  → cuando el mouse sale del elemento  
+
+  click       → clic normal  
+  dblclick    → doble clic  
+  contextmenu → clic derecho  
+
+  --------------------------------
+
+  📗 Eventos de foco
+  focus → cuando un input recibe foco (clic o tab)
+
+  --------------------------------
+
+  📗 Eventos de animaciones CSS
+  animationstart → cuando empieza una animación  
+  animationend   → cuando termina una animación  
+
+  --------------------------------
+
+  📗 Eventos del teclado
+  keydown → cuando presionas una tecla  
+  keyup   → cuando sueltas una tecla  
+
+  --------------------------------
+
+  📗 Eventos de la ventana
+  resize → cuando cambia el tamaño de la ventana  
+  scroll → cuando haces scroll  
+
+  --------------------------------
+
+  📗 Eventos de formularios
+  change → cuando cambia el valor de un input  
+  submit → cuando se envía un formulario
+
+//📘 FUNCIONES DE EVENTOS
+
+  preventDefault()
+  🧠 Evita el comportamiento por defecto del navegador
+  👉 ejemplo: evitar que un formulario se envíe
+
+  stopPropagation()
+  🧠 Evita que el evento siga propagándose a elementos padres
+
+
+//📘 REFERENCIAR ELEMENTOS HTML
+
+  document.getElementById('el-id')
+  🧠 Obtiene un elemento por su id
+  👉 devuelve UN solo elemento
+
+  document.querySelector('selector')
+  🧠 Devuelve el PRIMER elemento que coincida
+
+  document.querySelectorAll('selector')
+  🧠 Devuelve una lista de elementos (NodeList)
+  👉 parecido a un array
+
+
+//📘 OBTENER INFORMACIÓN DE UN ELEMENTO
+
+  el.id
+  🧠 Obtiene el id del elemento
+
+  el.className
+  🧠 Obtiene todas las clases como texto
+
+  el.getAttribute('alt')
+  🧠 Obtiene el valor de un atributo específico
+
+
+  el.textContent
+  🧠 Obtiene TODO el texto, incluso si está oculto por CSS
+
+  el.innerText
+  🧠 Obtiene solo el texto visible
+
+  el.attributes
+  🧠 Obtiene todos los atributos del elemento
+
+  el.dataset
+  🧠 Obtiene los atributos data-*
+
+
+//📘 PROPIEDADES DE TAMAÑO Y ESTILO
+
+  el.naturalWidth
+  🧠 Ancho REAL (original) de una imagen
+
+  el.naturalHeight
+  🧠 Alto REAL (original) de una imagen
+
+  clientWidth / clientHeight
+  🧠 Incluye padding, pero NO border
+
+  offsetWidth / offsetHeight
+  🧠 Incluye padding + border
+
+  el.style.getPropertyValue('css-property')
+  🧠 Obtiene estilos inline
+
+  getComputedStyle(el).getPropertyValue('css-property')
+  🧠 Obtiene estilos finales (CSS completo)
+
+  el.style.cssText
+  🧠 Todos los estilos inline como texto
+
+  getComputedStyle(el, '::after')
+  🧠 Obtiene estilos de pseudoelementos
+
+
+//📘 AGREGAR COSAS A UN ELEMENTO
+
+  el.classList.add('nueva-clase')
+  🧠 Agrega una clase
+
+  el.setAttribute('alt', 'texto')
+  🧠 Agrega o modifica un atributo
+
+  el.textContent += 'nuevo texto'
+  🧠 Agrega texto al contenido actual
+
+
+//📘 MODIFICAR VALORES DEL ELEMENTO
+
+  el.id = 'nuevo-id'
+  🧠 Cambia el id
+
+  el.className = 'nueva-clase'
+  🧠 Reemplaza todas las clases
+
+  el.textContent = 'nuevo contenido'
+  🧠 Reemplaza el texto
+
+
+//📘 MODIFICAR ESTILOS (INLINE)
+
+  el.style.color = 'red'
+  🧠 Estilo inline directo
+
+  el.style.setProperty('propiedad', 'valor', 'important')
+  🧠 Define estilos inline con prioridad
+
+  Object.assign(el.style, stylesToApply)
+  🧠 Aplica múltiples estilos desde un objeto JS
+
+
+//📘 ELIMINAR COSAS DEL ELEMENTO
+
+  el.remove()
+  🧠 Elimina el elemento del DOM
+
+  el.removeAttribute('nombre-atributo')
+  🧠 Elimina un atributo
+
+  el.classList.remove('nombre-clase')
+  🧠 Elimina una clase
+
+
+//📘 INSERTAR ELEMENTOS EN EL DOM
+
+  container.prepend(el)
+  🧠 Inserta al inicio
+
+  container.append(el)
+  🧠 Inserta al final
+
+  before / after
+  🧠 Inserta antes o después del elemento
+
+  insertAdjacentHTML(position, html)
+  insertAdjacentElement(position, element)
+
+  📗 Posiciones:
+  beforebegin  
+  afterbegin  
+  beforeend  
+  afterend  
+
+
+//📘 innerHTML
+
+  el.innerHTML = `
+    <div>
+      <p>Hola</p>
+    </div>
+  `
+  🧠 Inserta HTML directamente (cuidado con seguridad)
+
+
+//📘 NAVEGACIÓN ENTRE ELEMENTOS
+
+  childElementCount
+  🧠 Cantidad de hijos (solo elementos)
+
+  firstElementChild
+  🧠 Primer hijo elemento
+
+  lastElementChild
+  🧠 Último hijo elemento
+
+
+  children
+  🧠 HTMLCollection solo de elementos
+
+  replaceWith(el)
+  🧠 Reemplaza el elemento actual
+
+  replaceChildren(...)
+  🧠 Reemplaza todos los hijos
+
+
+//📘 RELACIÓN ENTRE ELEMENTOS
+
+  closest('selector')
+  🧠 Busca el ancestro más cercano que coincida
+
+  contains(el)
+  🧠 Verifica si un elemento contiene a otro

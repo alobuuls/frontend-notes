@@ -1,0 +1,140 @@
+🧱 1. ¿Qué es Angular y cómo funciona?
+
+- Qué es Angular
+- SPA (Single Page Application)
+- Arquitectura basada en componentes
+- Diferencia entre Angular vs React vs Vue
+- Instalación:
+  - Node.js
+  - Angular CLI
+  - Crear proyecto (ng new)
+
+---
+
+🧩 2. Estructura de un proyecto Angular
+
+Archivos importantes:
+
+- main.ts
+- app.module.ts
+- app.component.ts / html / css
+
+- Qué es un módulo (NgModule)
+- Cómo se organiza Angular internamente
+
+---
+
+🧱 3. Componentes (LO MÁS IMPORTANTE 🔥)
+
+- Crear componentes (ng generate component)
+- Estructura:
+  - TS (lógica)
+  - HTML (vista)
+  - CSS (estilos)
+- Decorador @Component
+
+Interpolación:
+
+{{ nombre }}
+
+---
+
+🔗 4. Data Binding (MUY CLAVE)
+
+- Interpolación {{ }}
+- Property binding [propiedad]
+- Event binding (click)
+- Two-way binding [(ngModel)]
+
+👉 Este tema es FUNDAMENTAL
+
+---
+
+🧭 5. Directivas
+
+- *ngIf
+- *ngFor
+- ngClass
+- ngStyle
+
+👉 Controlar el DOM dinámicamente
+
+---
+
+🧪 6. Comunicación entre componentes
+
+- Padre → hijo (@Input)
+- Hijo → padre (@Output + EventEmitter)
+
+👉 Comunicación entre componentes
+
+---
+
+🌐 7. Servicios y arquitectura *
+
+- Qué es un servicio
+- Crear servicios (ng generate service)
+- Inyección de dependencia (DI)
+- Compartir lógica entre componentes
+
+---
+
+🌍 8. Consumo de APIs (HTTP) *
+
+- HttpClient
+- Peticiones GET / POST
+- Manejo de respuestas
+- Tipado con interfaces
+
+👉 Aquí usas TypeScript de verdad
+
+---
+
+🔄 9. Observables (RxJS básico) *
+
+- Qué es un Observable
+- subscribe
+- pipe
+- Operadores básicos (map, filter)
+
+👉 Tema clave (nivel intermedio)
+
+---
+
+🧠 10. Routing (navegación) *
+
+- Configurar rutas
+- RouterModule
+- Navegación entre páginas
+- Parámetros en rutas
+
+---
+
+🧾 11. Formularios *
+
+- Template-driven forms
+- Reactive forms (más importante)
+- Validaciones
+
+---
+
+🎯 12. Pipes *
+
+- Pipes built-in (date, uppercase)
+- Crear pipes personalizados
+
+---
+
+🧱 13. Módulos avanzados *
+
+- Feature modules
+- Lazy loading
+
+---
+
+⚙️ 14. Buenas prácticas *
+
+- Estructura escalable
+- Separación de responsabilidades
+- Tipado correcto
+- Naming conventions

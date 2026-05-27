@@ -1,0 +1,409 @@
+//📘 ANGULAR CLI (COMMAND LINE INTERFACE)
+
+    🧠 CLI = Command Line Interface
+
+    👉 Es una herramienta que permite crear, ejecutar y administrar proyectos Angular desde la terminal
+
+    📘 🟢 ¿QUÉ ES ANGULAR CLI?
+
+        🧠 Es la herramienta oficial de Angular
+
+        👉 Automatiza tareas como:
+          • Crear proyectos
+          • Generar componentes
+          • Ejecutar la app
+          • Construir (build)
+
+        ✨ TIP
+        🧠 Te ahorra MUCHO tiempo
+
+    📘 🔵 COMANDOS PRINCIPALES
+
+        💡 Crear proyecto
+            ng new mi-app
+
+        💡 Ejecutar aplicación
+            ng serve
+
+        👉 Abre en: http://localhost:4200
+
+        💡 Generar cosas
+            ng generate component nombre
+            ng g c nombre
+
+            ng generate service nombre
+            ng g s nombre
+
+        💡 Build producción
+            ng build --prod
+
+    📘 🟣 GENERADORES (SCAFFOLDING)
+
+        🧠 CLI crea automáticamente:
+
+        ✔ Archivos necesarios  
+        ✔ Estructura correcta  
+        ✔ Registra en módulos  
+
+        👉 Ejemplo:
+            ng g c header
+
+        👉 Crea:
+            header.component.ts
+            header.component.html
+            header.component.css
+
+    📘 🟡 ¿PARA QUÉ SIRVE?
+
+        🎯 Beneficios:
+
+        ✔ Automatiza tareas  
+        ✔ Evita errores manuales  
+        ✔ Mantiene estructura consistente  
+        ✔ Acelera desarrollo  
+
+    📘 🟠 CONFIGURACIÓN
+
+        🧠 Archivo importante:
+
+            angular.json
+
+        👉 Configura:
+          • builds
+          • estilos globales
+          • assets
+
+    📘 🔴 WORKFLOW TÍPICO
+
+        🧠 Flujo común:
+
+        👉 ng new → crear app  
+        👉 ng serve → correr app  
+        👉 ng g → generar componentes  
+        👉 ng build → producción  
+
+    📘 ⚫ OPCIONES ÚTILES
+
+        💡 ng serve con puerto
+            ng serve --port 4201
+
+        💡 ng generate sin tests
+            ng g c header --skip-tests
+
+    ⚠️ COSAS IMPORTANTES
+
+        🧠 CLI es esencial en Angular
+        🧠 Usa "ng" como comando base
+        🧠 Genera código automáticamente
+        🧠 Mantiene buenas prácticas
+
+    ✨ RESUMEN
+
+        🧠 Angular CLI = herramienta de desarrollo
+
+        👉 Crea, ejecuta y organiza proyectos
+        👉 Automatiza tareas
+        👉 Usa comandos como ng new, ng serve, ng g
+
+        👉 Es clave para trabajar con Angular 🚀
+
+//📘 COMANDOS BÁSICOS DE ANGULAR CLI
+
+    🧠 Angular CLI usa el comando base: ng
+
+    👉 Todo se ejecuta desde la terminal
+
+    📘 🟢 COMANDO PRINCIPAL
+
+        🧠 ng = comando base de Angular CLI
+
+        👉 Se combina con otros comandos
+
+    📘 🔵 COMANDOS MÁS IMPORTANTES
+
+        💡 Crear proyecto
+            ng new mi-app
+
+        👉 Crea un proyecto desde cero
+
+        💡 Ejecutar aplicación
+            ng serve
+
+        👉 Corre el proyecto en local
+
+        💡 Ver versión
+            ng version
+
+        👉 Muestra la versión de Angular
+
+        💡 Build (compilar)
+            ng build
+
+        👉 Genera el compilado del proyecto
+
+    📘 🟣 GENERATE (g)
+
+        🧠 ng g = generate
+
+        👉 Sirve para crear archivos automáticamente
+
+        💡 Ejemplos
+
+            ng g component nombre
+            ng g c nombre
+
+            ng g service nombre
+            ng g s nombre
+
+            ng g pipe nombre
+            ng g p nombre
+
+        👉 Alias cortos:
+
+        • c → component  
+        • s → service  
+        • p → pipe  
+
+    📘 🟡 ¿QUÉ HACE generate?
+
+        🧠 Angular CLI:
+
+        ✔ Crea archivos automáticamente  
+        ✔ Sigue buenas prácticas  
+        ✔ Registra en módulos  
+
+    📘 🟠 WORKFLOW BÁSICO
+
+        🧠 Flujo típico:
+
+        👉 ng new → crear app  
+        👉 ng serve → correr app  
+        👉 ng g → generar código  
+        👉 ng build → producción  
+
+    📘 🔴 OPCIONES ÚTILES
+
+        💡 Puerto personalizado
+            ng serve --port 4201
+
+        💡 Sin tests
+            ng g c header --skip-tests
+
+    ⚠️ COSAS IMPORTANTES
+
+        🧠 ng es el comando base
+        🧠 generate tiene alias (g)
+        🧠 CLI automatiza todo
+        🧠 build crea versión final
+
+    ✨ RESUMEN
+
+        🧠 Comandos clave:
+
+        👉 ng new → nuevo proyecto  
+        👉 ng serve → correr app  
+        👉 ng version → ver versión  
+        👉 ng build → compilar  
+        👉 ng g → generar archivos  
+
+        👉 Son esenciales para trabajar con Angular 🚀
+
+//📘 FLAGS EN ANGULAR CLI
+
+    🧠 Los flags son opciones adicionales que modifican el comportamiento de los comandos
+
+    👉 Se agregan después del comando
+
+    📘 🟢 ¿QUÉ SON LOS FLAGS?
+
+        🧠 Son parámetros que personalizan cómo se ejecuta un comando
+
+        👉 Se usan con - o --
+
+        💡 Ejemplo
+            ng serve -o
+            ng serve --port 4201
+
+    📘 🔵 FLAGS EN ng serve
+
+        🧠 Ejecutar la aplicación
+
+        💡 Abrir navegador automáticamente
+            ng serve -o
+            ng serve --open
+
+        👉 Abre el navegador al iniciar
+
+        💡 Especificar puerto
+            ng serve -p 2332
+            ng serve --port 2332
+
+        👉 Corre la app en un puerto específico
+
+    📘 🟣 FLAGS EN ng build
+
+        🧠 Compilar proyecto
+
+        💡 Producción
+            ng build --prod
+
+        👉 Genera build optimizado
+
+        ✨ TIP
+        🧠 Reduce tamaño y mejora rendimiento
+
+    📘 🟡 FLAGS EN ng generate component
+
+        🧠 Crear componentes
+
+        💡 No generar tests
+            ng g c header --skip-tests
+
+        👉 No crea archivo .spec.ts
+
+        💡 Inline styles
+            ng g c header --inline-style
+
+        👉 No crea archivo CSS, lo pone en el TS
+
+        💡 Inline template
+            ng g c header --inline-template
+
+        👉 No crea HTML, lo pone en el TS
+
+    📘 🟠 ¿PARA QUÉ SIRVEN?
+
+        🎯 Beneficios:
+
+        ✔ Personalizar comandos  
+        ✔ Ahorrar tiempo  
+        ✔ Evitar archivos innecesarios  
+        ✔ Ajustar entorno (dev / prod)  
+
+    📘 🔴 EJEMPLO COMBINADO
+
+        💡 Ejemplo
+
+            ng serve -o -p 4201
+
+        👉 Abre navegador en puerto 4201
+
+    ⚠️ COSAS IMPORTANTES
+
+        🧠 - es forma corta
+        🧠 -- es forma larga
+        🧠 Se pueden combinar
+        🧠 Cambian el comportamiento del comando
+
+    ✨ RESUMEN
+
+        🧠 Flags = configuración extra
+
+        👉 -o → abrir navegador  
+        👉 -p → puerto  
+        👉 --prod → producción  
+        👉 --skip-tests → sin tests  
+        👉 --inline-style/template → sin archivos extra  
+
+        👉 Te dan más control sobre Angular CLI 🚀
+
+// 📘 INSTALACIÓN DE ANGULAR DESDE CERO
+
+🧠 Para trabajar con Angular necesitas preparar tu entorno de desarrollo.
+
+👉 Angular no funciona solo  
+👉 Necesita herramientas como Node.js y Angular CLI
+
+📘 🟢 1. INSTALAR NODE.JS
+
+    🧠 Node.js permite ejecutar JavaScript fuera del navegador.
+
+    👉 Es obligatorio para usar Angular
+
+      💡 Verificar instalación
+        node -v
+        npm -v
+
+    👉 Si ves versiones → ya está instalado  
+    👉 Si no → debes instalarlo
+
+    ⚠️ npm viene incluido con Node.js
+
+📘 🔵 2. INSTALAR ANGULAR CLI
+
+    🧠 Angular CLI es una herramienta para crear y manejar proyectos Angular.
+
+      💡 Instalación global
+        npm install -g @angular/cli
+
+    👉 Esto te permite usar el comando:
+        ng
+
+      💡 Verificar instalación
+        ng version
+
+    👉 Si funciona → todo listo
+
+    ✨ TIP
+    🧠 CLI = te ahorra escribir código manual repetitivo
+
+📘 🟣 3. CREAR UN PROYECTO ANGULAR
+
+    🧠 Una vez instalado Angular CLI, puedes crear una app.
+
+      💡 Comando
+        ng new mi-app
+
+    👉 Angular te hará preguntas:
+      • ¿Routing? (yes/no)  
+      • ¿CSS, SCSS, etc?
+
+    👉 Luego crea toda la estructura automáticamente
+
+📘 🟡 4. ENTRAR AL PROYECTO
+
+      💡 Comando
+        cd mi-app
+
+    👉 Te mueves a la carpeta del proyecto
+
+📘 🟠 5. LEVANTAR EL SERVIDOR
+
+    🧠 Ejecuta la aplicación en modo desarrollo
+
+      💡 Comando
+        ng serve
+
+    👉 Abre en el navegador:
+        http://localhost:4200
+
+    👉 Se recarga automáticamente al guardar cambios
+
+📘 🔴 6. ESTRUCTURA BÁSICA DEL PROYECTO
+
+    🧠 Angular crea varias carpetas importantes:
+
+    👉 src/
+      • app/ → componentes principales  
+      • index.html → página base  
+      • main.ts → punto de entrada  
+
+    👉 angular.json → configuración del proyecto
+
+⚠️ COSAS IMPORTANTES
+
+    🧠 Siempre instala Angular CLI globalmente  
+    🧠 Usa "ng serve" para desarrollo  
+    🧠 No edites archivos fuera de src sin saber qué haces  
+
+✨ RESUMEN
+
+    🧠 Pasos básicos:
+
+    1. Instalar Node.js  
+    2. Instalar Angular CLI  
+    3. Crear proyecto → ng new  
+    4. Entrar → cd  
+    5. Ejecutar → ng serve  
+
+    👉 Con eso ya puedes empezar a programar en Angular 🚀

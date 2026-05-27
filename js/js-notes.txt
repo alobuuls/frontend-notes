@@ -1,0 +1,36 @@
+// Reglas de oro
+un parámetro, las propiedades de los objetos, let y funcion deben ir en camelCase
+el nombre de un archivo js debe ir en skewer-case o snake case
+
+
+--------------------------------
+
+//
+//📘 prompt & alert
+
+🧠 Son funciones del navegador para interactuar con el usuario.
+
+--------------------------------
+
+📗 alert()
+
+🧠 Muestra un mensaje emergente.
+
+🧪 Ejemplo:
+alert("Hola mundo");
+
+--------------------------------
+
+📗 prompt()
+
+🧠 Pide información al usuario y devuelve un texto.
+
+🧪 Ejemplo:
+let name = prompt("¿Cuál es tu nombre?");
+console.log(name);
+
+--------------------------------
+
+📌 REGLA RÁPIDA:
+alert → mostrar mensaje  
+prompt → pedir datos

@@ -1,0 +1,182 @@
+// 📘 FUNCIONES EN JAVASCRIPT //
+
+    !! IMPORTANTE
+    PARA EJECTUAR UNA FUNCION SE DEBEN COLOCAR EL NOMBRE DE LA FUNCION Y PEGADO DOS PARENTESIS "sumar()"
+    LAS FUNCIONES INTERNAS DE JS SE INVOCAN CON ".nombreFuncion"
+    
+
+    🧠 Una función es un bloque de código que se puede reutilizar.
+    Puede recibir datos, procesarlos y opcionalmente retornar un valor.
+
+    📘 FUNCIÓN CON NOMBRE
+    🧠 Es una función tradicional que tiene un nombre.
+      💡 Ejemplo
+        function isEven(x) {
+          return x % 2 === 0;
+        }
+
+
+
+    📘 FUNCIÓN ANÓNIMA
+    🧠 Es una función sin nombre, generalmente asignada a una variable.
+      💡 Ejemplo
+        const isAnAdult = (edad) => {
+          return edad >= 18;
+        };
+
+
+    📘 FUNCIÓN QUE RECIBE PARÁMETROS
+    🧠 Los parámetros son valores que la función necesita para trabajar.
+      💡 Ejemplo
+        function isEven(x) {
+          return x % 2 === 0;
+        }
+
+    📘 FUNCIÓN QUE NO RECIBE PARÁMETROS
+    🧠 No necesita información externa para ejecutarse.
+      💡 Ejemplo
+        const isDecember = () => {
+          return new Date().getMonth() === 11
+            ? 'Navidad'
+            : 'Espera a diciembre';
+        };
+
+    📘 FUNCIÓN QUE RETORNA UN VALOR
+    🧠 Usa return para devolver un resultado.
+      💡 Ejemplo
+        const isAnAdult = (edad) => {
+          return edad >= 18;
+        };
+
+    📘 FUNCIÓN QUE NO RETORNA NADA
+    🧠 Ejecuta una acción, pero no devuelve ningún valor.
+      💡 Ejemplo
+        let canEnterToParty = false;
+
+        const isAnAdultOneLine = (edad) => {
+          canEnterToParty = edad >= 18;
+        };
+
+    📘 FUNCIÓN AUTOINVOCADA (IIFE)
+    🧠 Se ejecuta automáticamente sin ser llamada.
+      💡 Ejemplo
+        (function() {
+          console.log('hola');
+        }());
+
+        const users = [
+        { id: 1, name: "Ana" },
+        { id: 2, name: "Luis" },
+        { id: 3, name: "María" }
+      ];
+
+
+//📘 FUNCTIONS (FUNCIONES EN JAVASCRIPT)
+
+🧠 Una función es un bloque de código reutilizable
+que realiza una tarea específica.
+
+Permite:
+✔ Reutilizar código
+✔ Organizar mejor el programa
+✔ Evitar repetición
+
+--------------------------------
+
+📗 DECLARAR UNA FUNCIÓN
+
+function saludar() {
+  console.log("Hola");
+}
+
+🧠 Se define con la palabra clave function.
+
+--------------------------------
+
+📗 LLAMAR UNA FUNCIÓN
+
+saludar();
+
+🧠 Ejecuta el código dentro de la función.
+
+--------------------------------
+
+📗 FUNCIONES CON PARÁMETROS
+
+function saludar(nombre) {
+  console.log("Hola " + nombre);
+}
+
+saludar("Ana");
+
+🧠 Los parámetros permiten pasar datos a la función.
+
+--------------------------------
+
+📗 FUNCIONES CON RETORNO (return)
+
+function sumar(a, b) {
+  return a + b;
+}
+
+let resultado = sumar(2, 3);
+
+🧠 return devuelve un valor fuera de la función.
+
+--------------------------------
+
+📗 FUNCIÓN ANÓNIMA
+
+const saludar = function() {
+  console.log("Hola");
+};
+
+🧠 No tiene nombre, se guarda en una variable.
+
+--------------------------------
+
+📗 ARROW FUNCTION (FUNCIÓN FLECHA)
+
+const saludar = () => {
+  console.log("Hola");
+};
+
+🧠 Forma moderna y más corta de escribir funciones.
+
+--------------------------------
+
+📗 ARROW FUNCTION CON RETORNO IMPLÍCITO
+
+const sumar = (a, b) => a + b;
+
+🧠 Si es una sola línea, el return es automático.
+
+--------------------------------
+
+📗 FUNCIONES AUTOEJECUTADAS
+
+(function() {
+  console.log("Hola");
+})();
+
+🧠 Se ejecutan automáticamente al crearse.
+
+--------------------------------
+
+📗 TIPOS DE FUNCIONES
+
+✔ Con nombre
+✔ Anónimas
+✔ Flecha
+✔ Con parámetros
+✔ Con return
+✔ Sin return
+
+--------------------------------
+
+📗 REGLA RÁPIDA 🧠
+
+👉 function = bloque reutilizable  
+👉 parámetros = entrada de datos  
+👉 return = salida de datos  
+👉 arrow function = versión corta moderna

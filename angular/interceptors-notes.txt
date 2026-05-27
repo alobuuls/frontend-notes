@@ -1,0 +1,163 @@
+//📘 INTERCEPTORS EN ANGULAR (HTTP)
+
+    🧠 Un interceptor es una clase que permite interceptar y modificar TODAS las peticiones HTTP
+
+    👉 Antes de que salgan (request)
+    👉 O cuando regresan (response)
+
+    📘 🟢 ¿PARA QUÉ SIRVEN?
+
+        🧠 Usos principales:
+
+        ✔ Agregar headers (tokens, API keys)  
+        ✔ Manejar errores globales  
+        ✔ Mostrar loaders  
+        ✔ Loggear requests/responses  
+
+        ✨ TIP
+        🧠 Son como "middleware" para las peticiones HTTP
+
+    📘 🔵 CREAR UN INTERCEPTOR
+
+        🧠 Implementa la interfaz HttpInterceptor
+
+        💡 Ejemplo
+
+            import { Injectable } from '@angular/core';
+            import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
+            import { Observable } from 'rxjs';
+
+            @Injectable()
+            export class HeaderInterceptor implements HttpInterceptor {
+
+              intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+
+                const cloneReq = req.clone({
+                  setHeaders: {
+                    Authorization: 'Bearer TOKEN'
+                  }
+                });
+
+                return next.handle(cloneReq);
+              }
+            }
+
+    📘 🟣 ¿CÓMO FUNCIONA?
+
+        🧠 Flujo:
+
+        👉 Request → Interceptor → Servidor → Interceptor → Response → App
+
+        👉 Puedes modificar entrada y salida
+
+    📘 🟡 REGLAS IMPORTANTES
+
+        ⚠️ Las requests son inmutables
+        👉 Debes usar clone()
+
+        ⚠️ Siempre retornar:
+            return next.handle(req);
+
+        👉 Si no lo haces, la petición se rompe
+
+    📘 🟠 FILTRAR REQUESTS
+
+        🧠 Aplicar interceptor solo a ciertas URLs
+
+        💡 Ejemplo
+
+            if (!req.url.includes('api.miapi.com')) {
+              return next.handle(req);
+            }
+
+    📘 🔴 REGISTRAR INTERCEPTOR
+
+        🧠 Se agrega en providers
+
+        💡 Ejemplo
+
+            import { HTTP_INTERCEPTORS } from '@angular/common/http';
+
+            providers: [
+              {
+                provide: HTTP_INTERCEPTORS,
+                useClass: HeaderInterceptor,
+                multi: true
+              }
+            ]
+
+        👉 multi: true permite múltiples interceptores
+
+    📘 ⚫ EJEMPLO REAL (API KEY)
+
+        💡 Ejemplo
+
+            const cloneReq = req.clone({
+              setHeaders: {
+                Authorization: `Client-ID ${environment.apiKey}`
+              }
+            });
+
+    📘 ⚪ LEER HEADERS
+
+        💡 Ejemplo
+
+            req.headers.keys().forEach(key => {
+              console.log(key, req.headers.get(key));
+            });
+
+    📘 🟤 INTERCEPTAR RESPUESTA
+
+        🧠 Usando RxJS
+
+        💡 Ejemplo
+
+            import { tap } from 'rxjs/operators';
+            import { HttpResponse } from '@angular/common/http';
+
+            return next.handle(req).pipe(
+              tap(event => {
+                if (event instanceof HttpResponse) {
+                  console.log(event.body);
+                }
+              })
+            );
+
+    📘 🟢 MANEJO DE ERRORES
+
+        💡 Ejemplo
+
+            import { catchError } from 'rxjs/operators';
+            import { throwError } from 'rxjs';
+
+            return next.handle(req).pipe(
+              catchError(err => {
+                console.error(err);
+                return throwError(() => err);
+              })
+            );
+
+    📘 🔵 USOS COMUNES
+
+        👉 Auth (JWT / API Key)  
+        👉 Logs  
+        👉 Loader global  
+        👉 Manejo de errores  
+        👉 Headers personalizados  
+
+    ⚠️ COSAS IMPORTANTES
+
+        🧠 Intercepta TODAS las requests
+        🧠 Usa clone() para modificar
+        🧠 Usa next.handle() para continuar
+        🧠 Puede modificar request y response
+
+    ✨ RESUMEN
+
+        🧠 Interceptors = control global de HTTP
+
+        👉 Interceptan peticiones y respuestas
+        👉 Permiten modificar headers
+        👉 Manejan errores globales
+
+        👉 Son clave para apps profesionales en Angular 🚀

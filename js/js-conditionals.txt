@@ -1,0 +1,117 @@
+// 📘 CONDICIONALES EN JAVASCRIPT //
+
+    🧠 Los condicionales permiten ejecutar código
+    dependiendo de si una condición es true o false.
+
+    📘 IF
+    🧠 Ejecuta el código si la condición es true.
+      💡 Ejemplo → Se ejecuta
+      let edad = 18;
+
+      if (edad >= 18) {
+      }                        
+
+    📘 IF / ELSE // → ELSE NUNCA LLEVA CONDICION
+    🧠 else se ejecuta cuando la condición es false.
+
+      💡 Ejemplo → No se ejecuta
+        let edad = 16;
+
+        if (edad >= 18) {
+        } else {
+        }
+
+    📘 ELSE IF ( “si no, entonces si…”)
+    🧠 Permite evaluar varias condiciones. (siempre va despues de if)
+
+      💡 Ejemplo
+        let nota = 8;
+
+        if (nota >= 9) {
+        } else if (nota >= 6) {
+        } else {
+        }
+
+    📘 CONDICIONES CON OPERADORES LÓGICOS
+    🧠 Se pueden combinar condiciones usando && y ||.
+
+      💡 Ejemplo → Se ejecuta
+        let edad = 20;
+        let tieneID = true;
+
+        if (edad >= 18 && tieneID) {
+        }
+
+    📘 TRUTHY Y FALSY EN CONDICIONALES
+    🧠 JavaScript evalúa valores no booleanos como true o false.
+
+      💡 Ejemplo → no se ejecuta (string vacío es falsy)
+        let nombre = "";
+
+        if (nombre) {
+        }
+
+    📘 TERNARIO (CONDICIONAL CORTO)
+    🧠 Versión corta del if / else.
+
+      💡 Ejemplo
+        let edad = 18;
+
+        let mensaje = edad >= 18
+          ? "Mayor de edad"
+          : "Menor de edad";
+
+
+          
+//📘 SWITCH / CASE
+
+    🧠 Se usa para ejecutar diferentes bloques de código
+    según el valor de una expresión.
+    Es una alternativa más clara que muchos if / else if.
+    --------------------------------
+
+    📗 switch(valor)
+    🧠 Compara el valor con cada case usando ===
+
+    📌 Estructura básica:
+
+    switch (expresion) {
+      case valor1:
+        // código
+        break;
+
+      case valor2:
+        // código
+        break;
+
+      default:
+        // código si ningún case coincide
+    }
+    --------------------------------
+
+    ✨ Ejemplo:
+
+    const color = 'rojo';
+
+    switch (color) {
+      case 'azul':
+        console.log('El color es azul');
+        break;
+
+      case 'rojo':
+        console.log('El color es rojo');
+        break;
+
+      case 'verde':
+        console.log('El color es verde');
+        break;
+
+      default:
+        console.log('Color no reconocido');
+    }
+    --------------------------------
+
+    ⚠️ IMPORTANTE:
+    • break evita que siga ejecutando los otros cases
+    • default es opcional, pero recomendado
+    • Usa === (comparación estricta)

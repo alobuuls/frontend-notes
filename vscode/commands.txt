@@ -1,0 +1,113 @@
+//📘 KEYBOARD SHORTCUTS (ATAJOS DE TECLADO 🔥)
+
+//🧠 Atajos esenciales para Windows, Chrome y VSCode
+//👉 Mejoran la velocidad de trabajo y productividad
+
+//====================================================
+//📘 🟢 WINDOWS
+//====================================================
+
+🧠 Atajos del sistema operativo
+
+👉 shift + alt → cambiar idioma del teclado
+👉 alt + tab → cambiar entre programas
+👉 ctrl + tab → siguiente pestaña
+👉 ctrl + shift + tab → pestaña anterior
+
+
+//====================================================
+//📘 🔵 GOOGLE CHROME
+//====================================================
+
+🧠 Atajos del navegador
+
+👉 ctrl + T → nueva pestaña
+👉 ctrl + N → nueva ventana
+👉 ctrl + W → cerrar pestaña actual
+👉 ctrl + shift + T → reabrir última pestaña cerrada
+
+
+//====================================================
+//📘 🟣 VS CODE (EDITOR)
+//====================================================
+
+🧠 Atajos para programar más rápido
+
+//----------------------------------------------------
+//📌 EDICIÓN DE CÓDIGO
+//----------------------------------------------------
+
+👉 alt + ↑ / ↓ → mover línea arriba o abajo
+👉 ctrl + L → seleccionar línea actual
+👉 ctrl + shift + K → eliminar línea
+👉 ctrl + K + C → comentar línea
+👉 ctrl + K + U → descomentar línea
+👉 ctrl + D → seleccionar siguiente coincidencia
+👉 ctrl + shift + L → seleccionar todas las coincidencias
+
+//----------------------------------------------------
+//📌 NAVEGACIÓN
+//----------------------------------------------------
+
+👉 ctrl + B → abrir/cerrar barra lateral
+👉 ctrl + J → abrir/cerrar terminal
+👉 ctrl + P → buscar archivo
+👉 ctrl + G → ir a una línea específica
+
+//----------------------------------------------------
+//📌 BÚSQUEDA
+//----------------------------------------------------
+
+👉 ctrl + F → buscar en archivo actual
+👉 ctrl + shift + F → buscar en todo el proyecto
+👉 ctrl + H → buscar y reemplazar
+
+//----------------------------------------------------
+//📌 SCROLL Y MOVIMIENTO
+//----------------------------------------------------
+
+👉 ctrl + ↑ / ↓ → scrollear línea
+👉 ctrl + shift + ↑ / ↓ → seleccionar líneas
+
+//----------------------------------------------------
+//📌 DUPLICAR LÍNEAS
+//----------------------------------------------------
+
+👉 alt + shift + ↑ → duplicar línea arriba
+👉 alt + shift + ↓ → duplicar línea abajo
+
+//----------------------------------------------------
+//📌 SELECCIÓN AVANZADA
+//----------------------------------------------------
+
+👉 ctrl + shift + ← / → → seleccionar palabra por palabra
+👉 alt + shift + ← / → → expandir selección
+👉 ctrl + alt + shift + ← / → → selección múltiple avanzada
+
+
+//====================================================
+//📘 ⚠️ CONSEJOS IMPORTANTES
+//====================================================
+
+🧠 No intentes aprender todos de golpe
+👉 Empieza con los básicos:
+    - copiar línea
+    - mover línea
+    - buscar (ctrl + F)
+    - terminal (ctrl + J)
+
+🧠 Los atajos aumentan MUCHO la velocidad de programación
+
+//====================================================
+//✨ RESUMEN
+//====================================================
+
+👉 Windows → cambiar apps y idioma
+👉 Chrome → pestañas y navegación
+👉 VSCode → edición, búsqueda y productividad
+
+🚀 DOMINAR ESTO = PROGRAMAR MÁS RÁPIDO Y PROFESIONAL
+
+
+
+

@@ -1,0 +1,1319 @@
+// 🟦 QUE ES TYPESCRIPT
+
+    📖 Qué es  
+    TypeScript es un lenguaje de programación creado por Microsoft que extiende a JavaScript añadiendo tipado estático y herramientas para escribir código más seguro y mantenible.
+
+    En realidad, TypeScript no reemplaza JavaScript, sino que lo mejora.
+
+    🧠 Idea clave  
+    TypeScript es un superset de JavaScript, lo que significa que:
+
+    - Todo JavaScript válido funciona en TypeScript
+    - TypeScript agrega tipos y verificación de errores
+    - El código TypeScript se compila a JavaScript
+
+    El navegador no entiende TypeScript, por eso primero debe convertirse a JavaScript.
+
+    💻 Ejemplo
+
+    JavaScript:
+
+    function saludar(nombre) {
+      return "Hola " + nombre;
+    }
+
+    saludar(5);
+
+
+    TypeScript:
+
+    function saludar(nombre: string): string {
+      return "Hola " + nombre;
+    }
+
+    saludar(5); // Error
+
+    TypeScript detecta el error antes de ejecutar el programa.
+
+    ⚠️ Cosas importantes
+
+    • TypeScript no se ejecuta directamente en el navegador  
+    • Primero se compila a JavaScript  
+    • Ayuda a detectar errores antes de correr el código  
+    • Es muy usado en proyectos grandes y aplicaciones modernas
+
+    ✨ Tip
+
+    Si ya sabes JavaScript, aprender TypeScript es mucho más fácil, porque en realidad seguirás escribiendo JavaScript, pero con tipos.
+
+// 🟦 DIFERENCIA ENTRE TYPESCRIPT Y JAVASCRIPT
+
+    📖 Qué es  
+    JavaScript es un lenguaje de programación interpretado que se ejecuta directamente en el navegador o en entornos como Node.js.
+
+    TypeScript es una extensión de JavaScript que agrega tipado estático y otras herramientas para mejorar la calidad del código.
+
+    🧠 Idea clave  
+    La principal diferencia es que TypeScript permite definir tipos de datos, mientras que JavaScript no lo hace de forma estricta.
+
+    Esto permite detectar errores antes de ejecutar el programa.
+
+    💻 Ejemplo
+
+    JavaScript:
+
+    function sumar(a, b) {
+      return a + b;
+    }
+
+    sumar(10, "5"); // Puede generar un resultado inesperado
+
+
+    TypeScript:
+
+    function sumar(a: number, b: number): number {
+      return a + b;
+    }
+
+    sumar(10, "5"); // Error detectado antes de ejecutar
+
+
+    ⚠️ Cosas importantes
+
+    • JavaScript se ejecuta directamente en el navegador  
+    • TypeScript necesita compilarse a JavaScript  
+    • TypeScript agrega tipado estático  
+    • TypeScript ayuda a detectar errores en desarrollo  
+    • Todo código JavaScript válido funciona en TypeScript
+
+
+    ✨ Tip
+
+    TypeScript no reemplaza a JavaScript, sino que lo mejora.  
+    Al final, todo código TypeScript se convierte en JavaScript para poder ejecutarse.
+
+// 🟦 QUÉ ES EL TIPADO ESTÁTICO
+
+    📖 Qué es  
+    El tipado estático es una característica de algunos lenguajes de programación donde el tipo de las variables se define y se verifica antes de ejecutar el programa.
+
+    Esto permite que el sistema detecte errores de tipo durante el desarrollo.
+
+    🧠 Idea clave  
+    Con tipado estático, cada variable tiene un tipo definido (por ejemplo: number, string, boolean).
+
+    El compilador revisa que los valores usados en el código coincidan con esos tipos antes de ejecutar el programa.
+
+    💻 Ejemplo
+
+    JavaScript:
+
+    let edad = 25;
+    edad = "veinticinco"; // permitido
+
+
+    TypeScript:
+
+    let edad: number = 25;
+    edad = "veinticinco"; // Error
+
+
+    ⚠️ Cosas importantes
+
+    • Los tipos se verifican antes de ejecutar el código  
+    • Ayuda a prevenir errores comunes  
+    • Hace el código más claro y fácil de mantener  
+    • Es una de las principales características de TypeScript  
+
+
+    ✨ Tip
+
+    Aunque TypeScript usa tipado estático, aún permite cierta flexibilidad gracias a la inferencia de tipos.
+
+🟦 VENTAJAS EN PROYECTOS GRANDES
+
+    📖 Qué es  
+    TypeScript es especialmente útil en proyectos grandes porque ayuda a organizar mejor el código y a detectar errores antes de que el programa se ejecute.
+
+    Cuando un proyecto crece y tiene muchos archivos, funciones y desarrolladores, mantener el código puede volverse difícil sin un sistema de tipos.
+
+    🧠 Idea clave  
+    El tipado permite entender rápidamente qué tipo de datos usa cada variable, función o clase.
+
+    Esto reduce errores y facilita que varias personas trabajen en el mismo proyecto.
+
+    💻 Ejemplo
+
+    TypeScript:
+
+    function calcularTotal(precio: number, cantidad: number): number {
+      return precio * cantidad;
+    }
+
+    calcularTotal(20, 3); // correcto
+    calcularTotal(20, "3"); // Error
+
+
+    ⚠️ Cosas importantes
+
+    • Detecta errores antes de ejecutar el programa  
+    • Hace el código más fácil de mantener  
+    • Mejora el autocompletado en los editores  
+    • Facilita trabajar en equipo  
+    • Hace el código más predecible
+
+
+    ✨ Tip
+
+    En proyectos grandes es común que el código tenga cientos o miles de archivos.  
+    TypeScript ayuda a que todo siga siendo claro y organizado.
+
+//🟦 CÓMO COMPILA TYPESCRIPT A JAVASCRIPT
+
+    📖 Qué es  
+    TypeScript no se ejecuta directamente en el navegador. Antes de ejecutarse, el código TypeScript debe convertirse a JavaScript.
+
+    Este proceso se llama compilación.
+
+    🧠 Idea clave  
+    El compilador de TypeScript analiza el código, revisa los tipos y luego genera una versión equivalente en JavaScript que sí puede ejecutarse en el navegador o en Node.js.
+
+    💻 Ejemplo
+
+    TypeScript:
+
+    function saludar(nombre: string): string {
+      return "Hola " + nombre;
+    }
+
+
+    JavaScript generado:
+
+    function saludar(nombre) {
+      return "Hola " + nombre;
+    }
+
+
+    ⚠️ Cosas importantes
+
+    • El navegador no entiende TypeScript  
+    • TypeScript siempre se convierte a JavaScript  
+    • El compilador elimina los tipos al generar el JavaScript  
+    • El proceso se hace usando el compilador llamado tsc  
+
+
+    ✨ Tip
+
+    Durante la compilación, TypeScript revisa errores en los tipos.  
+    Si encuentra un problema, mostrará un error antes de generar el JavaScript.
+
+
+// 🟦 INSTALAR TYPESCRIPT
+
+    📖 Qué es  
+    Para poder usar TypeScript en tu computadora necesitas instalar su compilador.
+
+    La forma más común es instalarlo usando npm (Node Package Manager), que viene incluido cuando instalas Node.js.
+
+    🧠 Idea clave  
+    Al instalar TypeScript se instala también el comando tsc, que es el compilador encargado de convertir el código TypeScript a JavaScript.
+
+    💻 Ejemplo
+
+    Instalar TypeScript globalmente:
+
+    npm install -g typescript
+
+    Verificar la instalación:
+
+    tsc -v
+
+
+    ⚠️ Cosas importantes
+
+    • npm es el gestor de paquetes de Node.js  
+    • La opción -g instala TypeScript de forma global en tu sistema  
+    • Después de instalarlo podrás usar el comando tsc desde la terminal  
+    • El compilador se encargará de convertir archivos .ts a .js  
+
+
+    ✨ Tip
+
+    Después de instalar TypeScript es buena práctica verificar la instalación usando:
+
+
+// 🟦 USAR EL COMPILADOR TSC
+
+    📖 Qué es  
+    tsc es el compilador de TypeScript. Su función es revisar el código TypeScript y convertirlo en JavaScript.
+
+    Durante este proceso también detecta errores de tipos en el código.
+
+    🧠 Idea clave  
+    Cuando ejecutas tsc desde la terminal, el compilador analiza tus archivos .ts y genera archivos .js equivalentes que pueden ejecutarse en el navegador o en Node.js.
+
+    💻 Ejemplo
+
+    Compilar un archivo TypeScript:
+
+    tsc archivo.ts
+
+    Esto generará automáticamente:
+
+    archivo.js
+
+
+    ⚠️ Cosas importantes
+
+    • tsc convierte archivos .ts a .js  
+    • También revisa errores en los tipos  
+    • Puede compilar un archivo o todo un proyecto  
+    • Es la herramienta principal para trabajar con TypeScript  
+
+
+    💻 Comandos útiles
+
+    Comando                 Qué hace  
+    tsc archivo.ts          Compila un archivo TS  
+    tsc                     Compila todo el proyecto  
+    tsc --watch             Compila automáticamente al guardar  
+    tsc --noEmit            Solo revisa errores  
+
+
+    ✨ Tip
+
+    El modo --watch es muy usado en desarrollo porque recompila automáticamente cada vez que guardas un archivo.
+
+// 🟦 TIPOS BÁSICOS
+
+    🧠 Los tipos básicos permiten definir qué tipo de datos puede tener una variable o función.  
+    Esto ayuda a detectar errores antes de ejecutar el código y hace el código más claro y mantenible.
+
+    📘 TIPOS PRIMITIVOS
+    🧠 TypeScript tiene los siguientes tipos primitivos:
+
+      📗 string
+      🧠 Para texto.
+        💡 Ejemplo
+          let nombre: string = "Alo";
+
+      📗 number
+      🧠 Para números enteros o decimales.
+        💡 Ejemplo
+          let edad: number = 25;
+
+      📗 boolean
+      🧠 Para valores true o false.
+        💡 Ejemplo
+          let esEstudiante: boolean = true;
+
+      📗 null
+      🧠 Representa ausencia de valor.
+        💡 Ejemplo
+          let valorNulo: null = null;
+
+      📗 undefined
+      🧠 Valor no asignado.
+        💡 Ejemplo
+          let valorIndef: undefined = undefined;
+
+      📗 any
+      🧠 Puede ser cualquier tipo, menos seguro.
+        💡 Ejemplo
+          let cualquiera: any = "hola";
+          cualquiera = 123;
+
+      📗 unknown
+      🧠 Puede ser cualquier tipo, pero obliga a verificar antes de usar.
+        💡 Ejemplo
+          let desconocido: unknown = "texto";
+          if (typeof desconocido === "string") {
+            console.log(desconocido.toUpperCase());
+          }
+
+      📗 void
+      🧠 Función que no retorna ningún valor.
+        💡 Ejemplo
+          function saludar(): void {
+            console.log("Hola!");
+          }
+
+      📗 never
+      🧠 Función que nunca retorna (lanza error o loop infinito).
+        💡 Ejemplo
+          function errorCritico(): never {
+            throw new Error("¡Error crítico!");
+          }
+
+    ⚠️ COSAS IMPORTANTES
+    🧠 Evita usar `any` si puedes usar tipos más específicos.  
+    `unknown` es más seguro que `any` porque obliga a verificar el tipo antes de usarlo.  
+    `void` se usa en funciones que no retornan nada.  
+    `never` indica que la función nunca termina normalmente.
+
+    ✨ TIP
+    🧠 Define siempre los tipos básicos en tus variables y funciones.  
+    Esto hará que tus proyectos grandes sean más fáciles de mantener y menos propensos a errores.
+
+//📘 ARRAYS EN TYPESCRIPT
+
+    🧠 Un array es una colección de valores ordenados.  
+    En TypeScript podemos definir el tipo de datos que puede contener un array para mayor seguridad.
+
+    📘 SINTAXIS BÁSICA
+    🧠 Para declarar arrays de un solo tipo se usa:
+
+      📗 type[]
+      🧠 Array que solo contiene valores de un tipo específico.
+        💡 Ejemplo
+          let numeros: number[] = [1, 2, 3];
+          let nombres: string[] = ["Ana", "Luis", "María"];
+
+      📗 (type1 | type2)[]
+      🧠 Array que puede contener más de un tipo.
+        💡 Ejemplo
+          let mezcla: (number | string)[] = [1, "dos", 3, "cuatro"];
+
+      📗 {prop: tipo}[]
+      🧠 Array de objetos con propiedades tipadas.
+        💡 Ejemplo
+          let usuarios: {nombre: string, edad: number}[] = [
+            { nombre: "Ana", edad: 25 },
+            { nombre: "Luis", edad: 30 }
+          ];
+
+      📗 readonly type[]
+      🧠 Array que no se puede modificar después de su creación.
+        💡 Ejemplo
+          const colores: readonly string[] = ["rojo", "verde", "azul"];
+          // colores.push("amarillo") ❌ Error
+
+    ⚠️ COSAS IMPORTANTES
+    🧠 TypeScript verifica que los elementos añadidos al array coincidan con el tipo declarado.  
+    Usar `readonly` ayuda a prevenir modificaciones accidentales.  
+    Los arrays pueden combinarse con tuplas, interfaces o tipos personalizados para estructuras más complejas.
+
+    ✨ TIP
+    🧠 Siempre que puedas, define el tipo del array.  
+    Esto evita errores sutiles y hace que tu código sea más legible y seguro.
+
+//📘 OBJETOS EN TYPESCRIPT 
+
+    🧠 Un objeto es una estructura que agrupa valores (propiedades) bajo un mismo nombre.  
+    En TypeScript podemos tipar cada propiedad para mayor seguridad y claridad.
+
+    📘 OBJETO SIMPLE
+    🧠 Declarar un objeto con propiedades de tipos específicos.
+      💡 Sintaxis
+        {prop1: type1; prop2: type2}
+      💡 Ejemplo
+        let persona: {nombre: string; edad: number} = {nombre: "Alo", edad: 25};
+
+    📘 PROPIEDADES OPCIONALES
+    🧠 Una propiedad puede no estar definida inicialmente usando `?`.
+      💡 Sintaxis
+        prop?: type
+      💡 Ejemplo
+        let producto: {nombre: string; precio?: number} = {nombre: "Libro"};
+        producto.precio = 20;  // ✅ válido
+
+    📘 PROPIEDADES DE SOLO LECTURA
+    🧠 Una propiedad con `readonly` no puede modificarse después de asignarla.
+      💡 Sintaxis
+        readonly prop: type
+      💡 Ejemplo
+        let persona: {readonly id: number; nombre: string} = {id: 1, nombre: "Alo"};
+        // persona.id = 2 ❌ Error
+
+    📘 PROPIEDADES DINÁMICAS
+    🧠 Permiten agregar propiedades adicionales usando claves de tipo string.
+      💡 Sintaxis
+        [clave: string]: type
+      💡 Ejemplo
+        let dic: {[clave: string]: string} = {};
+        dic["nombre"] = "Alo";
+
+    📘 TIPOS PERSONALIZADOS
+    🧠 Puedes definir un tipo de objeto reutilizable con `type`.
+      💡 Sintaxis
+        type Nombre = {prop: type}
+      💡 Ejemplo
+        type Persona = {nombre: string; edad?: number};
+        let p: Persona = {nombre: "Alo"};
+
+    ⚠️ COSAS IMPORTANTES
+    🧠 Tipar objetos permite:
+      • Evitar errores al acceder a propiedades inexistentes  
+      • Mejor autocompletado en el editor  
+      • Claridad al trabajar en equipo  
+
+    ✨ TIP
+    🧠 Siempre que uses objetos grandes o reutilizables, crea un **tipo personalizado** o **interfaz** para mantener tu código limpio y seguro.
+
+//📘 TIPOS PERSONALIZADOS EN TYPESCRIPT
+
+    🧠 Los tipos personalizados permiten definir estructuras de datos reutilizables.  
+    Podemos usar `type` o `interface` para crear alias, definir objetos o combinarlos.
+
+    📘 TYPE ALIAS
+    🧠 Permite crear un nombre para un tipo, puede ser primitivo, unión u objeto.
+      💡 Sintaxis
+        type Nombre = tipo
+      💡 Ejemplo
+        type ID = string | number;
+        let x: ID = 123;
+        let y: ID = "abc";
+      🧠 Nota
+        Alias flexible, puede ser unión, primitivo u objeto.
+
+    📘 INTERFACE BÁSICA
+    🧠 Define la forma de un objeto.
+      💡 Sintaxis
+        interface Nombre { prop: tipo }
+      💡 Ejemplo
+        interface Persona { id: ID; nombre: string; edad?: number }
+      🧠 Nota
+        Define claramente qué propiedades tiene el objeto.
+
+    📘 INTERFACE EXTENDIDA
+    🧠 Permite heredar propiedades de otra interface.
+      💡 Sintaxis
+        interface Hija extends Madre { propExtra: tipo }
+      💡 Ejemplo
+        interface Empleado extends Persona { puesto: string }
+      🧠 Nota
+        Facilita reutilizar y ampliar tipos de objetos.
+
+    📘 REUTILIZAR TYPE
+    🧠 Un type alias se puede usar en cualquier variable.
+      💡 Ejemplo
+        let idUsuario: ID = 5;
+        let idProducto: ID = "abc";
+
+    📘 REUTILIZAR INTERFACE
+    🧠 Una interface se puede usar en múltiples objetos.
+      💡 Ejemplo
+        let empleado: Empleado = { id: 1, nombre: "Alo", puesto: "Dev" };
+
+    📘 PROPIEDADES OPCIONALES
+    🧠 Una propiedad opcional puede o no existir.
+      💡 Sintaxis
+        prop?: tipo
+      💡 Ejemplo
+        edad?: number;
+
+    📘 PROPIEDADES DE SOLO LECTURA
+    🧠 Una propiedad `readonly` no puede modificarse después de asignarla.
+      💡 Sintaxis
+        readonly prop: tipo
+      💡 Ejemplo
+        readonly id: number;
+
+    📘 COMBINAR TYPE + INTERFACE
+    🧠 Puedes usar type alias para tipos dinámicos e interfaces para objetos.
+      💡 Ejemplo
+        type ID = string | number;
+        interface Persona { id: ID; nombre: string; edad?: number }
+      🧠 Nota
+        ✅ Útil para IDs dinámicos, unión de tipos o valores
+
+    ⚠️ COSAS IMPORTANTES
+    🧠 - `type` es más flexible, pero no puede ser extendido como interface  
+       - `interface` es ideal para objetos y herencia  
+       - Ambos pueden coexistir y combinarse según la necesidad  
+
+    ✨ TIP
+    🧠 Usa `type` para tipos primitivos, uniones o alias complejos y `interface` para objetos reutilizables y estructuras claras.  
+    Esto hará tu código más legible y escalable.
+
+
+//📘 FUNCIONES TIPADAS EN TYPESCRIPT
+
+    🧠 En TypeScript, las funciones pueden tener tipos en los parámetros y en el valor de retorno.  
+    Esto permite detectar errores y mejorar la autocompletación en el editor.
+
+    📘 FUNCIÓN NORMAL CON PARÁMETROS TIPADOS Y RETORNO
+    🧠 Sintaxis básica para declarar tipos en parámetros y retorno.
+      💡 Sintaxis
+        function nombre(param: tipo): tipo { ... }
+      💡 Ejemplo
+        function sumar(a: number, b: number): number {
+          return a + b;
+        }
+
+    📘 FUNCIÓN FLECHA CON PARÁMETROS TIPADOS Y RETORNO
+    🧠 Las funciones flecha también pueden ser tipadas.
+      💡 Sintaxis
+        const nombre = (param: tipo): tipo => { ... }
+      💡 Ejemplo
+        const multiplicar = (x: number, y: number): number => x * y;
+
+    📘 PARÁMETRO OPCIONAL
+    🧠 Un parámetro puede ser opcional usando `?`.
+      💡 Sintaxis
+        param?: tipo
+      💡 Ejemplo
+        function saludar(nombre?: string): string {
+          return `Hola ${nombre ?? "amigo"}`;
+        }
+
+    📘 VALOR POR DEFECTO EN PARÁMETRO
+    🧠 Puedes asignar un valor por defecto si no se pasa el argumento.
+      💡 Sintaxis
+        param: tipo = valor
+      💡 Ejemplo
+        function saludar(nombre: string = "amigo"): string {
+          return `Hola ${nombre}`;
+        }
+
+    📘 COMBINACIÓN OPCIONAL + DEFAULT
+    🧠 Usualmente se usa solo default, pero también se pueden combinar.
+      💡 Ejemplo
+        function presentarse(nombre: string = "desconocido", edad?: number): string {
+          return `Hola ${nombre}, edad: ${edad ?? "no especificada"}`;
+        }
+
+    📘 USO DE TIPOS PERSONALIZADOS EN PARÁMETROS
+    🧠 Puedes pasar objetos o tipos personalizados como parámetro.
+      💡 Sintaxis
+        (p: TypeName)
+      💡 Ejemplo
+        function saludarPersona(p: Persona): string {
+          return `Hola ${p.nombre}`;
+        }
+
+    📘 FUNCIÓN FLECHA CON TIPO PERSONALIZADO
+    🧠 Lo mismo para funciones flecha.
+      💡 Sintaxis
+        (p: TypeName): tipo => { ... }
+      💡 Ejemplo
+        const saludarPersonaFlecha = (p: Persona = { nombre: "amigo" }): string => {
+          return `Hola ${p.nombre}`;
+        }
+
+    ⚠️ COSAS IMPORTANTES
+    🧠 Siempre define los tipos de los parámetros y del retorno.  
+    Evita usar `any` para mantener la seguridad de tipos.  
+    Los parámetros opcionales deben ir al final de la lista.  
+    Los valores por defecto se ejecutan si no se pasa el argumento.
+
+    ✨ TIP
+    🧠 Tipar funciones hace tu código más predecible y ayuda a detectar errores antes de ejecutar.
+
+//📘 UNION TYPES Y TYPE NARROWING EN TYPESCRIPT
+
+    🧠 Union types permiten que una variable pueda tener **más de un tipo de dato**.  
+    Esto es muy útil cuando trabajas con APIs o datos que pueden cambiar de tipo.
+
+    📘 UNION TYPES
+    🧠 Sintaxis para declarar varios tipos posibles.
+      💡 Sintaxis
+        let variable: tipo1 | tipo2;
+      💡 Ejemplo
+        let id: string | number;
+        id = 123;       // ✅ válido
+        id = "abc";     // ✅ válido
+        // id = true;   ❌ Error
+
+    🧠 Muy usado en APIs donde un valor puede ser string o number, por ejemplo IDs.
+
+    📘 TYPE NARROWING
+    🧠 TypeScript puede **detectar automáticamente** qué tipo tiene una variable dentro de un bloque condicional.  
+    Esto se llama type narrowing y permite usar métodos o propiedades correctas según el tipo.
+
+      💡 Ejemplo
+        if (typeof id === "string") {
+          console.log(id.toUpperCase()); // ✅ id tratado como string
+        } else {
+          console.log(id + 1);           // ✅ id tratado como number
+        }
+
+    📘 CUÁNDO USAR CADA TÉCNICA DE NARROWING
+      💡 Sintaxis y ejemplos
+
+        Narrowing      | Cuándo usar                        | Ejemplo
+        -------------- | ---------------------------------- | ------------------------
+        `typeof`       | Tipos primitivos                   | `typeof x === "string"`
+        `instanceof`   | Clases                             | `obj instanceof MiClase`
+        `in`           | Propiedades únicas de objetos      | `"propiedad" in obj`
+        `String()`     | Para imprimir cualquier union type | `${String(valor)}`
+
+    ⚠️ COSAS IMPORTANTES
+    🧠 Union types te permiten escribir código más flexible y seguro.  
+    Type narrowing garantiza que accedas a métodos y propiedades solo cuando el tipo sea correcto.  
+    Siempre combina union types con narrowing para evitar errores en tiempo de ejecución.
+
+    ✨ TIP
+    🧠 Usa `typeof` para tipos primitivos, `instanceof` para clases, `in` para propiedades de objetos y `String()` para mostrar cualquier valor de un union type.
+
+//📘 TUPLAS EN TYPESCRIPT
+
+    🧠 Una tupla es un tipo especial de array donde **el número de elementos y su tipo están definidos y en un orden específico**.
+
+    🧠 A diferencia de un array normal, cada posición tiene un tipo concreto.
+
+    📘 SINTAXIS BÁSICA
+    🧠 Se define usando corchetes con los tipos en orden.
+
+      💡 Sintaxis
+        let variable: [tipo1, tipo2, tipo3];
+
+      💡 Ejemplo
+        let persona: [string, number] = ["Alo", 25];
+
+    🧠 Aquí:
+      • posición 0 → string  
+      • posición 1 → number
+
+    📘 ACCEDER A LOS VALORES
+    🧠 Los valores se acceden por índice como en un array.
+
+      💡 Ejemplo
+        let usuario: [string, number] = ["Ana", 30];
+
+        console.log(usuario[0]); // "Ana"
+        console.log(usuario[1]); // 30
+
+    📘 TUPLAS CON MÁS TIPOS
+    🧠 Puedes definir múltiples tipos en el orden que necesites.
+
+      💡 Ejemplo
+        let producto: [number, string, boolean] = [1, "Laptop", true];
+
+    📘 TUPLAS CON ELEMENTOS OPCIONALES
+    🧠 Algunas posiciones pueden ser opcionales usando `?`.
+
+      💡 Ejemplo
+        let usuario: [string, number?];
+
+        usuario = ["Alo"];
+        usuario = ["Alo", 25];
+
+    📘 TUPLAS CON REST (...)
+    🧠 Puedes permitir múltiples valores del mismo tipo después de una posición.
+
+      💡 Ejemplo
+        let datos: [string, ...number[]];
+
+        datos = ["puntos", 10, 20, 30];
+
+    📘 TUPLAS DE SOLO LECTURA
+    🧠 Puedes evitar modificaciones usando `readonly`.
+
+      💡 Ejemplo
+        const coordenada: readonly [number, number] = [10, 20];
+
+        // coordenada[0] = 15 ❌ Error
+
+    📘 USO COMÚN DE TUPLAS
+    🧠 Las tuplas se usan cuando **la posición de los datos es importante**.
+
+      💡 Ejemplo típico
+        let coordenada: [number, number] = [40.7128, -74.0060];
+
+      🧠 También se usan en retornos de funciones.
+
+      💡 Ejemplo
+        function obtenerUsuario(): [number, string] {
+          return [1, "Alo"];
+        }
+
+    ⚠️ COSAS IMPORTANTES
+    🧠 Las tuplas tienen **orden y longitud definidos**.  
+    Cada posición tiene un tipo específico.  
+    Son útiles cuando quieres representar datos estructurados simples.  
+    Se parecen a los arrays pero con tipos más estrictos.
+
+    ✨ TIP
+    🧠 Usa tuplas cuando el **orden de los datos tenga significado**, como coordenadas, pares clave-valor o resultados de funciones.
+
+//📘 TYPE GUARDS EN TYPESCRIPT
+
+    🧠 Los Type Guards son técnicas para **verificar o asegurar el tipo de una variable** antes de usarla.  
+    Esto ayuda a evitar errores en tiempo de ejecución y mejora la seguridad de tipos.
+
+    📘 `is` → VERIFICAR EL TIPO (SEGURO)
+    🧠 Permite comprobar el tipo de una variable antes de usarla.  
+    Funciona como una **verificación real**, no fuerza nada.
+
+      💡 Sintaxis
+        function esString(valor: any): valor is string {
+          return typeof valor === "string";
+        }
+
+      💡 Ejemplo
+        let dato: string | number = "Hola";
+
+        if (esString(dato)) {
+          console.log(dato.toUpperCase()); // ✅ seguro, dato es string
+        } else {
+          console.log(dato + 1);           // ✅ seguro, dato es number
+        }
+
+    📘 `as` → FORZAR EL TIPO (PELIGROSO SI NO ESTÁS SEGURO)
+    🧠 Convierte una variable a un tipo, **sin verificarlo**.  
+    ⚠️ Solo usar cuando estás 100% seguro del tipo.
+
+      💡 Sintaxis
+        let elemento = document.getElementById("input") as HTMLInputElement;
+
+      💡 Ejemplo
+        const input = document.getElementById("nombre") as HTMLInputElement;
+        console.log(input.value); // ✅ funciona si el elemento existe y es input
+        // ❌ si el elemento no es input, puede causar error en tiempo de ejecución
+
+    📘 USO RECOMENDADO
+    🧠 Cuándo usar cada uno:
+
+      • `as` → cuando estás **100% seguro del tipo**  
+        💡 Ejemplo: elementos HTML, resultados de APIs conocidas  
+
+      • `is` / Type Guard → cuando **no estás seguro del tipo**  
+        💡 Ejemplo: variables de union types, datos dinámicos, resultados de APIs
+
+    📘 COMBINANDO CON UNION TYPES
+    🧠 Type Guards son muy útiles cuando trabajas con union types.
+
+      💡 Ejemplo
+        function procesar(id: string | number) {
+          if (typeof id === "string") {
+            console.log(id.toUpperCase());
+          } else {
+            console.log(id + 1);
+          }
+        }
+
+    ⚠️ COSAS IMPORTANTES
+    🧠 `as` **no valida**, simplemente fuerza el tipo → usar con precaución.  
+    `is` o type guards **verifican**, lo que garantiza seguridad.  
+    Siempre que no estés 100% seguro del tipo, prefiere `is` o checks con `typeof` / `instanceof`.
+
+    ✨ TIP
+    🧠 Combina union types + type guards para escribir código flexible y seguro, y usa `as` solo en casos controlados.
+
+//📘 MODIFICADORES DE ACCESO EN TYPESCRIPT
+
+    🧠 En TypeScript podemos controlar quién puede acceder a las propiedades y métodos de una clase usando **modificadores de acceso**: `public`, `private` y `protected`.  
+    Esto ayuda a **encapsular datos** y evitar que se usen de manera incorrecta.
+
+    📘 TIPOS DE MODIFICADORES
+      💡 Tabla de acceso
+
+        Modificador   | Acceso desde fuera | Acceso desde clase hija
+        ------------- | ----------------- | ---------------------
+        public        | ✅                 | ✅
+        private       | ❌                 | ❌
+        protected     | ❌                 | ✅
+
+    📘 PUBLIC
+    🧠 Acceso libre desde cualquier lugar.
+      💡 Ejemplo
+        class Persona {
+          public nombre: string;
+          constructor(nombre: string) {
+            this.nombre = nombre;
+          }
+        }
+
+        const p = new Persona("Alo");
+        console.log(p.nombre); // ✅ funciona desde fuera
+
+    📘 PRIVATE
+    🧠 Solo accesible dentro de la clase donde se declara.  
+    ⚠️ En TypeScript esto es **solo en compilación**, no en runtime real.
+      💡 Ejemplo
+        class Persona {
+          private edad: number;
+          constructor(edad: number) {
+            this.edad = edad;
+          }
+          mostrarEdad() {
+            console.log(this.edad); // ✅ accesible dentro de la clase
+          }
+        }
+
+        const p = new Persona(25);
+        // console.log(p.edad); ❌ Error, private
+
+    📘 PROTECTED
+    🧠 Accesible dentro de la clase y sus subclases (hijas).
+      💡 Ejemplo
+        class Persona {
+          protected nombre: string;
+          constructor(nombre: string) {
+            this.nombre = nombre;
+          }
+        }
+
+        class Empleado extends Persona {
+          mostrarNombre() {
+            console.log(this.nombre); // ✅ accesible en subclase
+          }
+        }
+
+        const e = new Empleado("Alo");
+        // console.log(e.nombre); ❌ Error, protected desde fuera
+
+    ⚠️ COSAS IMPORTANTES
+    🧠 - `private` → solo en la clase  
+    - `protected` → en la clase y subclases  
+    - `public` → acceso libre  
+    - En JavaScript (#) existe privacidad real en runtime  
+    - En TypeScript `private` y `protected` funcionan **solo en compilación**  
+
+    ✨ TIP
+    🧠 Usa `private` para datos que no deberían cambiarse fuera de la clase,  
+    `protected` para que las subclases puedan acceder y `public` para propiedades/métodos que deben ser accesibles desde cualquier lugar.
+
+//📘 CLASES, EXTENDS Y IMPLEMENTS EN TYPESCRIPT
+
+    🧠 Las clases en TypeScript permiten **crear objetos con propiedades y métodos**, siguiendo la programación orientada a objetos.  
+    Se pueden extender otras clases con `extends` o cumplir contratos con interfaces usando `implements`.
+
+    📘 EXTENDS
+    🧠 Permite **heredar propiedades y métodos** de otra clase (clase base).  
+    ⚠️ Solo se permite **una clase base**.
+
+      💡 Ejemplo
+        class Animal {
+          comer() {
+            console.log("Comiendo");
+          }
+        }
+
+        class Perro extends Animal {}
+
+        const p = new Perro();
+        p.comer(); // ✅ heredado de Animal
+
+    🧠 Beneficios de `extends`:
+      • Reutiliza código de la clase base  
+      • Permite especializar o añadir métodos/properties en la clase hija  
+
+    📘 IMPLEMENTS
+    🧠 Permite que una clase **cumpla con una interfaz (contrato)**.  
+    ⚠️ No hereda código, solo obliga a definir los métodos o propiedades indicados.  
+    🧠 Una clase puede implementar **varias interfaces**.
+
+      💡 Ejemplo
+        interface Volador {
+          volar(): void;
+        }
+
+        class Pajaro implements Volador {
+          volar() {
+            console.log("Volando");
+          }
+        }
+
+        const p = new Pajaro();
+        p.volar(); // ✅ cumple la interfaz
+
+    🧠 Beneficios de `implements`:
+      • Garantiza que la clase cumpla con un contrato  
+      • Ideal para definir estructuras comunes en varias clases  
+
+    ⚠️ COSAS IMPORTANTES
+    🧠 - `extends` → hereda **propiedades y métodos** de otra clase  
+    - `implements` → obliga a definir **métodos/properties de una interfaz**  
+    - Una clase puede **extender solo una clase**, pero **implementar varias interfaces**  
+    - Combinar `extends` + `implements` permite herencia de código y cumplimiento de contratos  
+
+    ✨ TIP
+    🧠 Usa `extends` para reutilizar código y `implements` para asegurar que tu clase cumpla un **contrato claro**, especialmente en proyectos grandes o APIs.
+
+//📘 LITERAL TYPES EN TYPESCRIPT
+
+    🧠 Los Literal Types permiten definir valores **exactos y específicos** como tipo.  
+    En lugar de permitir cualquier string o number, limitas la variable a valores concretos.
+
+    📘 LITERAL TYPES BÁSICOS
+    🧠 Puedes usar valores exactos como tipos.
+
+      💡 Ejemplo
+        let estado: "activo";
+        estado = "activo";   // ✅ válido
+        // estado = "inactivo"; ❌ Error
+
+    🧠 Aquí la variable solo puede tener **ese valor exacto**.
+
+    📘 COMBINAR CON UNION TYPES
+    🧠 Muy común usar literal types con union types para permitir varias opciones específicas.
+
+      💡 Ejemplo
+        let rol: "admin" | "user" | "guest";
+
+        rol = "admin";  // ✅
+        rol = "user";   // ✅
+        // rol = "superadmin"; ❌ Error
+
+    📘 USO EN OBJETOS
+    🧠 Puedes usar literal types dentro de objetos para restringir valores.
+
+      💡 Ejemplo
+        type Usuario = {
+          nombre: string;
+          rol: "admin" | "user";
+        };
+
+        const u: Usuario = {
+          nombre: "Alo",
+          rol: "admin"
+        };
+
+    📘 USO EN FUNCIONES
+    🧠 Permite controlar exactamente qué valores recibe una función.
+
+      💡 Ejemplo
+        function cambiarEstado(estado: "on" | "off"): void {
+          console.log(estado);
+        }
+
+        cambiarEstado("on");  // ✅
+        // cambiarEstado("idle"); ❌ Error
+
+    📘 CONST ASSERTIONS (as const)
+    🧠 Permite que los valores se mantengan como literal types en lugar de generalizarse.
+
+      💡 Ejemplo
+        const config = {
+          modo: "oscuro"
+        } as const;
+
+        // modo ahora es tipo "oscuro", no string
+
+    ⚠️ COSAS IMPORTANTES
+    🧠 Los literal types restringen valores a opciones específicas.  
+    Son muy usados junto con union types.  
+    Ayudan a evitar errores al usar valores incorrectos.  
+    Son clave para patrones como discriminated unions.
+
+    ✨ TIP
+    🧠 Usa literal types cuando tengas un conjunto fijo de opciones (roles, estados, tipos).  
+    Esto hace tu código más seguro y fácil de entender.
+
+//📘 ENUMS EN TYPESCRIPT
+
+    🧠 Un enum (enumeración) permite definir un conjunto de valores constantes con nombre.  
+    Se usa para representar opciones fijas como roles, estados o tipos.
+
+    📘 ENUM BÁSICO
+    🧠 Se define usando la palabra clave `enum`.
+
+      💡 Ejemplo
+        enum Rol {
+          Admin,
+          User,
+          Guest
+        }
+
+        let usuarioRol: Rol = Rol.Admin;
+
+    🧠 Por defecto, TypeScript asigna valores numéricos:
+      • Admin = 0  
+      • User = 1  
+      • Guest = 2  
+
+    📘 ENUM CON VALORES PERSONALIZADOS
+    🧠 Puedes asignar valores manualmente.
+
+      💡 Ejemplo
+        enum Estado {
+          Activo = 1,
+          Inactivo = 0
+        }
+
+        let estado: Estado = Estado.Activo;
+
+    📘 ENUM DE STRINGS
+    🧠 También puedes usar strings en lugar de números.
+
+      💡 Ejemplo
+        enum Rol {
+          Admin = "ADMIN",
+          User = "USER",
+          Guest = "GUEST"
+        }
+
+        let rol: Rol = Rol.User;
+
+    📘 ACCESO A VALORES
+    🧠 Puedes acceder a los valores usando el nombre del enum.
+
+      💡 Ejemplo
+        console.log(Rol.Admin); // "ADMIN" o 0 según definición
+
+    📘 USO EN FUNCIONES
+    🧠 Permite restringir valores válidos en parámetros.
+
+      💡 Ejemplo
+        function crearUsuario(rol: Rol): void {
+          console.log(rol);
+        }
+
+        crearUsuario(Rol.Admin); // ✅
+
+    ⚠️ COSAS IMPORTANTES
+    🧠 Los enums agrupan constantes relacionadas.  
+    Pueden ser numéricos o de tipo string.  
+    Mejoran la legibilidad del código.  
+    Son útiles cuando tienes valores fijos reutilizables.
+
+    ✨ TIP
+    🧠 Usa enums cuando tengas un conjunto de valores constantes con nombre.  
+    Para casos simples, también puedes usar literal types con union types.
+
+//📘 GENERICS EN TYPESCRIPT
+
+    🧠 Los Generics permiten crear código reutilizable **sin perder el tipo**.  
+    En lugar de usar `any`, usas un tipo dinámico que se define automáticamente.
+
+    📘 FUNCIÓN GENÉRICA BÁSICA
+    🧠 Se usa `<T>` como tipo genérico.
+
+      💡 Ejemplo
+        function identidad<T>(valor: T): T {
+          return valor;
+        }
+
+    👉 Código reutilizable sin perder el tipo  
+    💡 Clave:
+      • T se define automáticamente  
+      • Entrada = salida  
+
+      💡 Uso
+        identidad(10);        // T = number
+        identidad("hola");    // T = string
+
+    📘 GENERICS CON ARRAYS
+    🧠 Muy común trabajar con arrays genéricos.
+
+      💡 Ejemplo
+        function getFirst<T>(arr: T[]): T {
+          return arr[0];
+        }
+
+        getFirst([1, 2, 3]);       // number
+        getFirst(["a", "b"]);      // string
+
+    📘 MÚLTIPLES TIPOS GENÉRICOS
+    🧠 Puedes usar más de un tipo.
+
+      💡 Ejemplo
+        function combinar<T, U>(a: T, b: U) {
+          return { a, b };
+        }
+
+        combinar(1, "hola"); // { a: number, b: string }
+
+    📘 GENERICS CON RESTRICCIONES (extends)
+    🧠 Puedes limitar qué tipos se permiten.
+
+      💡 Ejemplo
+        function fn<T extends { length: number }>(x: T): number {
+          return x.length;
+        }
+
+    👉 “Debe tener esa propiedad”
+
+        fn("hola");        // ✅ string tiene length
+        fn([1, 2, 3]);     // ✅ array tiene length
+        // fn(123);        ❌ number no tiene length
+
+    📘 GENERICS EN TYPES
+    🧠 También puedes usarlos en type alias.
+
+      💡 Ejemplo
+        type Caja<T> = {
+          contenido: T;
+        };
+
+        const caja: Caja<string> = { contenido: "hola" };
+
+    📘 GENERICS EN INTERFACES
+    🧠 Muy útiles para estructuras reutilizables.
+
+      💡 Ejemplo
+        interface Respuesta<T> {
+          data: T;
+          error: boolean;
+        }
+
+        const res: Respuesta<string> = {
+          data: "ok",
+          error: false
+        };
+
+    📘 GENERICS EN CLASES
+    🧠 Permiten clases flexibles y reutilizables.
+
+      💡 Ejemplo
+        class Stack<T> {
+          private items: T[] = [];
+
+          push(item: T) {
+            this.items.push(item);
+          }
+
+          pop(): T | undefined {
+            return this.items.pop();
+          }
+        }
+
+        const stack = new Stack<number>();
+
+    ⚠️ COSAS IMPORTANTES
+    🧠 Evita usar `any` cuando puedas usar generics.  
+    🧠 Mantienen el tipado fuerte.  
+    🧠 Se adaptan automáticamente al tipo que uses.  
+    🧠 Funcionan con funciones, tipos, interfaces y clases.
+
+    ✨ TIP
+    🧠 Usa Generics cuando quieras reutilizar lógica sin perder seguridad de tipos.  
+    Son clave en librerías, APIs y estructuras complejas.
+
+//📘 UTILITY TYPES EN TYPESCRIPT
+
+    🧠 Los Utility Types son herramientas que vienen integradas en TypeScript  
+    para transformar tipos existentes de forma rápida y reutilizable.
+
+    📘 🟢 Partial<T>
+    🧠 Convierte TODAS las propiedades en opcionales.
+
+      💡 Sintaxis
+        Partial<T>
+
+      💡 Ejemplo
+        type Usuario = {
+          nombre: string;
+          edad: number;
+        };
+
+        type UsuarioParcial = Partial<Usuario>;
+
+        // Resultado:
+        // { nombre?: string; edad?: number }
+
+    👉 Todo opcional
+
+    📘 🔵 Readonly<T>
+    🧠 Hace que todas las propiedades sean de solo lectura.
+
+      💡 Sintaxis
+        Readonly<T>
+
+      💡 Ejemplo
+        type Usuario = {
+          nombre: string;
+        };
+
+        const u: Readonly<Usuario> = {
+          nombre: "Alo"
+        };
+
+        // u.nombre = "Otro"; ❌ Error
+
+    👉 Solo lectura
+
+    📘 🟣 Pick<T, K>
+    🧠 Permite seleccionar solo algunas propiedades de un tipo.
+
+      💡 Sintaxis
+        Pick<T, "prop1" | "prop2">
+
+      💡 Ejemplo
+        type Usuario = {
+          id: number;
+          nombre: string;
+          email: string;
+        };
+
+        type UsuarioBasico = Pick<Usuario, "id" | "nombre">;
+
+    👉 Elegir propiedades
+
+    📘 🔴 Omit<T, K>
+    🧠 Permite quitar propiedades de un tipo.
+
+      💡 Sintaxis
+        Omit<T, "prop">
+
+      💡 Ejemplo
+        type Usuario = {
+          id: number;
+          nombre: string;
+          password: string;
+        };
+
+        type UsuarioPublico = Omit<Usuario, "password">;
+
+    👉 Quitar propiedades
+
+    📘 🟡 Record<K, T>
+    🧠 Crea un objeto con claves y valores tipados.
+
+      💡 Ejemplo
+        type Roles = "admin" | "user";
+
+        const permisos: Record<Roles, boolean> = {
+          admin: true,
+          user: false
+        };
+
+    👉 Muy útil para diccionarios tipados
+
+    📘 🟠 Required<T>
+    🧠 Hace que todas las propiedades sean obligatorias.
+
+      💡 Ejemplo
+        type Usuario = {
+          nombre?: string;
+        };
+
+        type UsuarioCompleto = Required<Usuario>;
+
+        // { nombre: string }
+
+    📘 ⚫ Exclude<T, U>
+    🧠 Elimina tipos de una unión.
+
+      💡 Ejemplo
+        type Rol = "admin" | "user" | "guest";
+
+        type SinGuest = Exclude<Rol, "guest">;
+        // "admin" | "user"
+
+    📘 ⚪ Extract<T, U>
+    🧠 Extrae tipos de una unión.
+
+      💡 Ejemplo
+        type Rol = "admin" | "user" | "guest";
+
+        type SoloAdmin = Extract<Rol, "admin">;
+        // "admin"
+
+    📘 🔥 COMBINACIONES (NIVEL PRO)
+    🧠 Puedes combinar varios utility types.
+
+      💡 Ejemplo
+        type Usuario = {
+          id: number;
+          nombre: string;
+          password: string;
+        };
+
+        type SafeUser = Readonly<Partial<Omit<Usuario, "password">>>;
+
+    👉 Traducción:
+      • Quita password  
+      • Hace todo opcional  
+      • Hace todo readonly  
+
+    ⚠️ COSAS IMPORTANTES
+    🧠 No crean tipos nuevos desde cero, transforman existentes.  
+    🧠 Son muy usados en APIs (crear, actualizar, respuestas).  
+    🧠 Mejoran reutilización y limpieza del código.  
+
+    ✨ TIP
+    🧠 Usa Utility Types para evitar repetir tipos manualmente.  
+    Son esenciales en proyectos grandes y código escalable.

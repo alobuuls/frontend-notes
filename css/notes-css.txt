@@ -1,0 +1,460 @@
+  selector {
+    propiedad:valor;
+  }
+
+// COLOR
+  tanto para (r), (g) y (b) su valor min es de 0 y max 255
+  para (a) alpha se puede de dos maneras min 0, max 1 manejando decimales o min 0% max 100%
+
+  🔑hsla
+
+      🔹h (hue): sin límite fijo → se normaliza ( 0 = 360)
+      🔹s (saturation): min 0%, max 100%
+      🔹l (lightness): min 0%, max 100%
+      🔹a (alpha): min 0, max 1 (decimales) ó min 0%, max 100%
+
+  🔑oklcha
+
+      🔹OK
+      🔹l (lightness): min 0%, max 100%.
+      🔹c (chroma): min 0, sin máximo fijo (se recorta al gamut)
+      🔹h (hue): sin límite fijo → se normaliza  (0 = 360)
+      🔹a (alpha): min 0, max 1 (decimales) ó min 0%, max 100%
+
+      🔹rgba = red, green, black, alpha(opacidad)
+      🔹rgb = red, green, black
+      🔹hsl = hue(matíz), saturacion, luminosidad
+      🔹oklch = ok, luminosidad, chroma, hue
+
+// CLASES Y IDS
+  🔑 HTML : (class)
+    🔹CSS : (.)
+
+  🔑 HTML : (id)
+    🔹CSS : (#)
+
+
+// HERENCIA
+
+  🔑 Propiedades que se heredan: 
+    font-family
+    font-size
+    font-style
+    font-variant
+    font-weight
+    line-height
+    letter-spacing
+    word-spacing
+    white-space
+    color (aunque no es de fuente, también se hereda)
+    text-align
+    visibility
+
+    [font-family: system-ui] (carga las fuentes predeterminadas para el sistema operativo) 
+
+  🔑 Propiedades que no se heredan (solo con inherit)
+    text-decoration
+    text-transform
+    text-shadow
+    vertical-align
+
+  🔑 Valores especiales de herencia
+
+    🔹 inherit → fuerza que el elemento tome exactamente el mismo valor que su elemento padre.
+    🔹 initial → fuerza que la propiedad tome su valor inicial definido por CSS 
+                (el que trae por defecto en la especificación, no en el navegador).
+    🔹 unset → combina herencia e inicial:
+                si la propiedad es heredable → actúa como inherit.
+                si no es heredable → actúa como initial.
+    🔹 revert → revierte el valor al definido por el user agent stylesheet 
+                (los estilos por defecto del navegador) o al de la siguiente regla en cascada más cercana.
+
+    🔹 revert-layer → parecido a revert, pero revierte solo hasta el límite de la capa de cascade layer definida 
+                (CSS Cascade Layers).
+
+
+//PSEUDO-CLASES
+
+  🔑 Pseudo-clases de interacción con el usuario (generales)
+    🔹 :hover → cuando el cursor pasa sobre el elemento
+    🔹 :active → mientras el elemento está siendo activado 📌(clic)
+    🔹 :focus → cuando el elemento tiene foco 📌(input seleccionado)
+    🔹 :focus-visible → cuando el navegador decide mostrar el foco 📌(accesibilidad)
+    🔹 :focus-within → si el elemento o alguno de sus hijos tiene foco
+    🔹 :visited → enlace ya visitado
+    🔹 :link → enlace no visitado
+    🔹 :target → cuando el elemento coincide con el fragmento de la URL (#id)
+
+  🔑Pseudo-clases estructurales
+
+    🔹:first-child / :last-child → primer o último hijo de su padre.
+    🔹:only-child → único hijo.
+    🔹:nth-child(n) / :nth-last-child(n) → hijos según patrón numérico.
+    🔹:first-of-type / :last-of-type → primer o último de un tipo de elemento.
+    🔹:only-of-type → único de su tipo.
+    🔹:nth-of-type(n) / :nth-last-of-type(n) → tipo de hijo según patrón.
+
+    🔹:root → el elemento raíz 📌(<html>).
+
+    🔹:empty → elemento sin hijos ni texto.
+
+//SELECTORES
+
+  Un selector es lo que usamos para “apuntar” a uno o varios elementos del DOM y aplicarles estilos.
+
+  🔑Selectores básicos
+
+    🔹Selector universal → * { } → selecciona todos los elementos.
+    🔹Selector de tipo → p { } → selecciona todos los <p>.
+    🔹Selector de clase → .caja { } → selecciona todos con class="caja".
+    🔹Selector de ID → #titulo { } → selecciona el que tenga id="titulo".
+
+  🔑Selector de atributo →
+    🔹[type="text"] → input con atributo exacto.
+    🔹[type^="te"] → empieza por.
+    🔹[type$="xt"] → termina en.
+    🔹[type*="ex"] → contiene.
+
+  🔑Selectores combinadores
+
+    🔹Descendiente (espacio) → div p { } → todos los <p> dentro de <div>.
+    🔹Hijo directo (>) → div > p { } → solo <p> hijos directos de <div>.
+    🔹Hermano adyacente (+) → h1 + p { } → <p> justo después de un <h1>.
+    🔹Hermano general (~) → h1 ~ p { } → todos los <p> hermanos después de un <h1>.
+
+//ESPECIFICIDAD 
+
+  🔑Regla X,Y,Z
+
+      🔹X = número de selectores de ID (#id)
+      🔹Y = número de selectores de clase (.clase), atributos ([attr]) y pseudo-clases (:hover, :first-child, etc.)
+      🔹Z = número de selectores de tipo (elementos HTML como div, p, span) y pseudo-elementos (::before, ::after)
+
+//UNIDADES RELATIVAS Y ABSOLUTAS 
+
+  🔑Absolutas (fijas)
+    Se usan cuando quieres medidas exactas (útiles en impresión, menos en web[excepto por px]).
+      🔹px → píxeles, la más usada en pantallas.
+      🔹cm → centímetros.
+      🔹mm → milímetros.
+      🔹in → pulgadas (1in = 96px).
+      🔹pt → puntos tipográficos (1pt = 1/72in).
+      🔹pc → picas (1pc = 12pt).
+
+  🔑Relativas
+      Dependen del contexto (tamaño de fuente del contenedor, viewport, etc.).
+      Son más flexibles y recomendadas para diseño responsivo.
+
+    Relativas a la fuente
+      🔹em → relativo al font-size del elemento padre.
+        📌Ej: si body {font-size: 16px} → 2em = 32px.
+      🔹rem → relativo al font-size de la raíz (html).
+        📌Ej: si html {font-size: 16px} → 2rem = 32px en todo el documento.
+      🔹ex → altura de la “x” minúscula de la fuente.
+      🔹ch → ancho del carácter “0” de la fuente usada.
+
+    Relativas al viewport (pantalla)
+      🔹vw → 1% del ancho del viewport.
+      🔹vh → 1% de la altura del viewport.
+      🔹vmin → 1% del menor lado del viewport.
+      🔹vmax → 1% del mayor lado del viewport.
+
+    Otras relativas modernas
+      🔹% → relativo al contenedor inmediato (ancho, alto, padding, etc.).
+      🔹lh → relativo al line-height del elemento.
+
+//RESET & NORMALIZE
+
+  🔑Reset
+    🔹Es una hoja de estilos que elimina por completo los estilos por defecto que los navegadores aplican a los elementos HTML (márgenes, paddings, tamaños de texto, etc.).
+    🔹Objetivo → empezar desde cero y tener un lienzo “limpio”,
+    aunque hace que tengas que re-definir todos los estilos básicos.
+
+  🔑Normalize
+    🔹Es una hoja de estilos que no elimina todo, sino que estandariza los estilos por defecto entre navegadores.
+    🔹Ajusta inconsistencias 📌(diferencias en h1, button, form, etc.) 
+    pero mantiene estilos útiles como negritas en <strong>, tamaños por defecto de h1, etc.
+    🔹Objetivo → lograr consistencia cross-browser sin borrar lo bueno que traen los estilos por defecto.
+
+//BOX MODEL
+
+  Cada elemento en CSS se representa como una caja compuesta por 4 áreas principales:
+    🔹Content → el contenido del elemento (texto, imágenes, etc.).
+    🔹Padding → espacio entre el contenido y el borde.
+    🔹Border → el borde que rodea el padding y el contenido.
+    🔹Margin → espacio externo entre la caja y otros elementos.
+
+  🔑Propiedades
+
+    🔹padding → espacio interno.
+      📌Ej: padding: 20px; → relleno dentro de la caja.
+    🔹border → grosor, estilo y color del borde.
+      📌Ej: border: 2px solid black;.
+    🔹margin → espacio externo.
+      📌Ej: margin: 10px; → separación con otros elementos.
+
+  🔑Box-sizing
+
+    Controla cómo se calculan las dimensiones (width y height):
+    content-box (por defecto)
+    width y height solo incluyen el content.
+
+    El padding y el border se sumarán al tamaño total.
+    📌Ej: width: 100px; padding: 10px; border: 5px;
+      → ancho total = 130px.
+
+  🔑Border-box
+
+    width y height incluyen content + padding + border.
+    Más fácil para diseño responsivo.
+    📌Ej: width: 100px; padding: 10px; border: 5px;
+      → ancho total = 100px (el navegador ajusta el content)
+          * {
+            box-sizing: border-box;
+          }
+
+//OVERFLOW
+
+  Ocurre cuando el contenido de un contenedor no cabe dentro del área asignada (por width / height).
+    📌Ejemplo: un párrafo más largo que su caja.
+
+  🔑Overflow
+  Controla qué hacer con el contenido que se desborda:
+
+    🔹visible (valor por defecto) → el contenido sobresale de la caja.
+    🔹hidden → corta el contenido que se sale.
+    🔹scroll → agrega barras de scroll (siempre visibles).
+    🔹auto → agrega barras de scroll solo si son necesarias.
+      📌 Ejemplo: 
+      div {
+      width: 200px;
+      height: 100px;
+      overflow: auto;
+      }
+
+  🔑Text overflow
+  Se usa cuando el texto se desborda de un contenedor 📌(títulos muy largos).
+
+  🔹white-space: nowrap; → evita que el texto baje de línea.
+  🔹overflow: hidden; → corta el exceso.
+  🔹text-overflow: ellipsis; → muestra "…" al final del texto.
+
+    📌 Ejemplo:
+    p {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+
+//VALORES DE POSITION 
+
+    🔹static (por defecto)
+      El elemento se coloca en el flujo normal del documento.
+      No responde a top, left, right, bottom.
+
+    🔹relative
+      El elemento mantiene su lugar en el flujo, pero puedes moverlo relativo a su posición original
+      usando top, left, right, bottom.
+
+    🔹absolute
+      El elemento se saca del flujo y se posiciona respecto al primer ancestro con position distinto de static.
+      Se puede mover con top, left, right, bottom.
+
+    🔹fixed
+      Similar a absolute, pero el elemento se posiciona respecto al viewport (pantalla).
+      No se mueve al hacer scroll.
+
+    🔹sticky
+      Híbrido entre relative y fixed.
+      Se comporta como relative hasta que se cumple un límite definido (top, left, etc.),
+      y luego se queda fijo hasta que el contenedor termina.
+
+
+//INSET 
+
+  🔹Es un shorthand (atajo) para top, right, bottom, left.
+  🔹Se usa junto con position: relative | absolute | fixed | sticky.
+  🔹Define la distancia del elemento a los bordes de su contenedor.
+
+  🔑Sintaxis rápida
+
+    🔹inset: 0; → equivale a top:0; right:0; bottom:0; left:0; (centra el div)
+    🔹inset: 10px; → todos los lados = 10px.
+    🔹inset: 10px 20px; → vertical = 10px, horizontal = 20px.
+    🔹inset: 10px 20px 30px; → top = 10px, sides = 20px, bottom = 30px.
+    🔹inset: 10px 20px 30px 40px; → top, right, bottom, left.
+
+//Z-INDEX
+  
+  Es una propiedad CSS que controla el orden en el eje Z (la profundidad).
+
+  Determina qué elemento se muestra delante o detrás cuando se superponen.
+  Solo funciona en elementos con position distinto de static (relative, absolute, fixed, sticky).
+  El valor puede ser:
+
+    🔹auto → hereda el orden por defecto.
+    🔹número entero → define la prioridad:
+    🔹Mayor número = más al frente.
+    🔹Menor número = más al fondo. 
+
+    📌Ejemplo (👉 .caja2 se verá encima de .caja1.)
+      .caja1 {
+      position: absolute;
+      z-index: 1;
+      background: lightblue;
+      }
+
+      .caja2 {
+      position: absolute;
+      z-index: 2;
+      background: coral;
+      }
+
+//FLEX-BOX
+
+  🔑Propiedades del contenedor (padre)
+
+    🔹display: flex; → activa flexbox.
+    🔹flex-direction: → dirección del eje principal:
+    🔹row (default), row-reverse, column, column-reverse.
+    🔹flex-wrap: → controla si los ítems bajan de línea:
+    🔹nowrap (default), wrap, wrap-reverse.
+    🔹justify-content: → alinear en eje principal.
+    🔹align-items: → alinear en eje cruzado.
+    🔹align-content: → alinear múltiples filas.
+    🔹gap: → espacio entre ítems (sin usar margin).
+
+  🔑Propiedades de los ítems (hijos)
+
+    🔹order: → cambia el orden visual (default = 0).
+      📌Ej: order: 1;, order: 2;, order: 3;.
+    🔹flex-grow: → cuánto crece un ítem relativo a los demás.
+    🔹flex-shrink: → cuánto puede encogerse.
+    🔹flex-basis: → tamaño base del ítem antes de crecer/encogerse.
+    🔹flex-basis: 0; → ignora su tamaño base y reparte todo el espacio disponible.
+    🔹flex-basis: auto; → usa el tamaño del contenido como base.
+    🔹flex-basis: 1; (ejemplo poco común, significa que cada ítem empieza con 1px antes de crecer).
+    🔹flex: → shorthand → flex-grow flex-shrink flex-basis.
+    🔹flex: 1; → equivalente a flex: 1 1 0; (todos crecen igual).
+    🔹flex: 2; → crece el doble que uno con flex: 1;.
+    🔹flex: 3; → crece el triple, etc.
+    🔹align-self: → alinear un ítem distinto a los demás.
+
+//DIRECCION DE TEXTO Y FLEXBOX
+
+  🔑Direction: rtl;
+
+      Cambia el sentido de escritura y alineación en el eje horizontal:
+
+    🔹ltr (default, izquierda → derecha).
+    🔹rtl (derecha → izquierda, usado en árabe/hebreo).
+
+    En Flexbox, afecta cómo se interpretan propiedades como flex-start y flex-end en el eje horizontal.
+
+      📌Ejemplo:
+        .contenedor {
+        display: flex;
+        direction: rtl;
+        justify-content: flex-start; /* ahora "inicio" está a la derecha */
+        }
+
+  🔑writing-mode: vertical-lr;
+    Cambia la orientación del texto y con ello el eje de bloque:
+
+    🔹horizontal-tb (default).
+    🔹vertical-lr (texto de arriba a abajo, columnas de izquierda a derecha).
+    🔹vertical-rl (texto de arriba a abajo, columnas de derecha a izquierda).
+
+    Con Flexbox, puede modificar cómo se perciben los ejes principal/cruzado dependiendo de la escritura.
+
+      📌Ejemplo:
+        .contenedor {
+        display: flex;
+        writing-mode: vertical-lr;
+        flex-direction: row; /* ahora la "fila" es vertical */
+        }
+
+//GRID
+
+  CSS Grid Layout es un sistema de diseño bidimensional que permite organizar elementos en filas y columnas.
+
+  🔑Activar grid
+      📌display: grid;
+        display: inline-grid;
+
+    🔹display: grid; → el contenedor grid se comporta como un bloque (ocupa todo el ancho disponible).
+    🔹display: inline-grid; → el contenedor grid se comporta como un elemento en línea, 
+      se ajusta a su contenido y puede estar junto a otros elementos inline.
+
+  🔑Propiedades del contenedor (padre)
+
+    🔹grid-template-columns: → define columnas.
+      📌grid-template-columns: 100px 200px auto;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+
+    🔹grid-template-rows: → define filas.
+      📌grid-template-rows: 100px auto 50px;
+
+    🔹grid-template-areas: → permite nombrar áreas.
+    🔹grid-auto-rows: / grid-auto-columns: → tamaño de filas/columnas generadas automáticamente.
+
+    🔹grid-auto-flow: → dirección de colocación automática:
+      row (default), column, row dense, column dense.
+      📌grid-auto-flow: row; → llena fila por fila.
+      📌grid-auto-flow: column; → llena columna por columna.
+      📌grid-auto-flow: row dense; → como row, pero rellena huecos.
+      📌grid-auto-flow: column dense; → como column, pero rellena huecos.
+      
+    🔹row-gap → espacio solo entre filas.
+    🔹column-gap → espacio solo entre columnas.
+    🔹gap: → espacio entre filas y columnas (puede usarse row-gap y column-gap).
+    🔹justify-items: → alinear ítems en el eje horizontal de su celda.
+    🔹align-items: → alinear ítems en el eje vertical de su celda.
+    🔹place-items: → shorthand (align-items justify-items).
+    🔹justify-content: → alinear toda la grid en el contenedor (horizontal).
+    🔹align-content: → alinear toda la grid (vertical).
+    🔹place-content: → shorthand (align-content justify-content).
+
+  🔑Propiedades de los ítems (hijos)
+
+    🔹grid-column: → en qué columna empieza y termina.
+      📌grid-column: 1 / 3; /* de columna 1 a 3 */
+
+    🔹grid-row: → en qué fila empieza y termina.
+      📌grid-row: 2 / 4; /* de fila 2 a 4 */
+
+    🔹grid-area: → combinación de fila y columna o nombre definido en grid-template-areas.
+    🔹justify-self: → alinear ítem en su celda (horizontal).
+    🔹align-self: → alinear ítem en su celda (vertical).
+    🔹place-self: → shorthand (align-self justify-self).
+
+  🔑Valores y funciones útiles en Grid
+
+    🔹fr → fracción del espacio disponible.
+      📌grid-template-columns: 2fr 1fr 1fr; → Se divide en 4 partes:
+                                              Columna 1 = 2 partes (50%).
+                                              Columna 2 = 1 parte (25%).
+                                              Columna 3 = 1 parte (25%).
+
+    🔹auto → tamaño según el contenido.
+    🔹minmax(min, max) → define un rango de tamaño.
+    🔹repeat(n, valor) → repetir columnas/filas.
+    🔹auto-fill → llena el contenedor con el máximo número posible de columnas, aunque queden huecos vacíos.
+      📌grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); → mete todas las columnas posibles de 150px mínimo, aunque sobren espacios.
+
+    🔹auto-fit → parecido a auto-fill, pero colapsa los espacios sobrantes (las columnas vacías desaparecen).
+      📌grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); → los ítems se estiran para ocupar todo el espacio.
+
+//ANIMACIONES 
+    
+/* Tablet horizontal y laptop pequeña */
+@media (max-width: 1024px) {}
+
+/* Tablet vertical */
+@media (max-width: 768px) {}
+
+/* Celulares */
+@media (max-width: 480px) {}
+
+

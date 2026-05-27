@@ -1,0 +1,95 @@
+📘 "use strict" EN JAVASCRIPT
+
+🧠 "use strict" activa el modo estricto en JavaScript,
+haciendo que el código sea más seguro y evitando errores comunes.
+
+--------------------------------
+
+📗 ¿CÓMO SE USA?
+
+"use strict";
+
+function ejemplo() {
+  "use strict";
+}
+
+🧠 Se puede usar al inicio del archivo o dentro de una función.
+
+--------------------------------
+
+📗 ¿QUÉ HACE "use strict"?
+
+🧠 Cambia la forma en que JavaScript se comporta:
+
+✔ Evita errores silenciosos
+✔ Obliga a escribir código más limpio
+✔ Prohíbe malas prácticas
+✔ Hace el código más seguro
+
+--------------------------------
+
+📗 EJEMPLOS DE CAMBIOS CON STRICT MODE
+
+--------------------------------
+
+❌ 1. No permite variables sin declarar
+
+"use strict";
+
+x = 10; // ERROR
+
+🧠 Debes usar let, const o var
+
+let x = 10;
+
+--------------------------------
+
+❌ 2. No permite duplicar parámetros
+
+"use strict";
+
+function sumar(a, a) {
+  return a + a;
+}
+// ERROR
+
+--------------------------------
+
+❌ 3. this en funciones normales es undefined
+
+"use strict";
+
+function test() {
+  console.log(this);
+}
+
+test();
+// undefined
+
+--------------------------------
+
+❌ 4. No permite borrar variables o funciones
+
+"use strict";
+
+let nombre = "Ana";
+delete nombre; // ERROR
+
+--------------------------------
+
+📗 ¿POR QUÉ USAR "use strict"?
+
+🧠 Porque ayuda a escribir código más seguro y limpio.
+
+✔ Detecta errores temprano
+✔ Evita bugs difíciles
+✔ Mejora buenas prácticas
+
+--------------------------------
+
+📗 REGLA RÁPIDA 🧠
+
+👉 "use strict" = modo estricto  
+👉 evita errores silenciosos  
+👉 obliga a buenas prácticas  
+👉 hace JS más seguro

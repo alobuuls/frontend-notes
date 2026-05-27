@@ -1,0 +1,208 @@
+//📘 DIRECTIVAS EN ANGULAR (COMPLETO)
+
+    🧠 Directives = instrucciones que modifican el HTML
+
+    👉 Permiten:
+       • Mostrar / ocultar  
+       • Repetir elementos  
+       • Cambiar estilos  
+       • Escuchar eventos  
+
+    📘 🟢 ¿QUÉ SON LAS DIRECTIVAS?
+
+        🧠 Son “poderes” que Angular agrega al HTML
+
+        👉 Cambian:
+           • Estructura (DOM)  
+           • Apariencia  
+           • Comportamiento  
+
+        💡 Ejemplo
+            <p *ngIf="activo">Hola</p>
+
+    📘 🔵 TIPOS DE DIRECTIVAS
+
+        🧠 1. ESTRUCTURALES 🧱
+
+        👉 Modifican el DOM (agregan o eliminan elementos)
+
+        ✔ Usan *  
+        ✔ Cambian el layout  
+
+        💡 Ejemplos
+
+        ✔️ *ngIf
+            <p *ngIf="activo">Visible</p>
+
+        ✔️ *ngFor
+            <li *ngFor="let item of items">
+              {{ item }}
+            </li>
+
+        ✔️ *ngSwitch
+            <div [ngSwitch]="estado">
+              <p *ngSwitchCase="'ok'">OK</p>
+              <p *ngSwitchDefault>Error</p>
+            </div>
+
+        👉 false en *ngIf = NO existe en el DOM
+
+    📘 🟣 2. DE ATRIBUTO 🎨
+
+        🧠 Modifican apariencia o comportamiento
+
+        👉 NO cambian la estructura
+
+        ✔ No agregan/eliminan elementos  
+        ✔ Cambian estilos o clases  
+
+        💡 Ejemplos
+
+        ✔️ [ngClass]
+            <p [ngClass]="{ activo: isActive }"></p>
+
+        ✔️ [ngStyle]
+            <p [ngStyle]="{ color: 'red' }"></p>
+
+        ✔️ ngModel
+            <input [(ngModel)]="nombre">
+
+        ✔️ (click)
+            <button (click)="saludar()"></button>
+
+        ✔️ routerLink
+            <a routerLink="/home">Home</a>
+
+    📘 🟡 3. PERSONALIZADAS 🧩
+
+        🧠 Son creadas por el desarrollador
+
+        👉 Permiten lógica reutilizable
+
+        💡 Ejemplo
+
+            @Directive({
+              selector: '[dragDrop]'
+            })
+
+            export class DragDropDirective {}
+
+        👉 Uso en HTML
+            <div dragDrop></div>
+
+        ✔ Tipos:
+
+        👉 Atributo (más común)  
+        👉 Estructurales (más avanzadas, ej: *miIf)  
+
+    📘 🟠 DECORADOR @Directive
+
+        🧠 Define una directiva
+
+        👉 Le dice a Angular:
+           • que es una directiva  
+           • cómo usarla  
+
+        📌 selector
+
+        👉 '[dragDrop]' = atributo
+
+        💡 Ejemplo
+            <div dragDrop></div>
+
+    📘 🔴 EJEMPLO REAL (CUSTOM)
+
+        💡 TypeScript
+
+            import { Directive, ElementRef } from '@angular/core';
+
+            @Directive({
+              selector: '[dragDrop]'
+            })
+            export class DragDropDirective {
+
+              constructor(private el: ElementRef) {
+                this.el.nativeElement.style.border = '2px dashed blue';
+              }
+            }
+
+        💡 HTML
+            <div dragDrop>Arrástrame</div>
+
+    📘 ⚫ EVENTOS EN DIRECTIVAS
+
+        💡 Ejemplo
+
+            import { HostListener } from '@angular/core';
+
+            @HostListener('click')
+            onClick() {
+              console.log('click');
+            }
+
+    📘 ⚪ BUENA PRÁCTICA (DOM)
+
+        🧠 Usar Renderer2
+
+        💡 Ejemplo
+
+            constructor(private el: ElementRef, private renderer: Renderer2) {}
+
+            ngOnInit() {
+              this.renderer.setStyle(this.el.nativeElement, 'color', 'red');
+            }
+
+    📘 🟤 ng-else (con *ngIf)
+
+        💡 Ejemplo
+
+            <p *ngIf="activo; else noActivo">Activo</p>
+
+            <ng-template #noActivo>
+              <p>No activo</p>
+            </ng-template>
+
+    📘 🟢 DIFERENCIA CLAVE
+
+        🧠 *ngIf vs [hidden]
+
+        👉 *ngIf → elimina del DOM  
+        👉 [hidden] → solo oculta  
+
+    📘 🟡 REGLAS IMPORTANTES
+
+        ❌ Incorrecto
+            <div *ngIf="cond" *ngFor="let item of items"></div>
+
+        ✔️ Correcto
+            <ng-container *ngIf="cond">
+              <div *ngFor="let item of items"></div>
+            </ng-container>
+
+        👉 Solo una directiva estructural por elemento
+
+    📘 🟠 ¿PARA QUÉ SIRVEN?
+
+        ✔ Controlar UI dinámicamente  
+        ✔ Manejar listas  
+        ✔ Aplicar estilos dinámicos  
+        ✔ Escuchar eventos  
+
+    ⚠️ COSAS IMPORTANTES
+
+        🧠 Estructurales usan *
+        🧠 Atributo usan []
+        🧠 ngModel requiere FormsModule
+        🧠 Personalizadas usan @Directive
+        🧠 Usar Renderer2 en lugar de modificar DOM directo
+
+    ✨ RESUMEN
+
+        🧠 Directivas = control del HTML
+
+        👉 *ngIf / *ngFor → estructura  
+        👉 ngClass / ngStyle → apariencia  
+        👉 ngModel / (click) → interacción  
+        👉 custom → lógica reutilizable  
+
+        👉 Son clave para hacer Angular dinámico 🚀

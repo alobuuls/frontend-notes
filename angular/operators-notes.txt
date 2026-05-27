@@ -1,0 +1,168 @@
+    📘 RXJS EN ANGULAR (OPERADORES ESENCIALES)
+
+    🧠 RxJS es una librería para manejar programación reactiva con Observables
+
+    👉 Es clave en:
+       • HTTP (HttpClient)  
+       • Formularios reactivos  
+       • Eventos (valueChanges, clicks)  
+
+    📘 🟢 ¿QUÉ ES UN OBSERVABLE?
+
+        🧠 Es una fuente de datos que emite valores en el tiempo
+
+        👉 Puedes:
+           • transformar  
+           • filtrar  
+           • combinar  
+
+        ✨ TIP
+        🧠 pipe() es donde usas los operadores
+
+    📘 🔵 1. map → transformar datos
+
+        🧠 Modifica los valores emitidos
+
+        💡 Ejemplo
+
+            this.http.get('/api/users').pipe(
+              map((users: any[]) => users.map(u => u.name))
+            ).subscribe(names => console.log(names));
+
+        ✔ Convierte datos  
+        ✔ Muy usado en HTTP  
+
+    📘 🟣 2. filter → filtrar valores
+
+        🧠 Deja pasar solo valores que cumplen condición
+
+        💡 Ejemplo
+
+            of(1, 2, 3, 4, 5).pipe(
+              filter(n => n % 2 === 0)
+            ).subscribe(console.log);
+
+        ✔ Filtrado de datos  
+
+    📘 🟡 3. switchMap → cancelar anteriores
+
+        🧠 Cancela la petición anterior si llega una nueva
+
+        💡 Ejemplo
+
+            this.searchInput.valueChanges.pipe(
+              switchMap(value => this.http.get(`/api/search?q=${value}`))
+            ).subscribe(results => console.log(results));
+
+        ✔ Ideal para buscadores  
+        ✔ Evita respuestas viejas  
+
+    📘 🟠 4. mergeMap → paralelo
+
+        🧠 Ejecuta múltiples observables al mismo tiempo
+
+        💡 Ejemplo
+
+            of(1, 2, 3).pipe(
+              mergeMap(id => this.http.get(`/api/user/${id}`))
+            ).subscribe(console.log);
+
+        ✔ Paralelismo  
+        ❌ No mantiene orden  
+
+    📘 🔴 5. concatMap → secuencial
+
+        🧠 Ejecuta uno después del otro
+
+        💡 Ejemplo
+
+            of(1, 2, 3).pipe(
+              concatMap(id => this.http.get(`/api/user/${id}`))
+            ).subscribe(console.log);
+
+        ✔ Mantiene orden  
+        ✔ Ejecución controlada  
+
+    📘 ⚫ 6. tap → efectos secundarios
+
+        🧠 Ejecuta código sin modificar datos
+
+        💡 Ejemplo
+
+            this.http.get('/api/users').pipe(
+              tap(data => console.log('DEBUG:', data))
+            ).subscribe();
+
+        ✔ Logging  
+        ✔ Debugging  
+
+    📘 ⚪ 7. debounceTime → control de eventos
+
+        🧠 Retrasa emisiones
+
+        💡 Ejemplo
+
+            this.searchInput.valueChanges.pipe(
+              debounceTime(500)
+            ).subscribe(value => console.log(value));
+
+        ✔ Ideal para inputs  
+        ✔ Reduce llamadas a API  
+
+    📘 🟤 COMPARACIÓN CLAVE
+
+        🧠 switchMap vs mergeMap vs concatMap
+
+        🔄 switchMap
+
+        👉 Cancela anteriores  
+        👉 Solo importa el último  
+
+        ✔ Uso: buscadores  
+
+        ⚡ mergeMap
+
+        👉 Paralelo  
+        👉 No cancela  
+
+        ✔ Uso: múltiples requests  
+
+        📦 concatMap
+
+        👉 Secuencial  
+        👉 Mantiene orden  
+
+        ✔ Uso: procesos en orden  
+
+    📘 🟢 RESUMEN RÁPIDO
+
+        👉 map → transformar  
+        👉 filter → filtrar  
+        👉 switchMap → cancelar  
+        👉 mergeMap → paralelo  
+        👉 concatMap → secuencial  
+        👉 tap → debug  
+        👉 debounceTime → control eventos  
+
+    📘 🟡 BENEFICIOS
+
+        ✔ Optimiza HTTP  
+        ✔ Evita bugs de concurrencia  
+        ✔ Mejora rendimiento  
+        ✔ Controla flujos complejos  
+
+    ⚠️ COSAS IMPORTANTES
+
+        🧠 Siempre usar pipe()
+        🧠 No abusar de subscribe()
+        🧠 Elegir bien el operador
+        🧠 RxJS = clave en Angular
+
+    ✨ RESUMEN FINAL
+
+        🧠 RxJS = control total de datos async
+
+        👉 Permite transformar, filtrar y controlar flujos
+        👉 Hace Angular más potente y reactivo
+
+        👉 Dominar esto = nivel PRO en Angular 🚀

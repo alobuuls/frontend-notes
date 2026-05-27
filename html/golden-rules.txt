@@ -1,0 +1,17 @@
+01 - El nombre de los archivos debe ir tanto la extensión como el nombre del archivo todo en minusculas
+02 - El nombre de los archivos no deben llevar espacios
+03 - En caso de que el nombre del archivo lleve más de una palabra se debe separar con - (mi-archivo-importante.html)
+04 - El nombre de los archivos no debe ser tan extenso
+05 - Las etiquetas deben ir en minusculas
+06 - Los atributos deben ir todo pegados sin ningún espacio ni antes de cerrar la etiqueta, ni al abrirla ni luego del = por ej:
+   <img src="images/blue.jpg"> ✅
+   < img src= "images/blue.jpg"> ❌
+   <img src= "images/blue.jpg"> ❌
+   <img src ="images/blue.jpg"> ❌
+   <img src =" images/blue.jpg"> ❌
+   <img src ="images/blue.jpg "> ❌
+   <img src ="images/blue.jpg" > ❌
+07 - 
+08 - 
+09 -  
+10 - 

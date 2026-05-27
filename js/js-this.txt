@@ -1,0 +1,98 @@
+//📘 THIS EN JAVASCRIPT
+
+    🧠 `this` es una palabra clave que hace referencia al **contexto de ejecución** actual.
+    Dependiendo de dónde y cómo se use, `this` puede apuntar a cosas distintas.
+
+    --------------------------------
+
+    📗 EN EL CONTEXTO GLOBAL
+
+    console.log(this);
+    🧠 En navegador → apunta a `window`
+    🧠 En Node.js → apunta a `global` (objeto global)
+
+    --------------------------------
+
+    📗 DENTRO DE UNA FUNCIÓN
+
+    function saludar() {
+      console.log(this);
+    }
+
+    saludar();
+    🧠 En modo estricto → `undefined`
+    🧠 En modo normal → objeto global (window)
+
+    --------------------------------
+
+    📗 DENTRO DE UN MÉTODO DE OBJETO
+
+    const persona = {
+      nombre: 'Ana',
+      saludar: function() {
+        console.log(`Hola, soy ${this.nombre}`);
+      }
+    };
+
+    persona.saludar();
+    // 'Hola, soy Ana'
+    🧠 Aquí `this` apunta al **objeto que llamó al método** (`persona`)
+
+    --------------------------------
+
+    📗 FUNCIONES FLECHA (Arrow Functions)
+
+    const persona2 = {
+      nombre: 'Luis',
+      saludar: () => {
+        console.log(this);
+      }
+    };
+
+    persona2.saludar();
+    🧠 `this` **NO se vincula al objeto** en funciones flecha
+    🧠 Toma el `this` del contexto donde fue definida la función
+
+    --------------------------------
+
+   📗 EN CLASES
+
+    class Persona {
+      constructor(nombre) {
+        this.nombre = nombre;
+      }
+      
+      saludar() {
+        console.log(`Hola, soy ${this.nombre}`);
+      }
+    }
+
+    const p = new Persona('Ana');
+    p.saludar();
+    // 'Hola, soy Ana'
+    🧠 `this` apunta a la instancia de la clase
+
+    --------------------------------
+
+    📗 CAMBIAR EL CONTEXTO DE THIS
+
+    function saludarEdad(edad) {
+      console.log(`${this.nombre} tiene ${edad} años`);
+    }
+
+    const usuario = { nombre: 'Carlos' };
+
+    saludarEdad.call(usuario, 30);
+    saludarEdad.apply(usuario, [30]);
+    const nuevaFunc = saludarEdad.bind(usuario, 30);
+
+    🧠 call → llama la función con `this` específico
+    🧠 apply → igual que call pero recibe los argumentos en array
+    🧠 bind → devuelve una **nueva función** con `this` fijo
+
+    --------------------------------
+
+    📗 RESUMEN / REGLA RÁPIDA
+
+    💡 Regla rápida para recordar esto “como humano”:
+

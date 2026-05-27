@@ -1,0 +1,112 @@
+//📘 TRUTHY & FALSY EN JAVASCRIPT
+
+🧠 En JavaScript, todos los valores pueden evaluarse como:
+👉 true (truthy)
+👉 false (falsy)
+
+Esto se usa mucho en condicionales (if, ||, &&, etc).
+
+--------------------------------
+
+📗 FALSY VALUES ❌
+
+🧠 Son valores que se convierten automáticamente en false.
+
+Lista completa:
+
+false
+0
+-0
+0n (BigInt)
+""
+null
+undefined
+NaN
+
+🧪 Ejemplo:
+
+if (0) {
+  console.log("entra");
+} else {
+  console.log("no entra");
+}
+// "no entra"
+
+--------------------------------
+
+📗 TRUTHY VALUES ✅
+
+🧠 TODO lo que NO es falsy es truthy.
+
+Ejemplos comunes:
+
+true
+1
+-1
+"0"
+"hola"
+[]
+{}
+Infinity
+
+🧪 Ejemplo:
+
+if ("hola") {
+  console.log("entra");
+}
+// "entra"
+
+--------------------------------
+
+📗 EJEMPLO CLÁSICO 🧪
+
+let nombre = "";
+
+if (!nombre) {
+  console.log("No hay nombre");
+}
+// entra porque "" es falsy
+
+--------------------------------
+
+📗 USO CON || (OR)
+
+🧠 Devuelve el PRIMER valor truthy.
+
+🧪
+let user = "";
+let nombre = user || "Invitado";
+
+console.log(nombre);
+// "Invitado"
+
+--------------------------------
+
+📗 USO CON && (AND)
+
+🧠 Devuelve el PRIMER falsy o el último truthy.
+
+🧪
+let activo = true;
+let resultado = activo && "Usuario activo";
+
+console.log(resultado);
+// "Usuario activo"
+
+--------------------------------
+
+📗 CUIDADO IMPORTANTE ⚠️
+
+"0" → truthy  
+0   → falsy  
+
+🧪
+if ("0") console.log("entra"); // sí
+if (0) console.log("entra");   // no
+
+--------------------------------
+
+📗 REGLA RÁPIDA 🧠
+
+👉 Falsy → valores "vacíos" o inválidos  
+👉 Truthy → todo lo demás
