@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-content: center;
+}
+
+#container {
+  background-color: #cdcdcd;
+  min-height: 20vh;
+  width: 50%;
+  margin-inline: auto;
+}
+
+.ctn-approved-stu,
+.ctn-stu {
+  margin-block: 5rem;
+  
+  & div,
+  & li {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & li {
+    background-color: greenyellow;
+  }
+}

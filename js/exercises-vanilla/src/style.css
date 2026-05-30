@@ -1,0 +1,22 @@
+#map {
+  height: 100vh;
+  width: 100%;
+}
+
+#search {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  z-index: 1000;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.ctn-c {
+  position: fixed;
+  width: fit-content;
+  aspect-ratio: 1;
+  background-color: red;
+  z-index: 100000;
+}

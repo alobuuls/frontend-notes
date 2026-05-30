@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  align-content: center;
+  background-color: black;
+  color: #fff;
+  min-height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  color: #4b0683;
+}
+
+p {
+  margin-block: 1rem;
+}
+
+button {
+  background-color: #1c1c1c;
+  border-image-width: 2px;
+  border-image: linear-gradient(45deg, #0066ff, #d204a9) 1;
+  border-radius: 3px;
+  color: silver;
+  margin: 1rem auto;
+  cursor: pointer;
+  padding: 0.25rem 2rem;
+  transition: border-image 0.5s ease-in,
+              transform 0.5s ease-in;
+
+  &:hover {
+    border-image: linear-gradient(335deg, #0066ff, #0ac967) 1;
+  }
+
+  &:active {
+    transform: scale(0.8);
+  }
+
+  &:disabled {
+    cursor: no-drop;
+  }
+}
+
+#item-list-color {
+  color: lime;
+  cursor: pointer;
+  width: fit-content;
+  margin: auto;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 0 1px #fff;
+  }
+
+  &.active {
+    background-color: aquamarine;
+  }
+}
+
+.task-item {
+  cursor: pointer;
+  user-select: none;
+}
+
+#task-input {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  border-style: none;
+
+  &:user-invalid {
+    background-color: red;
+  }
+
+  &:user-valid {
+    background-color: green;
+  }
+}
+
+.task {
+  cursor: pointer;
+  transition: color 0.4s ease-in-out;
+  
+  &:hover {
+    color: lime;
+  }
+  
+  &.done {
+    color: #5e5e5e;
+    text-decoration-line: line-through;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+
+
+.red {
+  color: red;
+}
