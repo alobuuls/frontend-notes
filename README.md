@@ -1,39 +1,39 @@
 # 📚 Code Notes ALO
 
-Repositorio personal con apuntes, ejemplos, conceptos y recursos recopilados durante mi proceso de aprendizaje en desarrollo Frontend.
+Personal repository with notes, examples, concepts, and resources collected during my learning journey in Frontend development.
 
-Este espacio funciona como una base de conocimiento propia para reforzar conceptos, guardar referencias rápidas y documentar aprendizajes de distintas tecnologías.
-
----
-
-## 🎯 Objetivo del repositorio
-
-Este proyecto tiene como finalidad:
-
-- 📖 Documentar conceptos aprendidos
-- 🧠 Reforzar conocimientos mediante notas propias
-- ⚡ Tener referencias rápidas para consultas futuras
-- 🛠️ Centralizar ejemplos y fragmentos de código
-- 🚀 Mantener un seguimiento del aprendizaje continuo
+This space works as a personal knowledge base to reinforce concepts, save quick references, and document learnings across different technologies.
 
 ---
 
-## 🚀 Tecnologías y temas incluidos
+## 🎯 Repository Goal
 
-Actualmente el repositorio contiene apuntes sobre:
+This project aims to:
+
+- 📖 Document learned concepts
+- 🧠 Reinforce knowledge through personal notes
+- ⚡ Provide quick references for future consultation
+- 🛠️ Centralize examples and code snippets
+- 🚀 Track continuous learning progress
+
+---
+
+## 🚀 Technologies and Topics Included
+
+Currently, the repository contains notes about:
 
 ### 🅰️ Angular
 
-- Directivas
+- Directives
 - Pipes
 - Observables
 - Guards
-- Formularios
+- Forms
 - Interceptors
 - Routing
 - Services
 - Modules
-- Operadores RxJS
+- RxJS operators
 - Angular CLI
 
 ---
@@ -41,47 +41,47 @@ Actualmente el repositorio contiene apuntes sobre:
 ### ⚡ JavaScript
 
 - DOM
-- Promesas
-- Arrays y Objetos
-- Condicionales
-- Métodos String
+- Promises
+- Arrays and Objects
+- Conditionals
+- String methods
 - Regex
 - JSON
-- Funciones
-- Operadores
+- Functions
+- Operators
 - Truthy & Falsy
 
 ---
 
 ### 🌐 HTML
 
-- Estructura básica
-- Buenas prácticas
-- Etiquetas comunes
-- Organización semántica
+- Basic structure
+- Best practices
+- Common tags
+- Semantic organization
 
 ---
 
 ### 🎨 CSS
 
-- Selectores
-- Propiedades
-- Diseño y estilos
+- Selectors
+- Properties
+- Styling
 - Layouts
-- Personalización visual
+- Visual customization
 
 ---
 
 ### 🔧 Git
 
-- Comandos frecuentes
-- Conventional Commits
-- Flujo básico de trabajo
-- Buenas prácticas
+- Frequent commands
+- Conventional commits
+- Basic workflow
+- Best practices
 
 ---
 
-## 📂 Estructura del proyecto
+## 📂 Project Structure
 
 ```txt
 angular/
@@ -103,17 +103,20 @@ js/
 css/
 html/
 git/
-
-(Próximamente)
-typescript/
-vscode/
 ```
+
+### 🚀 Coming Soon
+
+New sections will be added progressively:
+
+- TypeScript
+- VS Code
 
 ---
 
-## 🛠️ En crecimiento
+## 🛠️ In Progress
 
-El repositorio seguirá ampliándose con notas sobre:
+This repository is continuously growing and will include notes on:
 
 - TypeScript
 - VS Code
@@ -123,29 +126,33 @@ El repositorio seguirá ampliándose con notas sobre:
 - SQL
 - Docker
 - Testing
-- Arquitectura Frontend
-- Buenas prácticas
+- Frontend Architecture
+- Best Practices
 - Clean Code
-- Patrones de diseño
+- Design Patterns
 
 ---
 
-## ✨ Características del repositorio
+## ✨ Repository Features
 
-- 📚 Organización por tecnologías
-- 🧩 Ejemplos prácticos y fragmentos reutilizables
-- 🧠 Conceptos resumidos para estudio rápido
-- ⚡ Notas simples y fáciles de consultar
-- 🔄 Actualización continua
-
----
-
-## 👨‍💻 Autor
-
-Desarrollado por **ALOBUULS**.
+- 📚 Organized by technologies for easy navigation
+- 🧩 Practical examples and reusable code snippets
+- 🧠 Simplified explanations for fast learning and revision
+- ⚡ Quick reference format for daily use
+- 🔄 Continuous updates as learning progresses
 
 ---
 
-## 📄 Licencia
+## 👨‍💻 Author
 
-Repositorio creado con fines educativos, aprendizaje personal y documentación de estudio.
+Developed by **ALOBUULS**
+
+---
+
+## 📄 License
+
+This repository is created for educational purposes, personal learning, and study documentation.
+
+```
+
+```
