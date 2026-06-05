@@ -154,5 +154,3 @@ Developed by **ALOBUULS**
 This repository is created for educational purposes, personal learning, and study documentation.
 
 ```
-
-```
