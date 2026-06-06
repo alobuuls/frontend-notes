@@ -1,252 +1,298 @@
-  <a href="https://atlassian.design/whats-new" target="_blank">more info</a>
+# 📘 UI DESIGN (USER INTERFACE) — FUNDAMENTOS DE INTERFAZ
 
+> [!NOTE]
+> UI (User Interface) = todo lo visual con lo que interactúa el usuario.
+>
+> Incluye botones, colores, layouts, tipografías, spacing, formularios, etc.
 
-    📘 UI DESIGN (USER INTERFACE) — FUNDAMENTOS DE INTERFAZ
+[More info](https://atlassian.design/whats-new)
 
-    🧠 UI (User Interface) = todo lo visual con lo que interactúa el usuario
+---
 
-    👉 Botones, colores, layouts, tipografías, spacing, formularios, etc.
+## 🟢 ¿Qué es UI?
 
-    📘 🟢 ¿QUÉ ES UI?
+> [!TIP]
+> UI = diseño visual de una aplicación.
+>
+> Define:
+> - Cómo se ve
+> - Cómo se organiza
+> - Cómo se siente la interfaz
 
-        🧠 UI = diseño visual de una aplicación
+**Objetivos:**
+- Interfaces claras
+- Bonitas
+- Fáciles de usar
 
-        👉 Define:
-           • cómo se ve  
-           • cómo se organiza  
-           • cómo se siente la interfaz  
+---
 
-        🎯 Objetivo:
+## 🔵 Diferencia UI vs UX
 
-        ✔ Interfaces claras  
-        ✔ Bonitas  
-        ✔ Fáciles de usar  
+> [!NOTE]
+> UI → Apariencia visual  
+> UX → Experiencia del usuario
 
-    📘 🔵 DIFERENCIA UI vs UX
+**Ejemplo:**
+- UI = colores, botones, layout  
+- UX = facilidad de uso
 
-        🧠 UI
+---
 
-        👉 Apariencia visual
+## 🟣 Colores 🎨
 
-        🧠 UX
+> [!TIP]
+> Los colores transmiten emociones y jerarquía.
+>
+> Deben tener armonía visual.
 
-        👉 Experiencia del usuario
+---
 
-        💡 Ejemplo
+## 🟡 Combinación de colores
 
-        UI = colores, botones, layout  
-        UX = facilidad de uso  
+> [!TIP]
+> Buenas combinaciones:
+> - Primary color
+> - Secondary color
+> - Neutral colors
+> - Accent colors
 
-    📘 🟣 COLORES 🎨
+**Ejemplo:**
+- Primary → azul  
+- Secondary → gris  
+- Accent → amarillo
 
-        🧠 Los colores transmiten emociones y jerarquía
+---
 
-        👉 Deben tener armonía visual
+## 🟠 Regla 60-30-10
 
-    📘 🟡 COMBINACIÓN DE COLORES
+> [!TIP]
+> Distribución visual de colores:
+> - 60% → color principal  
+> - 30% → secundario  
+> - 10% → acento
 
-        🧠 Buenas combinaciones:
+> Hace la UI equilibrada
 
-        ✔ Primary color  
-        ✔ Secondary color  
-        ✔ Neutral colors  
-        ✔ Accent colors  
+---
 
-        💡 Ejemplo
+## 🔴 Contraste
 
-            Primary → azul
-            Secondary → gris
-            Accent → amarillo
+> [!IMPORTANT]
+> Importante para accesibilidad:
+> - Texto oscuro sobre fondo claro  
+> - Evitar colores difíciles de leer
 
-    📘 🟠 REGLA 60-30-10
+❌ Mala práctica: texto gris claro sobre blanco
 
-        🧠 Distribución visual de colores
+---
 
-        👉 60% → color principal  
-        👉 30% → secundario  
-        👉 10% → acento  
+## ⚫ Tipografía (Fonts)
 
-        👉 Hace la UI equilibrada
+> [!TIP]
+> Las fuentes afectan legibilidad y personalidad.
+>
+> Buenas prácticas:
+> - Claras  
+> - Consistentes  
+> - Fáciles de leer
 
-    📘 🔴 CONTRASTE
+---
 
-        🧠 Importante para accesibilidad
+## ⚪ Jerarquía tipográfica
 
-        ✔ Texto oscuro sobre fondo claro  
-        ✔ Evitar colores difíciles de leer  
+> [!TIP]
+> Diferencia la importancia de los textos.
 
-        ❌ Mala práctica:
+**Ejemplo:**
+- H1 → grande  
+- H2 → mediano  
+- Texto → normal
 
-        texto gris claro sobre blanco
+> Ayuda a escanear contenido
 
-    📘 ⚫ TIPOGRAFÍA (FONTS)
+---
 
-        🧠 Las fuentes afectan legibilidad y personalidad
+## 🟤 Buenas prácticas de font
 
-        ✔ Deben ser claras  
-        ✔ Consistentes  
-        ✔ Fáciles de leer  
+- Máximo 2 fuentes  
+- Buen line-height  
+- Tamaños consistentes  
+- Evitar exceso de estilos
 
-    📘 ⚪ JERARQUÍA TIPOGRÁFICA
+---
 
-        🧠 Diferenciar importancia
+## 🟢 Layout 🧱
 
-        💡 Ejemplo
+> [!NOTE]
+> Layout = estructura visual que organiza los elementos en pantalla.
 
-        H1 → grande  
-        H2 → mediano  
-        texto → normal  
+**Ejemplos:**
+- Grid  
+- Flexbox  
+- Columnas  
+- Cards
 
-        👉 Ayuda a escanear contenido
+---
 
-    📘 🟤 BUENAS PRÁCTICAS DE FONT
+## 🔵 Principios de Layout
 
-        ✔ Máximo 2 fuentes  
-        ✔ Buen line-height  
-        ✔ Tamaños consistentes  
-        ✔ Evitar exceso de estilos  
+- Orden  
+- Simetría  
+- Balance  
+- Jerarquía visual
 
-    📘 🟢 LAYOUT 🧱
+---
 
-        🧠 Layout = estructura visual
+## 🟣 Spacing 📏
 
-        👉 Organiza los elementos en pantalla
+> [!TIP]
+> Spacing = espacios entre elementos.
+>
+> Hace la UI respirable y limpia:
+> - Margin → espacio externo  
+> - Padding → espacio interno
 
-        💡 Ejemplos
+---
 
-        ✔ Grid  
-        ✔ Flexbox  
-        ✔ Columnas  
-        ✔ Cards  
+## 🟡 Regla importante
 
-    📘 🔵 PRINCIPIOS DE LAYOUT
+> [!IMPORTANT]
+> Más espacio = más claridad
 
-        ✔ Orden  
-        ✔ Simetría  
-        ✔ Balance  
-        ✔ Jerarquía visual  
+❌ Interfaces apretadas  
+✔ Interfaces con aire visual
 
-    📘 🟣 SPACING 📏
+---
 
-        🧠 Spacing = espacios entre elementos
+## 🟠 Alignment (Alineación)
 
-        👉 Hace la UI respirable y limpia
+> [!TIP]
+> Todo debe alinearse correctamente:
+> - Texto alineado  
+> - Botones alineados  
+> - Inputs organizados
 
-        ✔ margin → espacio externo  
-        ✔ padding → espacio interno  
+> Hace que la UI se vea profesional
 
-    📘 🟡 REGLA IMPORTANTE
+---
 
-        🧠 Más espacio = más claridad
+## 🔴 Harmony (Armonía visual)
 
-        ❌ Interfaces apretadas
-        ✔ Interfaces con aire visual
+> [!NOTE]
+> Todos los elementos se sienten conectados.
+>
+> Colores, spacing, tamaños y componentes deben combinar:
+> - Consistencia visual  
+> - Diseño uniforme  
+> - Misma identidad
 
-    📘 🟠 ALIGNMENT (ALINEACIÓN)
+---
 
-        🧠 Todo debe alinearse correctamente
+## ⚫ Componentes UI
 
-        ✔ Texto alineado  
-        ✔ Botones alineados  
-        ✔ Inputs organizados  
+> [!TIP]
+> Elementos reutilizables de interfaz.
 
-        👉 Hace que la UI se vea profesional
+**Ejemplos:**
+- Buttons  
+- Cards  
+- Inputs  
+- Navbar  
+- Modal
 
-    📘 🔴 HARMONY (ARMONÍA VISUAL)
+> Angular trabaja mucho con componentes UI
 
-        🧠 Harmony = todos los elementos se sienten conectados
+---
 
-        👉 Colores, spacing, tamaños y componentes deben combinar
+## ⚪ Design Systems
 
-        ✔ Consistencia visual  
-        ✔ Diseño uniforme  
-        ✔ Misma identidad  
+> [!TIP]
+> Conjunto de reglas visuales reutilizables.
 
-    📘 ⚫ COMPONENTES UI
+**Ejemplos reales:**
+- Material Design  
+- Atlassian Design System  
+- Ant Design
 
-        🧠 Elementos reutilizables de interfaz
+> Mantienen consistencia
 
-        💡 Ejemplos
+---
 
-        ✔ Buttons  
-        ✔ Cards  
-        ✔ Inputs  
-        ✔ Navbar  
-        ✔ Modal  
+## 🟤 Responsive Design 📱
 
-        👉 Angular trabaja mucho con componentes UI
+> [!IMPORTANT]
+> Adaptar UI a diferentes pantallas:
+> - Mobile  
+> - Tablet  
+> - Desktop
 
-    📘 ⚪ DESIGN SYSTEMS
+> Fundamental hoy
 
-        🧠 Conjunto de reglas visuales reutilizables
+---
 
-        💡 Ejemplos reales
+## 🟢 Principios importantes de UI
 
-        👉 Material Design  
-        👉 Atlassian Design System  
-        👉 Ant Design  
+- Simplicidad  
+- Consistencia  
+- Accesibilidad  
+- Legibilidad  
+- Jerarquía visual
 
-        👉 Mantienen consistencia
+---
 
-    📘 🟤 RESPONSIVE DESIGN 📱
+## 🔵 Errores comunes
 
-        🧠 Adaptar UI a diferentes pantallas
+> [!WARNING]
+> - Demasiados colores  
+> - Mucho texto junto  
+> - Mala alineación  
+> - Fonts difíciles de leer  
+> - Layout desordenado
 
-        ✔ Mobile  
-        ✔ Tablet  
-        ✔ Desktop  
+---
 
-        👉 Fundamental hoy
+## 🟣 UI en Angular
 
-    📘 🟢 PRINCIPIOS IMPORTANTES DE UI
+> [!TIP]
+> Angular permite crear UI mediante:
+> - Components  
+> - Directives  
+> - Data Binding  
+> - CSS / SCSS  
+> - Angular Material
 
-        ✔ Simplicidad  
-        ✔ Consistencia  
-        ✔ Accesibilidad  
-        ✔ Legibilidad  
-        ✔ Jerarquía visual  
+---
 
-    📘 🔵 ERRORES COMUNES
+## 🟡 Herramientas populares
 
-        ❌ Demasiados colores
-        ❌ Mucho texto junto
-        ❌ Mala alineación
-        ❌ Fonts difíciles de leer
-        ❌ Layout desordenado
+- Figma  
+- Adobe XD  
+- Tailwind CSS  
+- Angular Material  
+- Atlassian Design System
 
-    📘 🟣 UI EN ANGULAR
+---
 
-        🧠 Angular permite crear UI mediante:
+## ⚠️ Cosas importantes
 
-        ✔ Components  
-        ✔ Directives  
-        ✔ Data Binding  
-        ✔ CSS / SCSS  
-        ✔ Angular Material  
+> [!IMPORTANT]
+> - Buena UI ≠ solo “bonito”  
+> - Debe ser usable  
+> - El spacing importa muchísimo  
+> - La consistencia es clave
 
-    📘 🟡 HERRAMIENTAS POPULARES
+---
 
-        ✔ Figma  
-        ✔ Adobe XD  
-        ✔ Tailwind CSS  
-        ✔ Angular Material  
-        ✔ Atlassian Design System  
+## ✨ Resumen
 
-    ⚠️ COSAS IMPORTANTES
+> [!NOTE]
+> UI = interfaz visual
 
-        🧠 Buena UI ≠ solo “bonito”
-        🧠 Debe ser usable
-        🧠 El spacing importa muchísimo
-        🧠 La consistencia es clave
+Incluye:
+- Colores  
+- Layout  
+- Spacing  
+- Typography  
+- Harmony
 
-    ✨ RESUMEN
-
-        🧠 UI = interfaz visual
-
-        👉 colores  
-        👉 layout  
-        👉 spacing  
-        👉 typography  
-        👉 harmony  
-
-        👉 Una buena UI mejora toda la experiencia 🚀
+> Una buena UI mejora toda la experiencia 🚀

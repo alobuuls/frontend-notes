@@ -1,264 +1,341 @@
-    📘 UX DESIGN (USER EXPERIENCE) — EXPERIENCIA DE USUARIO
+# 📘 UX Design (User Experience)
 
-    🧠 UX (User Experience) = cómo se siente usar una aplicación
+> [!NOTE]
+> UX (User Experience) es cómo se siente usar una aplicación.
+>
+> Busca que la experiencia sea:
+> - Simple
+> - Intuitiva
+> - Rápida
+> - Agradable
 
-    👉 Busca que la experiencia sea:
-       • simple  
-       • intuitiva  
-       • rápida  
-       • agradable  
+---
 
-    📘 🟢 ¿QUÉ ES UX?
+## 🧠 ¿Qué es UX?
 
-        🧠 UX se enfoca en la experiencia del usuario
+> [!TIP]
+> UX se enfoca en la experiencia del usuario al interactuar con:
+>
+> - Botones
+> - Formularios
+> - Navegación
+> - Errores
+> - Carga de datos
 
-        👉 Cómo interactúa con:
-           • botones  
-           • formularios  
-           • navegación  
-           • errores  
-           • carga de datos  
+### 🎯 Objetivos
 
-        🎯 Objetivo:
+- Reducir frustración
+- Facilitar tareas
+- Mejorar usabilidad
 
-        ✔ Reducir frustración  
-        ✔ Facilitar tareas  
-        ✔ Mejorar usabilidad  
+---
 
-    📘 🔵 PRINCIPIOS IMPORTANTES DE UX
+## 🔵 Principios importantes
 
-        ✔ Menos clicks  
-        ✔ Interfaces intuitivas  
-        ✔ Feedback visual  
-        ✔ Claridad  
-        ✔ Rapidez  
+> [!IMPORTANT]
+> Una buena UX prioriza:
+>
+> - Menos clicks
+> - Claridad
+> - Rapidez
+> - Consistencia
+> - Feedback visual
 
-    📘 🟣 MENOS CANTIDAD DE CLICKS
+---
 
-        🧠 Mientras menos pasos, mejor experiencia
+## 🟣 Menos cantidad de clicks
 
-        ❌ Mala UX:
+> [!WARNING]
+> Mientras más pasos tenga una tarea, peor suele ser la experiencia.
 
-        👉 5 pantallas para hacer login
+### ❌ Mala UX
 
-        ✔ Buena UX:
+- 5 pantallas para hacer login
 
-        👉 flujo rápido y simple
+### ✅ Buena UX
 
-    📘 🟡 UX INTUITIVO
+- Flujo rápido y simple
 
-        🧠 El usuario debe entender qué ocurre sin pensar demasiado
+---
 
-        👉 La app debe “guiarlo”
+## 🟡 UX intuitivo
 
-        ✔ Botones claros  
-        ✔ Mensajes entendibles  
-        ✔ Feedback visual  
+> [!TIP]
+> El usuario debe entender qué ocurre sin pensar demasiado.
 
-    📘 🟠 RETROALIMENTACIÓN (FEEDBACK)
+- Botones claros
+- Mensajes entendibles
+- Feedback visual
 
-        🧠 La app debe responder a las acciones del usuario
+---
 
-        💡 Ejemplos
+## 🟠 Feedback
 
-        ✔ Loading  
-        ✔ Toasts  
-        ✔ Mensajes de éxito  
-        ✔ Errores claros  
-        ✔ Animaciones suaves  
+> [!NOTE]
+> La aplicación siempre debe responder a las acciones del usuario.
 
-        👉 El usuario siempre debe saber qué está pasando
+### Ejemplos
 
-    📘 🔴 EJEMPLOS REALES DE BUEN UX
+- Loading
+- Toasts
+- Mensajes de éxito
+- Errores claros
+- Animaciones suaves
 
-        🧠 Undo (Gmail)
+---
 
-        👉 Permite deshacer acciones
+## 🔴 Ejemplos reales de buen UX
 
-        ✔ Reduce errores  
-        ✔ Da seguridad  
+### Undo
 
-        🧠 Autofill (Apple)
+> [!TIP]
+> Permite deshacer acciones.
 
-        👉 Completa datos automáticamente
+Beneficios:
 
-        ✔ Menos esfuerzo  
-        ✔ Más velocidad  
+- Reduce errores
+- Da seguridad
 
-        🧠 Autocomplete
+### Autofill
 
-        👉 Sugiere resultados mientras escribes
+> [!TIP]
+> Completa información automáticamente.
 
-        ✔ Más rápido  
-        ✔ Más intuitivo  
+Beneficios:
 
-    📘 ⚫ MANEJO DE ERRORES
+- Menos esfuerzo
+- Más velocidad
 
-        🧠 Un error debe ayudar al usuario
+### Autocomplete
 
-        ❌ Malo:
+> [!TIP]
+> Sugiere resultados mientras escribes.
 
-            "Error 500"
+Beneficios:
 
-        ✔ Bueno:
+- Más rápido
+- Más intuitivo
 
-            "No pudimos cargar los datos. Intenta nuevamente."
+---
 
-        👉 Explica:
-           • qué pasó  
-           • qué hacer  
-           • cómo solucionarlo  
+## ⚫ Manejo de errores
 
-    📘 ⚪ ERRORES INTUITIVOS
+> [!IMPORTANT]
+> Un error debe ayudar al usuario.
 
-        🧠 El usuario debe entender el problema fácilmente
+### ❌ Malo
 
-        ✔ Mensajes claros  
-        ✔ Lenguaje humano  
-        ✔ Opciones para continuar  
+```text
+Error 500
+```
 
-        💡 Ejemplo
+### ✅ Bueno
 
-            "Tu contraseña necesita mínimo 8 caracteres"
+```text
+No pudimos cargar los datos. Intenta nuevamente.
+```
 
-    📘 🟤 EMPTY STATES (LAYOUTS VACÍOS)
+Debe explicar:
 
-        🧠 Pantallas cuando no hay datos
+- Qué pasó
+- Qué hacer
+- Cómo solucionarlo
 
-        ❌ Malo:
+---
 
-        pantalla vacía
+## ⚪ Errores intuitivos
 
-        ✔ Bueno:
+> [!TIP]
+> Usa lenguaje humano.
 
-            "No tienes tareas aún"
-            [Crear tarea]
+Ejemplo:
 
-        👉 Ayudan a orientar al usuario
+```text
+Tu contraseña necesita mínimo 8 caracteres
+```
 
-    📘 🟢 PRECARGA Y MANEJO DE CARGA
+---
 
-        🧠 El usuario debe sentir que la app responde
+## 🟤 Empty States
 
-        💡 Técnicas comunes
+> [!WARNING]
+> Nunca dejes una pantalla vacía.
 
-        ✔ Progress bar  
-        ✔ Loader  
-        ✔ Skeleton loading  
+### ❌ Malo
 
-    📘 🔵 LOADER
+Pantalla vacía
 
-        🧠 Indicador de carga
+### ✅ Bueno
 
-        💡 Ejemplo
+```text
+No tienes tareas aún
+[Crear tarea]
+```
 
-            spinner girando
+---
 
-        👉 Indica que algo está ocurriendo
+## 🟢 Estados de carga
 
-    📘 🟣 PROGRESS BAR
+> [!NOTE]
+> El usuario debe percibir que la aplicación está respondiendo.
 
-        🧠 Barra de progreso
+### Técnicas comunes
 
-        👉 Muestra avance de una tarea
+- Loader
+- Progress Bar
+- Skeleton Loading
 
-        ✔ Descargas  
-        ✔ Uploads  
-        ✔ Procesos largos  
+---
 
-    📘 🟡 SKELETON LOADING
+## 🔵 Loader
 
-        🧠 Placeholder visual antes de cargar contenido
+> [!TIP]
+> Indica que algo está ocurriendo.
 
-        💡 Ejemplo
+Ejemplo:
 
-            Cards grises simulando contenido
+```text
+Spinner girando
+```
 
-        👉 Mejor percepción de velocidad
+---
 
-    📘 🟠 VALIDACIONES DE FORMULARIOS
+## 🟣 Progress Bar
 
-        🧠 Deben ayudar, no castigar
+> [!NOTE]
+> Muestra el avance de una tarea.
 
-        ✔ Mensajes claros  
-        ✔ Validación en tiempo real  
-        ✔ Explicar requisitos  
+Ideal para:
 
-        ❌ Mala UX:
+- Descargas
+- Uploads
+- Procesos largos
 
-            error genérico
+---
 
-        ✔ Buena UX:
+## 🟡 Skeleton Loading
 
-            "El email no es válido"
+> [!TIP]
+> Mejora la percepción de velocidad.
 
-    📘 🔴 UX EN FORMULARIOS
+Ejemplo:
 
-        ✔ Labels claros  
-        ✔ Inputs organizados  
-        ✔ Validación inmediata  
-        ✔ Estados visuales  
+```text
+Cards grises simulando contenido
+```
 
-    📘 ⚫ ACCESIBILIDAD (A11Y)
+---
 
-        🧠 UX también incluye accesibilidad
+## 🟠 Validaciones de formularios
 
-        ✔ Buen contraste  
-        ✔ Navegación teclado  
-        ✔ Texto legible  
-        ✔ Screen readers  
+> [!IMPORTANT]
+> Las validaciones deben ayudar, no castigar.
 
-    📘 ⚪ CONSISTENCIA
+### Buenas prácticas
 
-        🧠 Todo debe comportarse igual
+- Mensajes claros
+- Validación en tiempo real
+- Explicar requisitos
 
-        👉 Mismos botones  
-        👉 Mismos colores  
-        👉 Mismos patrones  
+### ❌ Mala UX
 
-        ✔ Reduce confusión
+```text
+Error
+```
 
-    📘 🟤 UX EN ANGULAR
+### ✅ Buena UX
 
-        🧠 Angular ayuda con UX usando:
+```text
+El email no es válido
+```
 
-        ✔ Reactive Forms  
-        ✔ Guards  
-        ✔ Lazy Loading  
-        ✔ Loaders  
-        ✔ RxJS  
+---
 
-    📘 🟢 BUENAS PRÁCTICAS
+## 🔴 UX en formularios
 
-        ✔ Menos pasos  
-        ✔ Feedback constante  
-        ✔ Estados de carga claros  
-        ✔ Manejo humano de errores  
-        ✔ Interfaces intuitivas  
+- Labels claros
+- Inputs organizados
+- Validación inmediata
+- Estados visuales
 
-    📘 🔵 ERRORES COMUNES
+---
 
-        ❌ Muchos clicks
-        ❌ Errores técnicos
-        ❌ Pantallas vacías
-        ❌ No mostrar loading
-        ❌ Formularios confusos
+## ⚫ Accesibilidad (A11Y)
 
-    ⚠️ COSAS IMPORTANTES
+> [!IMPORTANT]
+> UX también significa accesibilidad.
 
-        🧠 UX ≠ solo diseño bonito
-        🧠 UX = facilidad de uso
-        🧠 El usuario siempre debe entender qué pasa
-        🧠 La experiencia importa tanto como el código
+- Buen contraste
+- Navegación por teclado
+- Texto legible
+- Compatibilidad con screen readers
 
-    ✨ RESUMEN
+---
 
-        🧠 UX = experiencia del usuario
+## ⚪ Consistencia
 
-        👉 menos clicks  
-        👉 feedback  
-        👉 validaciones  
-        👉 loaders  
-        👉 manejo de errores  
+> [!NOTE]
+> Todo debe comportarse igual.
 
-        👉 Una buena UX hace que la app “se sienta bien” 🚀
+- Mismos botones
+- Mismos colores
+- Mismos patrones
+
+Beneficio:
+
+- Reduce confusión
+
+---
+
+## 🟤 UX en Angular
+
+Angular facilita una buena UX mediante:
+
+- Reactive Forms
+- Guards
+- Lazy Loading
+- Loaders
+- RxJS
+
+---
+
+## 🟢 Buenas prácticas
+
+> [!TIP]
+>
+> - Menos pasos
+> - Feedback constante
+> - Estados de carga claros
+> - Manejo humano de errores
+> - Interfaces intuitivas
+
+---
+
+## 🔵 Errores comunes
+
+> [!CAUTION]
+>
+> - Muchos clicks
+> - Errores técnicos
+> - Pantallas vacías
+> - No mostrar loading
+> - Formularios confusos
+
+---
+
+## ✨ Resumen
+
+> [!IMPORTANT]
+> UX ≠ Diseño bonito
+>
+> UX = Facilidad de uso
+
+Una buena UX incluye:
+
+- Menos clicks
+- Feedback
+- Validaciones
+- Loaders
+- Manejo de errores
+
+🚀 Una buena UX hace que la aplicación se sienta natural de usar.
