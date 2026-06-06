@@ -1,0 +1,181 @@
+
+# =========================
+# 📦 DEPENDENCIAS
+# =========================
+
+node_modules/
+# 👉 Dependencias instaladas (NUNCA se formatean)
+
+package-lock.json
+# 👉 Lockfile (npm controla versiones exactas)
+
+yarn.lock
+# 👉 Lockfile de Yarn
+
+pnpm-lock.yaml
+# 👉 Lockfile de PNPM
+
+
+# =========================
+# 🏗️ BUILD / OUTPUT
+# =========================
+
+dist/
+# 👉 Código compilado listo para producción
+
+build/
+# 👉 Build generado (React / Angular / Vite)
+
+out/
+# 👉 Output de compilación
+
+coverage/
+# 👉 Reportes de tests (no se formatean)
+
+.cache/
+# 👉 Cachés de herramientas
+
+
+# =========================
+# 📄 ARCHIVOS GENERADOS
+# =========================
+
+*.min.js
+# 👉 Archivos comprimidos automáticamente
+
+*.min.css
+# 👉 CSS minificado
+
+*.map
+# 👉 Source maps generados automáticamente
+
+*.generated.*
+# 👉 Archivos generados por tooling
+
+
+# =========================
+# 🪵 LOGS Y TEMPORALES
+# =========================
+
+*.log
+# 👉 Logs del sistema o herramientas
+
+npm-debug.log*
+# 👉 Logs de errores de npm
+
+yarn-error.log*
+# 👉 Logs de Yarn
+
+pnpm-debug.log*
+# 👉 Logs de PNPM
+
+tmp/
+temp/
+# 👉 Archivos temporales
+
+
+# =========================
+# 🖥️ SISTEMA OPERATIVO
+# =========================
+
+.DS_Store
+# 👉 MacOS metadata files
+
+Thumbs.db
+# 👉 Windows thumbnails cache
+
+.desktop.ini
+# 👉 Configuración de carpetas Windows
+
+
+# =========================
+# ⚙️ IDE / EDITOR
+# =========================
+
+.vscode/
+# 👉 Configuración local de VS Code (opcional ignorar Prettier)
+
+.idea/
+# 👉 JetBrains IDEs (WebStorm, IntelliJ)
+
+*.swp
+# 👉 Archivos temporales de Vim
+
+*.swo
+# 👉 Archivos temporales Vim
+
+
+# =========================
+# 🌐 FRAMEWORKS / BUILD TOOLS
+# =========================
+
+.next/
+# 👉 Next.js build output
+
+.nuxt/
+# 👉 Nuxt.js build output
+
+.angular/
+# 👉 Angular cache y build
+
+.svelte-kit/
+# 👉 SvelteKit build
+
+.vite/
+# 👉 Cache de Vite
+
+
+# =========================
+# 🧪 TESTING / REPORTS
+# =========================
+
+jest-cache/
+# 👉 Cache de Jest
+
+cypress/videos/
+# 👉 Videos de tests E2E
+
+cypress/screenshots/
+# 👉 Screenshots de tests fallidos
+
+
+# =========================
+# 📦 PACKAGE DISTRIBUTION
+# =========================
+
+*.tgz
+# 👉 Paquetes empaquetados npm
+
+*.tar
+# 👉 Archivos comprimidos de distribución
+
+
+# =========================
+# 🧠 ARCHIVOS DE CONFIG AVANZADOS
+# =========================
+
+.env
+# 👉 Variables de entorno (sensibles)
+
+.env.*
+# 👉 Variantes de entorno (dev, prod, test)
+
+secret.*
+# 👉 Archivos sensibles personalizados
+
+*.pem
+# 👉 Llaves privadas / certificados
+
+*.key
+# 👉 Claves privadas
+
+
+# =========================
+# 🚀 CASOS ESPECIALES
+# =========================
+
+storybook-static/
+# 👉 Build de Storybook
+
+playwright-report/
+# 👉 Reportes de Playwright

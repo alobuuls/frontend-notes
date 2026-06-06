@@ -1,0 +1,106 @@
+{
+  // =========================
+  // 🧠 HERENCIA BASE
+  // =========================
+  "extends": "./tsconfig.json",
+  // 👉 Hereda TODA la configuración base del tsconfig principal
+  // 👉 Evita duplicar reglas
+
+  // =========================
+  // 📦 COMPILADOR (SOLO APP)
+  // =========================
+  "compilerOptions": {
+
+    "outDir": "./dist/app",
+    // 👉 Carpeta de salida SOLO para la aplicación
+
+    "rootDir": "./src",
+    // 👉 Código fuente principal de la app
+
+    "types": [],
+    // 👉 Aquí puedes incluir tipos globales si lo necesitas
+    // 👉 Ej: ["node", "jest"]
+
+    "noEmit": false,
+    // 👉 Permite generar JS (importante en apps reales)
+
+    "sourceMap": true,
+    // 👉 Permite debugging TS en navegador
+
+    "declaration": false,
+    // 👉 No genera .d.ts (solo necesario en librerías)
+
+    "removeComments": true,
+    // 👉 Elimina comentarios en el build final
+
+    "strict": true,
+    // 👉 Activa todas las reglas estrictas (seguridad máxima)
+
+    "esModuleInterop": true,
+    // 👉 Compatibilidad entre CommonJS y ES Modules
+
+    "allowSyntheticDefaultImports": true,
+    // 👉 Permite imports flexibles
+
+    "moduleResolution": "node",
+    // 👉 Resolución de módulos estilo Node.js
+
+    "resolveJsonModule": true,
+    // 👉 Permite importar JSON en la app
+
+    "isolatedModules": true,
+    // 👉 Compatible con Vite / Babel / Webpack moderno
+
+    "useDefineForClassFields": true,
+    // 👉 Campos de clase modernos (ES standard)
+
+    "skipLibCheck": true,
+    // 👉 Ignora validación de node_modules (más rápido)
+
+    "forceConsistentCasingInFileNames": true,
+    // 👉 Evita errores entre Windows y Linux
+
+    "allowJs": false,
+    // 👉 Solo TypeScript (no JS en la app)
+
+    "checkJs": false,
+    // 👉 No valida archivos JS
+
+    "incremental": true,
+    // 👉 Cache de compilación para builds más rápidos
+
+    "tsBuildInfoFile": "./.tsbuildinfo.app"
+    // 👉 Archivo interno de cache para este build
+  },
+
+  // =========================
+  // 📁 ARCHIVOS DE LA APP
+  // =========================
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.d.ts"
+    // 👉 Incluye todo el código de la aplicación
+    // 👉 TS + React TSX + tipos
+  ],
+
+  // =========================
+  // 🚫 ARCHIVOS EXCLUIDOS
+  // =========================
+  "exclude": [
+    "**/*.spec.ts",
+    // 👉 Tests unitarios
+
+    "**/*.test.ts",
+    // 👉 Tests alternativos
+
+    "node_modules",
+    // 👉 Dependencias externas
+
+    "dist",
+    // 👉 Build generado
+
+    "coverage"
+    // 👉 Reportes de testing
+  ]
+}

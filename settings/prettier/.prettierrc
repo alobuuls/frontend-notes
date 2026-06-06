@@ -1,0 +1,117 @@
+{
+  // =========================
+  // 🧠 FORMATO BÁSICO
+  // =========================
+
+  "semi": true,
+  // 👉 Agrega punto y coma al final de cada línea
+
+  "singleQuote": true,
+  // 👉 Usa comillas simples en lugar de dobles
+
+  "tabWidth": 2,
+  // 👉 Número de espacios por indentación
+
+  "useTabs": false,
+  // 👉 Usa espacios en lugar de tabs
+
+  "printWidth": 80,
+  // 👉 Máximo de caracteres por línea antes de hacer salto
+
+  "trailingComma": "es5",
+  // 👉 Comas finales en objetos/arrays (mejor para Git diffs)
+
+  "bracketSpacing": true,
+  // 👉 Espacio dentro de objetos { a: 1 }
+
+  "arrowParens": "always",
+  // 👉 Siempre usa paréntesis en arrow functions (a) => {}
+
+  "endOfLine": "lf",
+  // 👉 Tipo de salto de línea (LF recomendado en equipos)
+
+
+  // =========================
+  // 🧩 JSX / FRAMEWORKS
+  // =========================
+
+  "jsxSingleQuote": true,
+  // 👉 Comillas simples en JSX (React)
+
+  "bracketSameLine": false,
+  // 👉 Cierra > en nueva línea en JSX
+
+  "jsxBracketSameLine": false,
+  // 👉 (legacy) mantiene compatibilidad en versiones antiguas
+
+
+  // =========================
+  // 🧪 ARCHIVOS ESPECÍFICOS
+  // =========================
+
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "printWidth": 120
+        // 👉 HTML permite líneas más largas
+      }
+    },
+    {
+      "files": "*.json",
+      "options": {
+        "printWidth": 100,
+        "tabWidth": 2
+        // 👉 JSON más flexible para configs
+      }
+    },
+    {
+      "files": "*.md",
+      "options": {
+        "proseWrap": "always",
+        // 👉 Ajusta texto en Markdown automáticamente
+
+        "printWidth": 80
+      }
+    }
+  ],
+
+
+  // =========================
+  // 🧠 FORMATO DE TEXTO
+  // =========================
+
+  "proseWrap": "preserve",
+  // 👉 Mantiene texto como está (Markdown)
+
+  "htmlWhitespaceSensitivity": "css",
+  // 👉 Respeta estilos CSS en HTML
+
+  "embeddedLanguageFormatting": "auto",
+  // 👉 Formatea código dentro de otros lenguajes (HTML, MD, etc)
+
+
+  // =========================
+  // ⚡ COMPATIBILIDAD Y CONSISTENCIA
+  // =========================
+
+  "requirePragma": false,
+  // 👉 Solo formatea archivos con comentario especial
+
+  "insertPragma": false,
+  // 👉 No agrega comentario automático en archivos
+
+  "vueIndentScriptAndStyle": true,
+  // 👉 Indenta correctamente scripts y styles en Vue
+
+
+  // =========================
+  // 🚀 OPTIMIZACIÓN DE PROYECTO
+  // =========================
+
+  "rangeStart": 0,
+  // 👉 Desde dónde empieza a formatear
+
+  "rangeEnd": Infinity
+  // 👉 Hasta dónde formatea (archivo completo)
+}

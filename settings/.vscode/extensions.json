@@ -1,0 +1,123 @@
+{
+  // 📌 EXTENSIONES RECOMENDADAS
+  // 👉 VS Code sugerirá instalar estas extensiones al abrir el proyecto
+
+  "recommendations": [
+    // 🎨 =========================
+    // FORMATEO Y CALIDAD DE CÓDIGO
+    // =========================
+
+    "esbenp.prettier-vscode",
+    // 👉 Formateador automático de código
+
+    "dbaeumer.vscode-eslint",
+    // 👉 Linter para detectar errores en JS/TS
+
+    "editorconfig.editorconfig",
+    // 👉 Mantiene estilos consistentes entre equipos
+
+
+    // 🧠 =========================
+    // ANGULAR / TYPESCRIPT
+    // =========================
+
+    "angular.ng-template",
+    // 👉 IntelliSense oficial de Angular (templates + bindings)
+
+    "ms-vscode.vscode-typescript-next",
+    // 👉 Versión avanzada de TypeScript
+
+    "johnpapa.angular2-snippets",
+    // 👉 Snippets para Angular (componentes, servicios, etc.)
+
+
+    // ⚛️ =========================
+    // REACT (si aplica en el proyecto)
+    // =========================
+
+    "dsznajder.es7-react-js-snippets",
+    // 👉 Snippets de React modernos
+
+    "bradlc.vscode-tailwindcss",
+    // 👉 Soporte Tailwind CSS con autocompletado
+
+
+    // 🌐 =========================
+    // WEB / HTML / CSS
+    // =========================
+
+    "formulahendry.auto-rename-tag",
+    // 👉 Renombra etiquetas HTML automáticamente
+
+    "formulahendry.auto-close-tag",
+    // 👉 Cierra etiquetas HTML automáticamente
+
+    "naumovs.color-highlight",
+    // 👉 Muestra colores directamente en el código
+
+    "pranaygp.vscode-css-peek",
+    // 👉 Ir del HTML al CSS rápidamente
+
+
+    // 🧹 =========================
+    // PRODUCTIVIDAD
+    // =========================
+
+    "streetsidesoftware.code-spell-checker",
+    // 👉 Detecta errores de ortografía en código
+
+    "mhutchie.git-graph",
+    // 👉 Visualiza el historial de Git
+
+    "eamodio.gitlens",
+    // 👉 Git avanzado (blame, historial, autor)
+
+
+    // 🚀 =========================
+    // RENDIMIENTO / UTILIDADES
+    // =========================
+
+    "visualstudioexptteam.vscodeintellicode",
+    // 👉 Mejora autocompletado con IA
+
+    "ms-vscode.live-server",
+    // 👉 Servidor local para HTML
+
+
+    // 🧪 =========================
+    // TESTING
+    // =========================
+
+    "vitest.explorer",
+    // 👉 Soporte para Vitest
+
+    "orta.vscode-jest",
+    // 👉 Soporte para Jest
+
+
+    // 🧩 =========================
+    // JSON / API / BACKEND
+    // =========================
+
+    "humao.rest-client",
+    // 👉 Hacer requests HTTP desde VS Code
+
+    "redhat.vscode-yaml"
+    // 👉 Soporte YAML (configs, pipelines)
+  ],
+
+
+  // 🚫 EXTENSIONES NO RECOMENDADAS
+  // 👉 Estas extensiones se bloquean o desaconsejan en el proyecto
+
+  "unwantedRecommendations": [
+    "some-old-theme.bad-theme-extension",
+    // 👉 Themes innecesarios o inconsistentes
+
+    "random-linter.outdated-linter",
+    // 👉 Linters antiguos que generan conflictos
+
+    "deprecated.angular-old-extension"
+    // 👉 Extensiones antiguas de Angular
+  ]
+}

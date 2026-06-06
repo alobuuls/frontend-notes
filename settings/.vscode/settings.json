@@ -1,0 +1,190 @@
+{
+  // 🎨 =========================
+  // UI / APARIENCIA DEL EDITOR
+  // =========================
+
+  "workbench.colorTheme": "Default Dark+", 
+  // 👉 Tema del editor
+
+  "workbench.iconTheme": "material-icon-theme",
+  // 👉 Iconos de archivos y carpetas
+
+  "editor.minimap.enabled": false,
+  // 👉 Desactiva minimapa (mejor rendimiento visual)
+
+  "workbench.startupEditor": "none",
+  // 👉 Evita pantalla de inicio
+
+
+  // ✍️ =========================
+  // EDITOR PRINCIPAL
+  // =========================
+
+  "editor.fontSize": 14,
+  // 👉 Tamaño de letra
+
+  "editor.fontLigatures": true,
+  // 👉 Mejora tipografía (ligaduras como => !==)
+
+  "editor.tabSize": 2,
+  // 👉 Espacios por tabulación
+
+  "editor.insertSpaces": true,
+  // 👉 Usa espacios en vez de tabs
+
+  "editor.wordWrap": "on",
+  // 👉 Salto de línea automático
+
+  "editor.lineHeight": 22,
+  // 👉 Altura entre líneas
+
+  "editor.cursorBlinking": "smooth",
+  // 👉 Animación del cursor
+
+  "editor.cursorSmoothCaretAnimation": "on",
+  // 👉 Movimiento suave del cursor
+
+  "editor.formatOnSave": true,
+  // 👉 Formatea código al guardar
+
+  "editor.formatOnPaste": true,
+  // 👉 Formatea al pegar código
+
+
+  // 💾 =========================
+  // ARCHIVOS
+  // =========================
+
+  "files.autoSave": "afterDelay",
+  // 👉 Guarda automáticamente
+
+  "files.autoSaveDelay": 1000,
+  // 👉 Tiempo de auto save (ms)
+
+  "files.trimTrailingWhitespace": true,
+  // 👉 Elimina espacios al final
+
+  "files.insertFinalNewline": true,
+  // 👉 Agrega salto de línea final
+
+  "files.exclude": {
+    "node_modules": true,
+    "dist": true,
+    "build": true
+  },
+  // 👉 Oculta carpetas innecesarias
+
+
+  // 🧹 =========================
+  // FORMATTERS (PRETTIER / ESLINT)
+  // =========================
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // 👉 Formateador por defecto
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  // 👉 Auto-fix de ESLint al guardar
+
+
+  // 🧠 =========================
+  // INTELLISENSE / AUTOCOMPLETE
+  // =========================
+
+  "editor.suggestSelection": "first",
+  // 👉 Primer resultado automático
+
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  // 👉 Autocompletado inteligente
+
+  "editor.parameterHints.enabled": true,
+  // 👉 Muestra ayuda de funciones
+
+
+  // 🔍 =========================
+  // BÚSQUEDA
+  // =========================
+
+  "search.exclude": {
+    "node_modules": true,
+    "dist": true
+  },
+  // 👉 Excluye carpetas de búsqueda
+
+  "search.useIgnoreFiles": true,
+  // 👉 Respeta .gitignore
+
+
+  // ⚡ =========================
+  // RENDIMIENTO
+  // =========================
+
+  "files.watcherExclude": {
+    "node_modules/**": true,
+    "dist/**": true
+  },
+  // 👉 Evita que VS Code vigile carpetas pesadas
+
+
+  // 🌐 =========================
+  // LENGUAJES Y VALIDACIONES
+  // =========================
+
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  // 👉 Actualiza imports automáticamente
+
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  // 👉 Igual pero para TypeScript
+
+  "typescript.preferences.importModuleSpecifier": "relative",
+  // 👉 Usa imports relativos
+
+
+  // 🧪 =========================
+  // GIT
+  // =========================
+
+  "git.enableSmartCommit": true,
+  // 👉 Commit automático si no hay cambios staged
+
+  "git.autofetch": true,
+  // 👉 Fetch automático
+
+
+  // 🎯 =========================
+  // UX (EXPERIENCIA DE USUARIO)
+  // =========================
+
+  "explorer.confirmDelete": false,
+  // 👉 No pregunta al borrar archivos
+
+  "explorer.confirmDragAndDrop": false,
+  // 👉 No confirma drag & drop
+
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  // 👉 Terminal por defecto
+
+
+  // 🧩 =========================
+  // EXTENSIONES
+  // =========================
+
+  "extensions.ignoreRecommendations": false,
+  // 👉 Muestra recomendaciones de extensiones
+
+
+  // 🚀 =========================
+  // PERFORMANCE GLOBAL
+  // =========================
+
+  "editor.largeFileOptimizations": true,
+  // 👉 Optimiza archivos grandes
+
+  "files.simpleDialog.enable": true
+  // 👉 Mejora diálogos de archivos
+}

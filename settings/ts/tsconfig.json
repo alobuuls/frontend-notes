@@ -1,0 +1,129 @@
+{
+  // =========================
+  // 🧠 COMPILADOR PRINCIPAL
+  // =========================
+  "compilerOptions": {
+    
+    "target": "ES2020",
+    // 👉 Versión de JavaScript a la que se compila el código
+    // 👉 ES2020 = moderno pero compatible
+
+    "module": "ESNext",
+    // 👉 Sistema de módulos (ES Modules moderno)
+
+    "moduleResolution": "node",
+    // 👉 Cómo TypeScript busca imports (como Node.js)
+
+    "baseUrl": "./",
+    // 👉 Base para imports absolutos
+
+    "rootDir": "./src",
+    // 👉 Carpeta de código fuente
+
+    "outDir": "./dist",
+    // 👉 Carpeta donde se genera el JS compilado
+
+    "declaration": true,
+    // 👉 Genera archivos .d.ts (tipos públicos de la librería)
+
+    "sourceMap": true,
+    // 👉 Permite debugging del código TS en navegador
+
+    "removeComments": true,
+    // 👉 Elimina comentarios en el build final
+
+    "importHelpers": true,
+    // 👉 Optimiza helpers de TypeScript (reduce tamaño)
+
+    "esModuleInterop": true,
+    // 👉 Permite usar imports de CommonJS sin problemas
+
+    "allowSyntheticDefaultImports": true,
+    // 👉 Permite imports más flexibles
+
+    "forceConsistentCasingInFileNames": true,
+    // 👉 Evita errores entre Windows/Linux (case sensitive)
+
+    "strict": true,
+    // =========================
+    // 🧠 MODO STRICT (SEGURIDAD MÁXIMA)
+    // =========================
+    // 👉 Activa TODAS las reglas estrictas
+
+    "noImplicitAny": true,
+    // 👉 Evita variables con tipo ANY implícito
+
+    "strictNullChecks": true,
+    // 👉 Obliga a manejar null y undefined
+
+    "strictFunctionTypes": true,
+    // 👉 Reglas estrictas en funciones
+
+    "strictBindCallApply": true,
+    // 👉 Mejora seguridad en bind/call/apply
+
+    "strictPropertyInitialization": true,
+    // 👉 Obliga a inicializar propiedades en clases
+
+    "noUnusedLocals": true,
+    // 👉 Detecta variables no usadas
+
+    "noUnusedParameters": true,
+    // 👉 Detecta parámetros no usados
+
+    "noImplicitReturns": true,
+    // 👉 Obliga a retornar siempre en funciones
+
+    "skipLibCheck": true,
+    // 👉 Ignora errores en node_modules (mejora performance)
+
+    "resolveJsonModule": true,
+    // 👉 Permite importar archivos JSON
+
+    "isolatedModules": true,
+    // 👉 Compatible con herramientas como Vite / Babel
+
+    "useDefineForClassFields": true,
+    // 👉 Comportamiento moderno de campos en clases
+
+    "allowJs": false,
+    // 👉 No permite archivos JS (solo TS puro)
+
+    "checkJs": false,
+    // 👉 No valida archivos JS
+
+    "incremental": true,
+    // 👉 Mejora velocidad de compilación (cache)
+
+    "tsBuildInfoFile": "./.tsbuildinfo"
+    // 👉 Archivo interno de cache para builds incrementales
+  },
+
+  // =========================
+  // 📦 ARCHIVOS INCLUIDOS
+  // =========================
+  "include": [
+    "src/**/*.ts"
+    // 👉 Solo compila archivos TypeScript dentro de src
+  ],
+
+  // =========================
+  // 🚫 ARCHIVOS EXCLUIDOS
+  // =========================
+  "exclude": [
+    "node_modules",
+    // 👉 Dependencias externas (NO se compilan)
+
+    "dist",
+    // 👉 Build generado
+
+    "coverage",
+    // 👉 Reportes de tests
+
+    "**/*.spec.ts",
+    // 👉 Tests si no quieres compilarlos en producción
+
+    "**/*.test.ts"
+    // 👉 Archivos de testing
+  ]
+}
