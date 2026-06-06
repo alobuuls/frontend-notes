@@ -1,248 +1,334 @@
-  <a href="https://web.dev/learn/performance" target="_blank">more info<a>
+# 📘 Performance Web — Rendimiento en Aplicaciones Web
 
-    📘 PERFORMANCE WEB — RENDIMIENTO EN APLICACIONES WEB
+> Más información: <https://web.dev/learn/performance>
 
-    🧠 Performance = qué tan rápida, fluida y eficiente se siente una aplicación
+## 🧠 ¿Qué es Performance?
 
-    👉 Impacta:
-       • UX  
-       • SEO  
-       • conversiones  
-       • experiencia general  
+**Performance** es qué tan rápida, fluida y eficiente se siente una aplicación para el usuario.
 
-    📘 🟢 ¿QUÉ ES PERFORMANCE?
+### 👉 Impacta directamente en:
 
-        🧠 Es la optimización del rendimiento de una app
+- UX (Experiencia de Usuario)
+- SEO
+- Conversiones
+- Experiencia general
 
-        👉 Busca:
-           • cargar rápido  
-           • evitar bloqueos  
-           • reducir consumo  
-           • mejorar fluidez  
+### 🎯 Objetivos
 
-        🎯 Objetivo:
+- ✅ Apps rápidas
+- ✅ Menos tiempo de espera
+- ✅ Mejor experiencia de usuario
 
-        ✔ Apps rápidas  
-        ✔ Menos tiempo de espera  
-        ✔ Mejor experiencia  
+También busca:
 
-    📘 🔵 CORE WEB VITALS
+- Cargar rápido
+- Evitar bloqueos
+- Reducir consumo de recursos
+- Mejorar la fluidez
 
-        🧠 Métricas importantes de Google
+---
 
-        👉 Miden experiencia real del usuario
+# 🔵 Core Web Vitals
 
-        ✔ LCP  
-        ✔ CLS  
-        ✔ INP (antes FID)  
+Las **Core Web Vitals** son métricas importantes de Google que miden la experiencia real del usuario.
 
-    📘 🟣 LCP (Largest Contentful Paint)
+### Principales métricas
 
-        🧠 Tiempo que tarda en cargar el contenido principal
+- ✅ LCP
+- ✅ CLS
+- ✅ INP (antes FID)
 
-        👉 Mide velocidad de carga visual
+---
 
-        💡 Ejemplo
+# 🟣 LCP (Largest Contentful Paint)
 
-        Hero image  
-        título principal  
-        banner  
+Mide el tiempo que tarda en cargarse el contenido principal visible de la página.
 
-        ✔ Bueno:
-           menos de 2.5s
+### 💡 Ejemplos
 
-        ❌ Malo:
-           carga lenta
+- Hero image
+- Título principal
+- Banner principal
 
-    📘 🟡 CLS (Cumulative Layout Shift)
+### Valores recomendados
 
-        🧠 Mide estabilidad visual
+- ✅ Bueno: menos de **2.5 segundos**
+- ❌ Malo: carga lenta del contenido principal
 
-        👉 Detecta:
-           • saltos  
-           • movimientos inesperados  
-           • cambios de layout  
+---
 
-        ❌ Ejemplo malo:
+# 🟡 CLS (Cumulative Layout Shift)
 
-        Un botón cambia de posición mientras cargas
+Mide la estabilidad visual de una página.
 
-        ✔ Buena práctica:
+Detecta:
 
-        reservar espacio antes de cargar contenido
+- Saltos visuales
+- Movimientos inesperados
+- Cambios de layout durante la carga
 
-    📘 🟠 ¿QUÉ CAUSA MAL CLS?
+### ❌ Ejemplo
 
-        ❌ Imágenes sin tamaño
-        ❌ Ads dinámicos
-        ❌ Fonts que cambian tamaño
-        ❌ Componentes cargando tarde
+Un botón cambia de posición mientras la página está cargando.
 
-    📘 🔴 OPTIMIZAR RECURSOS LOCALES
+### ✅ Buena práctica
 
-        🧠 Lo que puedas cargar localmente, mejor
+Reservar espacio antes de cargar contenido dinámico.
 
-        ✔ Fonts locales  
-        ✔ Multimedia optimizada  
-        ✔ Recursos estáticos  
+---
 
-        👉 Reduce requests externas
+# 🟠 ¿Qué causa un mal CLS?
 
-    📘 ⚫ OPTIMIZACIÓN DE IMÁGENES
+- ❌ Imágenes sin dimensiones definidas
+- ❌ Anuncios dinámicos
+- ❌ Fuentes que cambian de tamaño al cargar
+- ❌ Componentes renderizados tardíamente
 
-        ✔ Comprimir imágenes  
-        ✔ Usar formatos modernos (webp, avif)  
-        ✔ Lazy loading de imágenes  
-        ✔ Tamaños correctos  
+---
 
-        ❌ Imágenes gigantes innecesarias
+# 🔴 Optimización de Recursos Locales
 
-    📘 ⚪ FONTS Y PERFORMANCE
+Siempre que sea posible, carga recursos localmente.
 
-        🧠 Las fonts afectan carga y CLS
+### Recomendado
 
-        ✔ Preload fonts  
-        ✔ Usar pocas fuentes  
-        ✔ Preferir local fonts  
+- ✅ Fuentes locales
+- ✅ Multimedia optimizada
+- ✅ Recursos estáticos
 
-        ❌ Muchas fonts externas
+### Beneficios
 
-    📘 🟤 LAZY LOADING
+- Menos dependencias externas
+- Menos requests HTTP
+- Mayor velocidad de carga
 
-        🧠 Cargar contenido solo cuando se necesita
+---
 
-        👉 Mejora rendimiento inicial
+# ⚫ Optimización de Imágenes
 
-        💡 Ejemplos
+### Buenas prácticas
 
-        ✔ Lazy routes  
-        ✔ Lazy images  
-        ✔ Lazy modules  
+- ✅ Comprimir imágenes
+- ✅ Utilizar formatos modernos (`WebP`, `AVIF`)
+- ✅ Aplicar lazy loading
+- ✅ Servir tamaños adecuados
 
-        👉 Angular usa lazy loading con:
-           loadChildren
+### Evitar
 
-    📘 🟢 INFINITE SCROLL
+- ❌ Imágenes gigantes innecesarias
 
-        🧠 Carga contenido mientras haces scroll
+---
 
-        👉 No carga TODO al inicio
+# ⚪ Fonts y Performance
 
-        ✔ Mejor UX  
-        ✔ Menos carga inicial  
+Las fuentes pueden afectar tanto la velocidad de carga como el CLS.
 
-        ❌ Puede consumir mucha memoria si no se controla
+### Recomendaciones
 
-    📘 🔵 PAGINATION
+- ✅ Preload de fuentes
+- ✅ Utilizar pocas familias tipográficas
+- ✅ Preferir fuentes locales
 
-        🧠 Divide datos en páginas
+### Evitar
 
-        👉 Solo carga pequeños grupos de datos
+- ❌ Muchas fuentes externas
 
-        ✔ Mejor performance  
-        ✔ Mejor control  
+---
 
-        💡 Ejemplo
+# 🟤 Lazy Loading
 
-            Página 1 → 10 usuarios
-            Página 2 → otros 10
+Consiste en cargar recursos únicamente cuando son necesarios.
 
-    📘 🟣 PAGINATION vs INFINITE SCROLL
+### Beneficios
 
-        🧠 Pagination
+- Mejor rendimiento inicial
+- Menor consumo de recursos
 
-        ✔ Más control  
-        ✔ Mejor para tablas  
+### Ejemplos
 
-        🧠 Infinite Scroll
+- ✅ Lazy Routes
+- ✅ Lazy Images
+- ✅ Lazy Modules
 
-        ✔ Más dinámico  
-        ✔ Mejor para feeds  
+### Angular
 
-    📘 🟡 CODE SPLITTING
+Angular implementa lazy loading mediante:
 
-        🧠 Dividir el código en chunks
+```ts
+loadChildren
+```
 
-        👉 Angular lo hace con lazy loading
+---
 
-        ✔ Menor bundle inicial  
-        ✔ Mejor first load  
+# 🟢 Infinite Scroll
 
-    📘 🟠 PERFORMANCE EN ANGULAR
+Carga contenido mientras el usuario hace scroll.
 
-        🧠 Angular mejora performance usando:
+### Ventajas
 
-        ✔ Lazy loading  
-        ✔ OnPush change detection  
-        ✔ trackBy  
-        ✔ RxJS  
-        ✔ Async pipe  
+- ✅ Mejor experiencia de usuario
+- ✅ Menor carga inicial
 
-    📘 🔴 trackBy EN ngFor
+### Desventajas
 
-        🧠 Evita renders innecesarios
+- ❌ Puede consumir mucha memoria si no se controla correctamente
 
-        💡 Ejemplo
+---
 
-            <li *ngFor="let item of items; trackBy: trackById">
+# 🔵 Pagination
 
-        👉 Mejora rendimiento en listas
+Divide la información en páginas para cargar solo pequeños grupos de datos.
 
-    📘 ⚫ CACHE
+### Beneficios
 
-        🧠 Guardar datos para evitar recargas
+- ✅ Mejor rendimiento
+- ✅ Mayor control sobre la información
 
-        ✔ shareReplay  
-        ✔ localStorage  
-        ✔ service workers  
+### Ejemplo
 
-    📘 ⚪ SKELETON LOADING
+```text
+Página 1 → 10 usuarios
+Página 2 → otros 10 usuarios
+```
 
-        🧠 Mejora percepción de velocidad
+---
 
-        👉 Muestra placeholders mientras carga
+# 🟣 Pagination vs Infinite Scroll
 
-        ✔ UX más fluida
+## Pagination
 
-    📘 🟤 BUENAS PRÁCTICAS
+- ✅ Más control
+- ✅ Ideal para tablas y datos estructurados
 
-        ✔ Lazy loading  
-        ✔ Optimizar imágenes  
-        ✔ Reducir bundle  
-        ✔ Evitar renders innecesarios  
-        ✔ Usar async pipe  
-        ✔ Cachear cuando tenga sentido  
+## Infinite Scroll
 
-    📘 🟢 ERRORES COMUNES
+- ✅ Más dinámico
+- ✅ Ideal para feeds y redes sociales
 
-        ❌ Bundle gigante
-        ❌ Muchas requests
-        ❌ Imágenes pesadas
-        ❌ No usar lazy loading
-        ❌ Renders innecesarios
+---
 
-    📘 🔵 HERRAMIENTAS IMPORTANTES
+# 🟡 Code Splitting
 
-        ✔ Lighthouse  
-        ✔ Chrome DevTools  
-        ✔ WebPageTest  
-        ✔ web.dev  
+Consiste en dividir el código en múltiples chunks.
 
-    ⚠️ COSAS IMPORTANTES
+### Beneficios
 
-        🧠 Performance afecta UX
-        🧠 LCP = velocidad visual
-        🧠 CLS = estabilidad visual
-        🧠 Lazy loading es clave
-        🧠 Menos bundle = mejor carga
+- ✅ Menor bundle inicial
+- ✅ Mejor tiempo de carga inicial
 
-    ✨ RESUMEN
+### Angular
 
-        🧠 Performance = rapidez y fluidez
+Normalmente se implementa mediante Lazy Loading.
 
-        👉 LCP → tiempo de carga  
-        👉 CLS → estabilidad visual  
-        👉 Lazy loading → carga inteligente  
-        👉 Pagination / infinite scroll → optimización de datos  
+---
 
-        👉 Apps rápidas = mejores apps 🚀
+# 🟠 Performance en Angular
+
+Angular permite mejorar el rendimiento utilizando:
+
+- ✅ Lazy Loading
+- ✅ Change Detection Strategy `OnPush`
+- ✅ `trackBy`
+- ✅ RxJS
+- ✅ Async Pipe
+
+---
+
+# 🔴 trackBy en ngFor
+
+Evita renders innecesarios cuando una lista cambia.
+
+### Ejemplo
+
+```html
+<li *ngFor="let item of items; trackBy: trackById">
+```
+
+### Beneficio
+
+- ✅ Mejor rendimiento en listas grandes
+
+---
+
+# ⚫ Caché
+
+Consiste en almacenar información para evitar solicitudes repetidas.
+
+### Herramientas comunes
+
+- ✅ `shareReplay`
+- ✅ `localStorage`
+- ✅ Service Workers
+
+---
+
+# ⚪ Skeleton Loading
+
+Mejora la percepción de velocidad mostrando placeholders durante la carga.
+
+### Beneficios
+
+- ✅ Experiencia más fluida
+- ✅ Sensación de menor tiempo de espera
+
+---
+
+# 🟤 Buenas Prácticas
+
+- ✅ Utilizar Lazy Loading
+- ✅ Optimizar imágenes
+- ✅ Reducir el tamaño del bundle
+- ✅ Evitar renders innecesarios
+- ✅ Usar Async Pipe
+- ✅ Aplicar caché cuando tenga sentido
+
+---
+
+# 🟢 Errores Comunes
+
+- ❌ Bundle demasiado grande
+- ❌ Exceso de requests
+- ❌ Imágenes pesadas
+- ❌ No utilizar Lazy Loading
+- ❌ Renders innecesarios
+
+---
+
+# 🔵 Herramientas Importantes
+
+- ✅ Lighthouse
+- ✅ Chrome DevTools
+- ✅ WebPageTest
+- ✅ web.dev
+
+---
+
+# ⚠️ Conceptos Clave
+
+- 🧠 Performance afecta directamente la UX
+- 🧠 LCP mide la velocidad visual
+- 🧠 CLS mide la estabilidad visual
+- 🧠 Lazy Loading es fundamental
+- 🧠 Menos bundle implica mejor carga
+
+---
+
+# ✨ Resumen
+
+**Performance** es la rapidez y fluidez con la que se percibe una aplicación.
+
+### Métricas importantes
+
+- 👉 **LCP** → Tiempo de carga del contenido principal
+- 👉 **CLS** → Estabilidad visual
+- 👉 **INP** → Capacidad de respuesta a interacciones
+
+### Técnicas fundamentales
+
+- 👉 Lazy Loading
+- 👉 Code Splitting
+- 👉 Optimización de imágenes
+- 👉 Caché
+- 👉 Pagination e Infinite Scroll
+
+> 🚀 Apps rápidas = mejores experiencias de usuario.
