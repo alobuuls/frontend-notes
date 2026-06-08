@@ -1,156 +1,194 @@
-# 📚 Code Notes ALO
+<h1 align="center">📚 Code Notes</h1>
 
-Personal repository with notes, examples, concepts, and resources collected during my learning journey in Frontend development.
+<p align="center">
+  <img src="https://img.shields.io/badge/Knowledge%20Base-Software%20Development-blue" alt="Knowledge Base" />
+  <img src="https://img.shields.io/badge/Topics-Frontend%20%7C%20Backend%20%7C%20Architecture-success" alt="Topics" />
+  <img src="https://img.shields.io/badge/Status-Always%20Growing-brightgreen" alt="Growing" />
+</p>
 
-This space works as a personal knowledge base to reinforce concepts, save quick references, and document learnings across different technologies.
+<p align="center">
+  <a href="https://github.com/alobuuls/code-notes" target="_blank"><img src="https://img.shields.io/badge/GitHub-Repository-181717?logo=github&logoColor=white" alt="Repository" /></a>
+  <a href="https://github.com/alobuuls/code-notes/stargazers" target="_blank"><img src="https://img.shields.io/github/stars/alobuuls/code-notes?style=social" alt="GitHub Stars" /></a>
+</p>
+
+---
+
+## 📖 Description
+
+> [!NOTE]
+> Personal knowledge base containing notes, concepts, examples, references, exercises, configurations, and learning resources collected throughout my software development journey.
+
+This repository serves as a centralized place to document and reinforce knowledge across different areas of software engineering, including programming languages, frameworks, tooling, architecture patterns, design patterns, data structures, and development best practices.
+
+The content is continuously updated as I learn new technologies and deepen existing knowledge.
 
 ---
 
 ## 🎯 Repository Goal
 
-This project aims to:
+This repository aims to:
 
-- 📖 Document learned concepts
-- 🧠 Reinforce knowledge through personal notes
-- ⚡ Provide quick references for future consultation
-- 🛠️ Centralize examples and code snippets
-- 🚀 Track continuous learning progress
-
----
-
-## 🚀 Technologies and Topics Included
-
-Currently, the repository contains notes about:
-
-### 🅰️ Angular
-
-- Directives
-- Pipes
-- Observables
-- Guards
-- Forms
-- Interceptors
-- Routing
-- Services
-- Modules
-- RxJS operators
-- Angular CLI
+* 📚 Document concepts and learning notes
+* 🧠 Reinforce knowledge through active writing
+* ⚡ Create a quick-reference knowledge base
+* 🛠️ Centralize examples and snippets
+* 🚀 Track long-term learning progress
+* 🔄 Build a personal software engineering handbook
 
 ---
 
-### ⚡ JavaScript
+## 🗂 Knowledge Areas
 
-- DOM
-- Promises
-- Arrays and Objects
-- Conditionals
-- String methods
-- Regex
-- JSON
-- Functions
-- Operators
-- Truthy & Falsy
+### 🌐 Frontend
+
+* HTML
+* CSS
+* JavaScript
+* TypeScript
+* Angular
+* React *(planned)*
+* Astro *(planned)*
+
+### ⚙️ Backend
+
+* Express *(planned)*
+* Firebase *(planned)*
+* APIs
+* WebSockets
+
+### 🧱 Software Architecture
+
+* MVC
+* MVVM
+* Layered Architecture
+* Hexagonal Architecture
+* Clean Architecture
+* Microservices
+* Monoliths
+
+### 🎨 Design Patterns
+
+* Singleton
+* Factory
+* Observer
+* Strategy
+* Adapter
+* Decorator
+* Command
+* Mediator
+
+### 🧮 Data Structures
+
+* Arrays
+* Matrices
+* Linked Lists
+* Stacks
+* Queues
+* Hash Tables
+* Trees
+* Graphs
+* Heaps
+
+### 🛠 Tools & Technologies
+
+* Git
+* GitHub
+* npm
+* pnpm
+* Yarn
+* VS Code
+* Prettier
+* EditorConfig
+* Docker *(planned)*
 
 ---
 
-### 🌐 HTML
+## 📁 Repository Structure
 
-- Basic structure
-- Best practices
-- Common tags
-- Semantic organization
-
----
-
-### 🎨 CSS
-
-- Selectors
-- Properties
-- Styling
-- Layouts
-- Visual customization
-
----
-
-### 🔧 Git
-
-- Frequent commands
-- Conventional commits
-- Basic workflow
-- Best practices
-
----
-
-## 📂 Project Structure
-
-```txt
-angular/
+```text
+code/
 │
-├── directives/
-├── notes-syllabus/
-├── observables-notes.txt
-├── pipes-notes.txt
-└── services-notes.txt
-
-js/
+├── frontend/
+│   ├── concepts/
+│   ├── frameworks/
+│   └── languages/
 │
-├── dom/
-├── notes-syllabus/
-├── js-promises.txt
-├── js-regex.txt
-└── js-functions.txt
-
-css/
-html/
-git/
+├── technologies/
+│   ├── git/
+│   └── package-managers/
+│
+tools/
+│
+├── vscode/
+├── terminal/
+├── settings/
+└── shortcuts/
+│
+other/
+│
+├── exercises-to-practice/
+├── google/
+└── windows/
 ```
 
-### 🚀 Coming Soon
+---
 
-New sections will be added progressively:
+## ✨ Contents
 
-- TypeScript
-- VS Code
+The repository includes:
+
+* 📝 Theory notes
+* 💡 Programming concepts
+* 🔍 Quick references
+* 🧪 Practice exercises
+* ⚙️ Configuration files
+* 📦 Tooling documentation
+* 🏗 Architecture notes
+* 🎨 Design patterns
+* 📚 Learning roadmaps
+* 🚀 Best practices
 
 ---
 
-## 🛠️ In Progress
+## 🔄 Continuous Growth
 
-This repository is continuously growing and will include notes on:
+This repository is never considered finished.
 
-- TypeScript
-- VS Code
-- RxJS
-- Node.js
-- Firebase
-- SQL
-- Docker
-- Testing
-- Frontend Architecture
-- Best Practices
-- Clean Code
-- Design Patterns
+New topics, technologies, notes, examples, exercises, and references are continuously added as part of my learning process.
 
----
+Some future additions include:
 
-## ✨ Repository Features
-
-- 📚 Organized by technologies for easy navigation
-- 🧩 Practical examples and reusable code snippets
-- 🧠 Simplified explanations for fast learning and revision
-- ⚡ Quick reference format for daily use
-- 🔄 Continuous updates as learning progresses
+* Docker
+* React
+* Astro
+* Express
+* SQL
+* NoSQL
+* Firebase
+* JWT
+* Swagger
+* WebSockets
+* Ionic
+* Electron
+* System Design
+* Software Testing
+* Advanced Design Patterns
+* Advanced Data Structures
 
 ---
 
-## 👨‍💻 Author
+## 🎯 Why This Repository Exists
 
-Developed by **ALOBUULS**
+Writing notes is one of the most effective ways to learn.
+
+Instead of relying only on bookmarks, videos, or documentation, I maintain this repository as a personal reference system where concepts are explained in my own words and supported by examples, exercises, and practical resources.
+
+The goal is not only to store information, but also to transform learning into a reusable asset that can be revisited, expanded, and refined over time.
 
 ---
 
 ## 📄 License
 
-This repository is created for educational purposes, personal learning, and study documentation.
+This repository is intended for educational, learning, and reference purposes.
 
-```
+Created by **Alondra Francisco Onofre**.
